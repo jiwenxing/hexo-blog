@@ -5,15 +5,15 @@ tags: [Summary, Memory]
 ---
 ![](https://github.com/jiwenxing/learngit/blob/master/jajdha.jpg?raw=true)
 <!-- more -->
-##PREFACE 
+## PREFACE 
 After everything gets done and suddenly, I just realize that time has come to 2015. Look back to the passed year at this moment, I can't help sighing with emotions. It is really a wonderful and significant year for me although with much pressure and not a few tough days. Finally and fortunately, I have come through all of these, happiness, struggles as well as hardships. Thanks for everything and everyone that I met, precious memory and of course some remarkable lessons.
-##MEMORIES DURING THIS YEAR
+## MEMORIES DURING THIS YEAR
 
-###Firstly, let this MV create some atmosphere
+### Firstly, let this MV create some atmosphere
 
 <iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&code=uhduWh3WD_Y&lcode=&resourceId=709134954_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:480px;height:400px;"></iframe>
 
-###This year I have known some good friends...
+### This year I have known some good friends...
 
 - Mike Zhang - Ten years elder than me and just like my brother, teach me programming and give me precious suggestions...
 - The Wish - Someone who can make you feel relaxed, bring you fun and accompany you to the hospital at midnight is a real friend.
@@ -25,7 +25,7 @@ and Jenny, Kundi, 江雨, 散人王, Forecho, Spock and ... ...
 
 
 <br>
-###This year I have been to some places...
+### This year I have been to some places...
 - Hangzhou - One of the seven ancient capitals in China
 ![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/DSC_0068.JPG)
 
@@ -47,7 +47,7 @@ and Jenny, Kundi, 江雨, 散人王, Forecho, Spock and ... ...
 ![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/DSCN0825.jpg)
 
 <br>
-###This year I have encountered some setbacks...
+### This year I have encountered some setbacks...
 
 - Setbacks in research
 I spent the first year implementing my initial idea on the research smoothly. That was a giant enhancement for my self-confidence and I planned to finished my second idea using the next year. I had been always believed that I can realize whatever if I really decide to do until I finally give up after several hard attempts. Maybe it is nothing serious about my thesis, but it makes me start to doubt myself, and it is a little difficulty to rebuild the self-confidence. Remember, giving up should be never allowed!
@@ -62,7 +62,7 @@ It is not a smooth process. Sometimes you will get tired, you will be refused or
 If you get seriously sick, you will feel those common strangers across the street so happy just because they are healthy. But when you get better, your happiness by the recovery will soon filled up with variable annoyances. That's because you are always ignoring what you already have and asking more less important. Remember, a man who is contented is always happy.
 
 <br>
-###This year I have got some achievements...
+### This year I have got some achievements...
 
 - Publish a conference paper based on my research
 ![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/copy-cropped-cropped2-logo_363.png) 
@@ -76,7 +76,7 @@ If you get seriously sick, you will feel those common strangers across the stree
 
 - A girl
 
-##PAST PRESENT AND FUTURE
+## PAST PRESENT AND FUTURE
 
 2014 is a year with sweets and bitters, ups and downs, joys and sorrows, pains and gains. Anyway, the past is over, and all we can do is learn from them.
 Here and now, I would like to hold a memorial ceremony for my school days, that's 20+ years since I was six years old. That is the whole teenage and youth!

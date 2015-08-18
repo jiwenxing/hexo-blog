@@ -7,10 +7,10 @@ tags: [GitHub]
 最近每次访问自己的博客巨慢无比，严重影响用户体验，浏览器下方一直在提示：
 >正在等待fonts.googleleapis.com的响应...
 <!-- more -->
-##原因
+## 原因
 忍无可忍，上网查找解决方案，原来是hexo主题默认使用的是google提供的字体，每次访问都要转到google的服务器加载，而google在国内大家都懂的。
 
-##解决方法
+## 解决方法
 找到..\hexo\themes\RagingCat\source\css目录下的style.styl文件打开
 ![](http://7u2eve.com1.z0.glb.clouddn.com/blogElement/style.PNG)
 

@@ -15,11 +15,11 @@ Redis的命令总是很难记，每次用到都去网上查一下，最近得空
 
 
 
-###set的基本操作
+### set的基本操作
 
 [添加](#setadd)   [查询](#setsee)     [删除](#setdel)    [集合关系操作](#setrelation)
 
-####<span id = "setadd">添加数据</span>
+#### <span id = "setadd">添加数据</span>
 
 > sadd key  value1 value2 value3...
 
@@ -34,7 +34,7 @@ Redis的命令总是很难记，每次用到都去网上查一下，最近得空
     "redis"
     "hello"
 
-####<span id = "setsee">查询数据</span>
+#### <span id = "setsee">查询数据</span>
 
  - 获取set指定key的所有member
 
@@ -74,7 +74,7 @@ Redis的命令总是很难记，每次用到都去网上查一下，最近得空
     dev:0>srandmember test:set:01
     "world"
 
-####<span id = "setdel">删除数据</span>
+#### <span id = "setdel">删除数据</span>
 
  - 随机删除指定key的一个value
 
@@ -121,7 +121,7 @@ Redis的命令总是很难记，每次用到都去网上查一下，最近得空
     "world"
     "worl"
 
-####<span id = "setrelation">集合关系操作</span>
+#### <span id = "setrelation">集合关系操作</span>
 
  - 多个set的并集
 
@@ -193,11 +193,11 @@ Redis的命令总是很难记，每次用到都去网上查一下，最近得空
     dev:0>sdiff set1 set2
     "world"
 
-###sorted set的基本操作
+### sorted set的基本操作
 
 [添加](#zsetadd)   [查询](#zsetsee)   [更新](#zsetupdate)    [删除](#zsetdel)    [集合关系操作](#setrelation)
 
-####<span id = "zsetadd">添加/查询数据</span>
+#### <span id = "zsetadd">添加/查询数据</span>
 
 > zadd key score member [[score member] [score member] ...]
 
@@ -208,7 +208,7 @@ Redis的命令总是很难记，每次用到都去网上查一下，最近得空
     redis
 
 
-####<span id = "zsetsee">查询数据</span>
+#### <span id = "zsetsee">查询数据</span>
 
 > 语法：zrange key start stop [withscores]
 > 解释：返回有序集key中指定范围[通过索引 start stop]的member[及其score]；
@@ -285,7 +285,7 @@ Redis的命令总是很难记，每次用到都去网上查一下，最近得空
 local:0>zcard zset:set1
 3
 
-####<span id = "zsetupdate">更新数据</span>
+#### <span id = "zsetupdate">更新数据</span>
 
 > 语法：zincrby key increment member
 > 解释：有续集key的member增加增量increment，返回增加后的score
@@ -297,7 +297,7 @@ local:0>zcard zset:set1
     local:0>zscore zset:set1 redis
     611
 
-####<span id = "zsetdel">更新数据</span>
+#### <span id = "zsetdel">更新数据</span>
 
 > 语法：zrem key member [member ...] 
 > 解释：移除有续集中的一个或多个member，返回移除member的个数

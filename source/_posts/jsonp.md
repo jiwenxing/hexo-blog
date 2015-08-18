@@ -5,7 +5,7 @@ tags: [JavaScript]
 ---
 这几天想对自己的博客做一些优化，例如我的相册是通过Instagram提供的api以Ajax封装的jsonp跨域请求方式获取照片来展示，但是需要翻墙才能访问，我希望如果用户未翻墙导致访问失败后能够调用error callback展示另一个页面。<!-- more -->
 
-##PROBLEM
+## PROBLEM
 先看看这段代码，刚开始不管怎么搞都无法进入到`error`回调函数中。
 
 	$.ajax({
@@ -28,7 +28,7 @@ tags: [JavaScript]
 
 当然访问失败很正常，但按理说访问失败就应该进入`error`回调中，而页面却没有任何反应，也没有进入任何`callback`中。
 
-##DIGNOSE
+## DIGNOSE
 先了解下JSONP是个什么东东，她的使用场景和实现原理是什么。
 由于浏览器同源策略的限制，Ajax无法实现数据的跨域请求，而 HTML 的 `<script>` 元素是一个例外。利用 `<script>` 元素的这个开放策略，网页可以得到从其他来源动态产生的JSON 资料。其过程可以简单的描述为: 当需要通讯时，本站脚本创建一个`<script>`元素，地址指向第三方的API网址，形如： `<script src="http://www.example.net/api?param1=1&param2=2"></script>` ，并提供一个回调函数来接收数据（函数名可约定，或通过地址参数传递）。 第三方产生的响应为json数据的包装（故称之为jsonp，即json padding），形如： callback({"name":"hax","gender":"Male"}) 这样浏览器会调用callback函数，并传递解析后json对象作为参数，本站脚本可在callback函数里处理所传入的数据。简单讲就是jsonp通过一种取巧的非正式的方式实现了数据的跨域请求。
 
@@ -42,7 +42,7 @@ tags: [JavaScript]
 > $.ajax() can determine other error scenarios by inspecting the XHR
 object, but jsonp doesn't use XHR.
 
-##SOLUTION
+## SOLUTION
 
 如果jsonp方式想在请求失败后触发并执行error callback要怎么实现呢？万能的Google搜到了[一个帖子](http://designwithpc.com/post/11989720389/jsonp-error-handling-with-jqueryajax)提到了两种可行的方案。
 
@@ -78,7 +78,7 @@ object, but jsonp doesn't use XHR.
 另外还需注意jsonp只支持get不支持post请求。
 
 
-###REFERENCE
+### REFERENCE
 1. [http://www.kankanews.com/ICkengine/archives/96670.shtml](http://www.kankanews.com/ICkengine/archives/96670.shtml)
 2. [http://forum.jquery.com/topic/jquery-ajax-with-datatype-jsonp-will-not-use-error-callback-if-request-fails](http://forum.jquery.com/topic/jquery-ajax-with-datatype-jsonp-will-not-use-error-callback-if-request-fails)
 3. [http://designwithpc.com/post/11989720389/jsonp-error-handling-with-jqueryajax](http://designwithpc.com/post/11989720389/jsonp-error-handling-with-jqueryajax)

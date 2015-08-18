@@ -6,13 +6,13 @@ tags: [Hadoop]
 
 出于兴趣，花了两天时间安装hadoop的调试环境，过程中遇到各种各样的问题，但是很庆幸几乎所有遇到的问题网上都有网友分享的解决方法，因此我觉得学会分享是很重要的一件事~本文的安装过程基本按照[这篇博文](http://pengbin6755198.blog.163.com/blog/static/23254939201421043925839/)进行的，软件版本略有不同，不过影响不大，这里主要讲讲安装过程中出现的一些新状况。
 <!-- more -->
-##JDK安装
+## JDK安装
 之前装过jdk，版本为jdk1.7.0_51，且是安装在c盘program files目录下的。原博文所提的由于hadoop不识别目录中空格因此建议不能装在该目录下，经测试其实也没有关系，后面只需建立一个目录映射的软连接即可，指令为：
 ```bash
 $ ln -s "c:/program files/java/jdk1.7.0_21" /usr/local/jdk1.7.0_21。
 ```
 
-##sygwin安装及ssh无密码登陆配置
+## sygwin安装及ssh无密码登陆配置
 直接下载[sygwin](http://www.cygwin.com/)按照原博文步骤安装即可，一般不会有什么问题。因为楼主是外行（刚开始连sygwin是什么都不知道⊙﹏⊙b汗），按照教程做的时候往往也只是知其然不知其所以然，因此稍微出点状况就不知道该怎么解决了，所以还是建议大家（基础概念不清楚的亲们）知道每一步怎么做的同时也能尽量知道为什么这么做。
 >sygwin：Get that Linux feeling - on Windows，a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
 
@@ -31,7 +31,7 @@ $ who
 lenovo   pty1         2014-08-26 13:31 (::1)</span></span></span>
 ```
 
-##hadoop安装和配置
+## hadoop安装和配置
 这里需要注意的就是修改conf下配置文件时，只改相关内容不要改格式，就是用记事本打开把相应的内容改过来即可。我刚开始为了便于阅读在写字板里改的，可能是改变了文档的格式，导致出错。
 ```bash
 lenovo@Wilson ~
@@ -59,7 +59,7 @@ $ jps
 ```
 显示namenode,datanode,secondarynamenode,jobtracker,tasktracker启动成功，win7下cygwin中显示不全，但已启动。
 
-##安装配置eclipse
+## 安装配置eclipse
 ![](http://7u2eve.com1.z0.glb.clouddn.com/blogpic/20140826144826043.jpg)
 
 
@@ -101,7 +101,7 @@ bin/hadoop dfsadmin -safemode leave
 $ bin/hadoop fs -chmod 777 /user/cyg_server
 ```
 
-##运行成功
+## 运行成功
 ```
 libpath=/home/hadoop-1.2.1/lib/native/linux-i386-32
 14/08/25 16:20:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable

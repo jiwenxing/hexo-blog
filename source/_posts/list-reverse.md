@@ -4,10 +4,10 @@ categories: Coding
 tags: [Java]
 ---
 
-##问题
+## 问题
 如何实现单链表的逆置，给出完整程序，并测试结果
 <!-- more -->
-##实现方法
+## 实现方法
 ```java
 package dataStructure;
 /**

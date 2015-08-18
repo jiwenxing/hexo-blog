@@ -8,7 +8,7 @@ tags: [Travelling]
 
 废话不多说，跟我一起去感受一下这个北美的欧式异域风情吧。。。
 <!-- more -->
-##Day 1
+## Day 1
 
 七月十二日下午六点的灰机，我们一行早早的安检来到候机大厅，顺便去逛了逛免税店，这就是即将带我们穿越半个地球的那个大大的灰机（为什么一看到灰机就会想到失联，呸呸呸）
 
@@ -39,7 +39,7 @@ tags: [Travelling]
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/IMG_20140714_020622.jpg)
 
 
-##Day 2
+## Day 2
 
 睡了四个小时左右就被领队叫醒，让大家早餐完赶紧去会场注册，这是我们的早餐，还有憨憨的彪哥o(^▽^)o
 
@@ -60,7 +60,7 @@ tags: [Travelling]
 下午看完比赛其他人都出去玩了，我和拿笔竟然出奇一致的拿出电脑改起PPT来（囧了个囧），因为拿笔第四天要做presentation，他还没完全做好准备，我虽然是第六天，但是鉴于自己渣渣的英语水平还是果断在准备准备吧，一天竟然就这么过去了。。
 
 
-##Day 3
+## Day 3
 
 今天上午是大会的opening session，大家都要出席，就是过来听各种领导讲话
 
@@ -122,7 +122,7 @@ opening session结束后还有个coffee break，在一个大厅里有各种饮�
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/DSCN0814.JPG)
 
 
-##Day 4
+## Day 4
 
 今天是个重要的日子，因为拿笔要上台做presentation，他被安排在上午最后一个压轴出场，但是我们还是早早的来到会场，能感觉我他也是有点紧张的。不过拿笔的英文好赖还是比我强很多的，很顺利的就结束了，之前预想的报告结束之后的各种提问和激烈讨论并没有出现，可能大家都饿了，等着吃午饭呢(-｡-;)
 
@@ -146,7 +146,7 @@ opening session结束后还有个coffee break，在一个大厅里有各种饮�
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/WeChatImage635562728594695539)
 
 
-##Day 5
+## Day 5
 今天是个悲桑的一天，想到第二天要做汇报，再想到自己渣渣英语，实在不好意思出去浪了，拿笔和彪哥他们去海洋馆玩了，我就呆屋里练ppt(T_T)
 
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/DSCN1031.JPG)
@@ -164,7 +164,7 @@ opening session结束后还有个coffee break，在一个大厅里有各种饮�
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/DSCN1245.JPG)
 
 
-##Day 6
+## Day 6
 
 终于等到了今天，我也是上午最后一个登台，早早起床整装待发，特发自拍照一枚(●'◡'●)
 
@@ -179,7 +179,7 @@ opening session结束后还有个coffee break，在一个大厅里有各种饮�
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/DSCN1106.JPG)
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/DSC04491.JPG)
 
-##Day 7
+## Day 7
 今天终于可以毫无顾虑的痛痛快快出去玩耍了，我和拿笔决定去远离市区号称美洲三大瀑布之一的蒙特伦西瀑布(Montmonency Fall) 去看看，说走就走，一次3加元的公交
 
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/DSC04538.JPG)
@@ -227,7 +227,7 @@ opening session结束后还有个coffee break，在一个大厅里有各种饮�
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/DSCN1212.JPG)
 
 
-##Day 8
+## Day 8
 time flies，转眼这趟旅途就到了尾声，为了赶飞机，凌晨三点就起床搭小飞机去多伦多转机
 
 ![](http://7u2eve.com1.z0.glb.clouddn.com/canada/IMG_20000101_082343.jpg)

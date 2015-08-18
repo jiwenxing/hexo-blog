@@ -6,7 +6,7 @@ tags: [GitHub,Git]
 
 虽然很早就接触github，但对git的版本控制并不了解，最近开始学习使用git，对其使用简单做一些整理。<!-- more -->
 
-##git 介绍
+## git 介绍
 `Git`是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。关于她的特点[`Git`官网](http://www.git-scm.com/)是这么介绍的：   
 
 > Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  
@@ -17,9 +17,9 @@ tags: [GitHub,Git]
 
 以下为本人学习`git`过程中的一些练习和笔记，相关参考：[廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
-##git 本地仓库常用操作
+## git 本地仓库常用操作
 
-###git 创建本地仓库
+### git 创建本地仓库
     $ mkdir learngit  //创建文件夹  
     $ cd learngit  
     $ pwd   //查看当前目录  
@@ -34,7 +34,7 @@ tags: [GitHub,Git]
     $ git reset --hard HEAD^  //回退上个版本  
 在`Git`中，用`HEAD`表示当前版本，上一个版本就是`HEAD^`，上上一个版本就是`HEAD^^`，当然往上`100`个版本写`100`个`^`比较容易数不过来，所以写成`HEAD~100`。
 
-###回退后又想恢复怎么办？
+### 回退后又想恢复怎么办？
     $ git reset --hard commit_id //即可，但是怎么知道上次回滚的commit_id呢？  
     $ git reflog  
     289f53a HEAD@{0}: reset: moving to HEAD^  
@@ -46,7 +46,7 @@ tags: [GitHub,Git]
  
 `git reflog`可以查看命令历史，于是我们知道 `add a line` 的`commit_id`是`ba423b7`
 
-###git 的撤销修改
+### git 的撤销修改
 1，如果只是在本地做了一些修改，没有执行`commit`也没有`add`操作，使用`git status`可以看到红色字体提示 `modified: <file>  `
    这时如果不想保存本地修改，即丢弃工作区修改，直接执行`git checkout -- <file>`即可（`git status`有提示）  
 2，如果已经执行了`add`还没有`commit`想回滚，可以执行`$ git reset HEAD readme.txt`将暂存区修改内容回退到工作区，如果还想撤回本地修改，执行步骤1即可  
@@ -59,9 +59,9 @@ tags: [GitHub,Git]
 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令`git reset HEAD file`，就回到了场景1，第二步按场景1操作。  
 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
 
-##git 远程仓库
+## git 远程仓库
 
-###git 远程仓库基本操作
+### git 远程仓库基本操作
 以上所讲只是在一个本地仓库里管理文件历史，我们知道`git`是一个分布式的版本控制系统，即同一个`git`仓库可以分布在不同的服务器上，很庆幸`github`这个网站便可以提供免费的仓库托管服务。
 
 先在`github`上注册账号登陆后`Create a new repo`新建一个仓库，例如`learngit`，于是便在`github`上新建了一个空仓库  
@@ -79,10 +79,10 @@ tags: [GitHub,Git]
 `https`路径： `https://github.com/jiwenxing/learngit.git`  
 通过`ssh`支持的原生`git`协议速度最快。但是在某些特定环境ssh端口被封掉时可以采用`https`，唯一不便的是每次提交都需要输入一下用户名和密码！
 
-###git 从远程仓库 clone
+### git 从远程仓库 clone
     git clone https://github.com/h5bp/html5-boilerplate.git
 
-###git 分支管理
+### git 分支管理
 
 `git`创建并切换到新分支 
  
@@ -136,7 +136,7 @@ tags: [GitHub,Git]
 - 合并某分支到当前分支：`git merge <name>`
 - 删除分支：`git branch -d <name>`
 
-###git 分支冲突
+### git 分支冲突
     
     $ git checkout -b feature1  //创建并切换到新分支，并对test文件做修改
     fatal: A branch named 'feature1' already exists.
@@ -189,7 +189,7 @@ tags: [GitHub,Git]
 **注意：**  
 合并分支指令`$ git merge feature1`默认使用的是`fast forward`模式，这样合并并不记录合并历史，而使用指令`$ git merge --no-ff -m "merge with no-ff" dev`则是使用普通模式合并代码，合并后有历史记录，建议采用后一种。
 
-###git 分支管理策略
+### git 分支管理策略
 
 > 注：该部分内容参考自文章[《Git 分支管理详解》](http://www.oschina.net/question/31384_157479)
 
@@ -205,7 +205,7 @@ tags: [GitHub,Git]
 - `bug`分支`fixbug`：软件正式发布以后，难免会出现bug。这时就需要创建一个分支，进行`bug`修补。修补`bug`分支是从`Master`分支上面分出来的。修补结束以后，再合并进`Master`和`Dev`分支。
    ![](http://static.oschina.net/uploads/img/201406/05112016_PIf1.png)
   
-##使用`github`参与开源项目
+## 使用`github`参与开源项目
 
 访问自己感兴趣的项目主页（例如`bootstrap`项目`https://github.com/twbs/bootstrap`）， 点右上角的`“Fork”`就在自己的账号下克隆了一个`bootstrap`仓库，然后，**从自己的账号下`clone`**：  
 
