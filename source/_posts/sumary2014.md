@@ -53,7 +53,7 @@ and Jenny, Kundi, 江雨, 散人王, Forecho, Spock and ... ...
 I spent the first year implementing my initial idea on the research smoothly. That was a giant enhancement for my self-confidence and I planned to finished my second idea using the next year. I had been always believed that I can realize whatever if I really decide to do until I finally give up after several hard attempts. Maybe it is nothing serious about my thesis, but it makes me start to doubt myself, and it is a little difficulty to rebuild the self-confidence. Remember, giving up should be never allowed!
 
 - Setbacks in affection
-I am always confused about that what shall I do if I love someone who doesn't love me. especially the 'someone' is one of your best friend. Because it takes me a long time to fall in love with someone and takes me longer to clean her away from my heart. Sometimes you have to sacrifice love in order to save friendship, but sometimes just the opposite!
+Sometimes you have to sacrifice friendship for love, but sometimes just the opposite!
 
 - Setbacks in job application
 It is not a smooth process. Sometimes you will get tired, you will be refused or cheated and sometimes you will lose your confidence. But you do need to believe that you will get what you want as long as you stick up to the end. Remember, this is true!
