@@ -1,7 +1,7 @@
 title: JSONP error handling with jquery.ajax
 date: 2015-07-27 23:50:15
 categories: Coding
-tags: [JavaScript] 
+tags: [Java] 
 ---
 这几天想对自己的博客做一些优化，例如我的相册是通过Instagram提供的api以Ajax封装的jsonp跨域请求方式获取照片来展示，但是需要翻墙才能访问，我希望如果用户未翻墙导致访问失败后能够调用error callback展示另一个页面。<!-- more -->
 

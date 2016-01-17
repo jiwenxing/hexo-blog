@@ -120,7 +120,7 @@ var Instagram = (function(){
 			},
 			error:function(){  
     			//alert("hello error");
-    			$('<section><h1 class="warncontainer">BAD REQUEST</h1><p class="warncontainer1"><strong>Dear friend, I am so sorry that your request has been blocked by the damned Great Fire Wall. Fxxk the GFW</strong></p><p id="suggestions">If you are still trying to visit this page,<a href="http://www.zhiyanblog.com/goagent-chrome-switchyomega-proxy-2015-latest.html">click here</a> to learn how to surf the Internet over the <strong>Great Fire Wall,</strong> or <a href="http://xskywalker.software.informer.com/">click here</a> to download <strong>xskywalker</strong> to visit directly.<p></section>').appendTo($(".instagram")); 
+    			$('<section><h1 class="warncontainer">BAD REQUEST</h1><p class="warncontainer1"><strong>Dear friend, I am so sorry that your request has been blocked by the damned Great Fire Wall. Fxxk the GFW</strong></p><p id="suggestions">If you are still trying to visit this page,<a href="http://pan.baidu.com/s/1pKrBFwZ">click here</a> to download <strong>Lantern</strong> to visit over the <strong>Great Fire Wall</strong>.<p></section>').appendTo($(".instagram")); 
 			},
 /*			error:function(XMLHttpRequest, textStatus, errorThrown){
 		        alert(XMLHttpRequest.status);
