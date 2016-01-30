@@ -28,34 +28,148 @@ tags: [Java]
 
 #### 签约结果异步通知
 尽管签约结果是异步通知给商户的，但是根据微信工程师介绍及实测，签约结果通知几乎是实时的，也就是说绝大多数情况下，当用户在微信端签约完成返回到商户app之前商户已经收到通知了，但是为了慎重起见回到商户app之后前端可以做一个查询签约结果的效果稍微拖延一下用户，等待一两秒再去调用查询接口查询签约结果。
-#### 解约同签约，不同的是解约的notify_url是在商户后台设置的。
+
+#### 解约同签约，不同的是解约的notify_url是在商户后台设置的。附收到的解约通知：
+```xml
+<xml>
+	<change_type>DELETE</change_type>
+	<contract_code>5feb99af29c340b69bc6800ca3066a8d</contract_code>
+	<contract_id>201512210005943896</contract_id>
+	<contract_termination_mode>2</contract_termination_mode>
+	<mch_id>123837873</mch_id>
+	<openid>oTxn5wu4H5sa5Bj9wwjsItssU7M8</openid>
+	<operate_time>2015-12-21 19:37:23</operate_time>
+	<plan_id>12227</plan_id>
+	<request_serial>9223372036854775807</request_serial>
+	<result_code>SUCCESS</result_code>
+	<return_code>SUCCESS</return_code>
+	<return_msg>OK</return_msg>
+	<sign>FA84C9EA12F90550A5D32875AA0E1612</sign>
+</xml>
+```
 
 ## 支付&退款
 对于财务系统很简单或者根本就没有财务系统的小商户来说，支付这部分开发会比较容易，只需要按照微信的接口文档调通接口，用户支付钱打到商户号绑定的银行卡即可。但是对于比较大型的商户，一般支付会涉及到订单系统、交易系统、台账系统、财务系统、仓储系统等，中间的逻辑就需要厘清。下面也简单介绍几点支付需要注意的问题。
 
 #### 支付结果异步通知
 调用支付接口支付完成后会返回一个实时结果，如果支付成功也会返回<result_code><![CDATA[SUCCESS]]></result_code>，但是不能根据此信息确认支付成功，这只说明支付请求没有出现异常，最终的支付业务成功还是需要收到异步通知结果才能确定。但是如果返回“SYSTEMERROR”及“BANKERROR”异常时，则需要调用查询接口确认支付结果。
+注意微信的文档写的不太规范，起初拿到的文档里面写的是“余额不足”及“超限额”的异常是在同步结果中返回，后来经过测试发现“超限额”异常是同步返回，没有异步通知；但是“余额不足”异常同步返回成功，异步才会告知异常！并且异步返回异常时并不会回传包括“attach”字段在内的一些信息。下面是一些实际的测试数据：
+- 超限额时同步返回结果，无异步通知 
+```xml  
+<xml>
+	<return_code><![CDATA[SUCCESS]]></return_code>
+	<return_msg><![CDATA[OK]]></return_msg>
+	<appid><![CDATA[wxcb5534cjskdhfks3]]></appid>
+	<mch_id><![CDATA[123837873]]></mch_id>
+	<nonce_str><![CDATA[ZWju0IDf2U6ZJgXq]]></nonce_str>
+	<sign><![CDATA[AE6EC119E21A8D64BE485938A93B0464]]></sign>
+	<result_code><![CDATA[FAIL]]></result_code>
+	<err_code><![CDATA[RULELIMIT]]></err_code>
+	<err_code_des><![CDATA[交易金额超出限制]]></err_code_des>
+</xml>  
+```
+- 余额不足时同步返回结果及异步通知  
+同步结果： 
+
+```xml  
+<xml>
+	<return_code><![CDATA[SUCCESS]]></return_code>
+	<return_msg><![CDATA[OK]]></return_msg>
+	<appid><![CDATA[wxcb5534cjskdhfks3]]></appid>
+	<mch_id><![CDATA[123837873]]></mch_id>
+	<nonce_str><![CDATA[lqfYK0sdRoje8IWP]]></nonce_str>
+	<sign><![CDATA[AFB905E34349B94B20B595234FEA3846]]></sign>
+	<result_code><![CDATA[SUCCESS]]></result_code>
+</xml>  
+```
+
+
+异步通知：  
+
+```xml  
+<xml>
+	<appid><![CDATA[wxcb5534cjskdhfks3]]></appid>
+	<contract_id><![CDATA[20160122684623938]]></contract_id>
+	<err_code><![CDATA[NOTENOUGH]]></err_code>
+	<err_code_des><![CDATA[银行卡可用余额不足（如信用卡则为可透支额度不足），请核实后再试]]></err_code_des>
+	<mch_id><![CDATA[123837873]]></mch_id>
+	<nonce_str><![CDATA[5VYnrTNjA1kx9nDg]]></nonce_str>
+	<out_trade_no><![CDATA[5410416012212010000020269]]></out_trade_no>
+	<result_code><![CDATA[FAIL]]></result_code>
+	<return_code><![CDATA[SUCCESS]]></return_code>
+	<return_msg><![CDATA[OK]]></return_msg>
+	<sign><![CDATA[66A1DF6591BB83ECC8AB79DF127C2153]]></sign>
+</xml>   
+```
+
+- 支付成功时的异步通知 
+
+```xml  
+<xml>  
+	<appid><![CDATA[wxcb5534cjskdhfks3]]></appid>
+	<attach><![CDATA[{"amount":"29.90","Pin":"wenzibin2005","agencyCode":"541"}]]></attach>
+	<bank_type><![CDATA[SPDB_DEBIT]]></bank_type>
+	<cash_fee><![CDATA[2990]]></cash_fee>
+	<cash_fee_type><![CDATA[CNY]]></cash_fee_type>
+	<contract_id><![CDATA[20160122684623938]]></contract_id>
+	<fee_type><![CDATA[CNY]]></fee_type>
+	<is_subscribe><![CDATA[N]]></is_subscribe>
+	<mch_id><![CDATA[123837873]]></mch_id>
+	<nonce_str><![CDATA[pgYQFmLoHdigrN67]]></nonce_str>
+	<openid><![CDATA[oTxn5wpEQxnmRuj0e_bbT5KJLw]]></openid>
+	<out_trade_no><![CDATA[5410416012514320000182171]]></out_trade_no>
+	<result_code><![CDATA[SUCCESS]]></result_code>
+	<return_code><![CDATA[SUCCESS]]></return_code>
+	<return_msg><![CDATA[OK]]></return_msg>
+	<sign><![CDATA[D4FD9613C1C6D23EA5745ED2C54EC563]]></sign>
+	<time_end><![CDATA[20151225143434]]></time_end>
+	<total_fee>2990</total_fee>
+	<trade_state><![CDATA[SUCCESS]]></trade_state>
+	<transaction_id><![CDATA[1008740918201601252891325515]]></transaction_id>
+</xml>   
+```
+
+可以发现当支付异常时（例如余额不足），异步通知的参数会少很多，只能用out_trade_no字段去识别订单。
 
 #### 支付结果查询
 据微信的研发人员介绍，支付结果查询接口需要在支付之后至少30秒才能准确获的支付结果
 
 #### 退款
-退款接口与其它接口唯一的不同是多了一个证书，官方有demo（[demo链接](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)），调试过程基本没有什么问题
+退款接口与其它接口唯一的不同是多了一个证书，官方有demo（[demo链接](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)），调试过程基本没有什么问题，附退款请求返回值：
 
+```xml  
+<xml>
+	<return_code><![CDATA[SUCCESS]]></return_code>
+	<return_msg><![CDATA[OK]]></return_msg>
+	<appid><![CDATA[wxcb5534cjskdhfks3]]></appid>
+	<mch_id><![CDATA[123837873]]></mch_id>
+	<nonce_str><![CDATA[oQxaMheGcTSjZH7o]]></nonce_str>
+	<sign><![CDATA[6764C2086F4AD1097AEFC25329410BBB]]></sign>
+	<result_code><![CDATA[SUCCESS]]></result_code>
+	<transaction_id><![CDATA[1005550918201512252307432422]]></transaction_id>
+	<out_trade_no><![CDATA[151225541003079294892]]></out_trade_no>
+	<out_refund_no><![CDATA[1512251854113034514]]></out_refund_no>
+	<refund_id><![CDATA[2005550918201512250112155398]]></refund_id>
+	<refund_channel><![CDATA[]]></refund_channel>
+	<refund_fee>5</refund_fee>
+	<coupon_refund_fee>0</coupon_refund_fee>
+	<total_fee>5</total_fee>
+	<cash_fee>5</cash_fee>
+	<coupon_refund_count>0</coupon_refund_count>
+	<cash_refund_fee>5</cash_refund_fee>
+</xml>    
+```
 ## 安全
 由于支付属于安全级别比较高的业务，作为开发一定要注意可能存在的安全隐患，比如微信端接口返回数据及异步通知数据都要进行签名验证，另外部署的时候除了接收异步通知的接口以外，签约、解约、支付及退款等接口尽量都不要暴露在外网上。
 
 ## 附录
-由于目前获得的官方开发文档资料不是很详尽，特将之前开发的一些核心代码传至github以供参考（[github链接](https://github.com/jiwenxing/wechat-pap-pay)），另外附上测试过程中得各项参数及返回值列出以供参考：
+由于目前获得的官方开发文档资料不是很详尽，特将之前开发的一些核心代码传至github以供参考（[github链接](https://github.com/jiwenxing/wechat-pap-pay)）
 
 - 示例签约url，直接在微信聊天页面点击链接即可（不要输入密码哦）
 >https://api.mch.weixin.qq.com/papay/entrustweb?appid=wxf5b5e87a6a0fde94&contract_code=1234632222236852fga6&contra  
 ct_display_account=%E6%B5%8B%E8%AF%95&mch_id=10000097&notify_url=http%3A%2F%2Fpaysdk.weixin.qq.com&plan_id=  
 10072&request_serial=12345&timestamp=1234&version=1.0&sign=6A04DAED91E0E61C01208119E281513A
 
-- 签约异步通知数据
-- 解约请求参数
-- 解约返回结果
 
 
 
