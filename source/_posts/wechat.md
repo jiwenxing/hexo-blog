@@ -144,8 +144,10 @@ tags: [Java]
 据微信的研发人员介绍，支付结果查询接口需要在支付之后至少30秒才能准确获的支付结果
 
 #### 退款
-退款接口与其它接口唯一的不同是多了一个证书，官方有demo（[demo链接](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)），调试过程基本没有什么问题，附退款请求返回值：
+退款接口与其它接口唯一的不同是多了一个证书，官方有demo（[demo链接](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)），调试过程基本没有什么问题，附流程图：
+<br>![](http://7u2eve.com1.z0.glb.clouddn.com/wechatrefund.jpg)
 
+退款请求返回值:
 ```xml  
 <xml>
 	<return_code><![CDATA[SUCCESS]]></return_code>
