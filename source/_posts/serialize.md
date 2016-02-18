@@ -132,8 +132,62 @@ ac95 1d0b 94e0 8b02 0000 7870 0000 07e0
 
 
 ## JSON实现序列化
-其实将对象转换为JSON格式字符串进行进程间远程通信同样也是一种序列化方式，其明文结构一目了然，可以跨语言，属性的增加减少对解析端影响较小，但是字节数过多，依赖于不同的第三方类库。而Object Serialize是java原生支持，不需要提供第三方的类库，使用比较简单。但也存在不能跨语言，有时存在兼容性等缺点。
+其实将对象转换为JSON格式字符串进行进程间远程通信同样也是一种序列化方式，其明文结构一目了然，可以跨语言，属性的增加减少对解析端影响较小，但是字节数过多，依赖于不同的第三方类库。而Object Serialize是java原生支持，不需要提供第三方的类库，使用比较简单。但也存在不能跨语言，有时存在兼容性等缺点。下面对java原生序列化和Google提供的json库gson-2.1.jar对同一对象的序列化及反序列化效率做一个对比。
+java原生序列化/反序列化
+```java
+//---测试java内置序列化和gson序列化性能---
+Student student = new Student("jverson", "secret", 'M', 2016);
+int MAX_LOOP = 1000000;
+long start = System.currentTimeMillis();
+for(int i=0; i<MAX_LOOP; i++){
+	//序列化
+	ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
+	ObjectOutputStream oout = new ObjectOutputStream(byteStream);
+	oout.writeObject(student);
+	byte[] binary = byteStream.toByteArray();
+	//反序列化
+	ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(binary);
+	ObjectInputStream oin = new ObjectInputStream(byteArrayInputStream);
+	Student deseriStudent = (Student)oin.readObject();
+}
+long end = System.currentTimeMillis();
+System.out.println("Object serialization time: "+(end-start));
+```
+Gson序列化/反序列化
+```java
+//---测试java内置序列化和gson序列化性能---
+Student student = new Student("jverson", "secret", 'M', 2016);
+int MAX_LOOP = 1000000;
+long start = System.currentTimeMillis();
+for(int i=0; i<MAX_LOOP; i++){
+	//序列化
+	Gson gson = new Gson();
+	String stuJson = gson.toJson(student);
+	//反序列化
+	Student stuObject = gson.fromJson(stuJson, Student.class);
+}
+long end = System.currentTimeMillis();
+System.out.println("Gosn serialization time: "+(end-start));
+```
+注意Gson使用的是[gson-2.1.jar](http://grepcode.com/snapshot/repo1.maven.org/maven2/com.google.code.gson/gson/2.1)，得到测试结果如下：
+>Object serialization time: 20163
+Gosn serialization time: 23354
+
+可见在针对上述Student这个对象的序列化和反序列化，java原生的序列化效率较Gson略为占优。我们发现Student对象属性都是一些基本数据类型，如果我们再加上一些对象的引用测试结果会怎么样呢？首先为对象添加一个Map类型的属性如下：
+```java
+Map<String, Object> parent = new HashMap<String, Object>();
+parent.put("Mom", "mother");
+parent.put("Dad", "father");
+Student student = new Student("jverson", "secret", 'M', 2016, parent);
+```
+
+测试条件不变，得到测试结果为：
+>Object serialization time: 28674
+Gosn serialization time: 40533
+
+不难发现两者的效率差距进一步扩大，但是不同Json序列化实现方式效率也不同，另外也和对象的结构和复杂程度有关，由于没有进一步测试，因此这里并没有孰优孰劣的定论。在效率要求不是很严格的场景下，我们可以根据需要灵活地使用不同的序列化方式，或者也可以使用本文类似的方法针对具体的场景进行效率测试从而选用更为高效的序列化方式。
 
 ## reference
-- [Java中的序列化Serialable高级详解](http://blog.csdn.net/jiangwei0910410003/article/details/18989711)
+- [Java 中的序列化Serialable高级详解](http://blog.csdn.net/jiangwei0910410003/article/details/18989711)
 - [Java 序列化 (Serializable) 的作用](http://www.oschina.net/question/4873_23270)
+- [Java 内置序列化与Gson性能比较](http://www.tuicool.com/articles/2Q3M73)
