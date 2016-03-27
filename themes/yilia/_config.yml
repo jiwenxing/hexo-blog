@@ -1,0 +1,54 @@
+# Header
+menu:
+  主页: /
+  技术文章: /categories/Coding
+  随笔: /categories/Thinking
+  相册: /instagram
+subtitle: 地质专业搞导航的Web程序猿
+# SubNav
+subnav:
+  github: "https://github.com/jiwenxing"
+  weibo: "http://weibo.com/1956200350"
+  #rss: "#"
+  zhihu: "http://www.zhihu.com/people/jverson"
+  #douban: "#"
+  #mail: "Jverson@126.com"
+  facebook: "https://www.facebook.com/wenxing.ji.9"
+  #google: "#"
+  #twitter: "#"
+  #linkedin: "#"
+
+rss: /atom.xml
+
+# Content
+excerpt_link: more
+fancybox: true
+mathjax: true
+
+# Miscellaneous
+google_analytics: ''
+favicon: "http://7u2eve.com1.z0.glb.clouddn.com/0000312d37073acde1b8fc274ebf1218_600_600-img2ico.net.ico"
+
+#你的头像url
+avatar: "http://7u2eve.com1.z0.glb.clouddn.com/000020120608161752_RzKAE.thumb.600_0.jpeg"
+#是否开启分享
+share: true
+#是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
+#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
+duoshuo: true
+#是否开启云标签
+tagcloud: true
+
+#是否开启友情链接
+#不开启——
+friends: false
+#开启——
+#About me: https://about.me/Jverson
+#  卡卡的美丽传说: http://localhost:4000/
+
+
+#是否开启“关于我”。
+#不开启——
+#aboutme: false
+#开启——
+aboutme: “TO ACCOMPLISH GREAT THINGS, WE MUST NOT ONLY ACT, BUT ALSO DREAM, NOT ONLY PLAN, BUT ALSO BELIEVE.”
