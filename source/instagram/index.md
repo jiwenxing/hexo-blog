@@ -1,6 +1,4 @@
 ---
-layout: post
-slug: "instagram"
 title: "My album"
 noDate: "true"
 ---

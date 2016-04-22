@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Jverson's blog
-#subtitle: Ô½Å¬Á¦£¬¾ÍÔ½ĞÒÔË
+title: å¢¨è¨€
+subtitle: æ¡ƒææ˜¥é£ä¸€æ¯é…’ æ±Ÿæ¹–å¤œé›¨åå¹´ç¯
 description: jiwenxing's blog | java | web | Jverson
 author: Jverson
 email: Jverson@126.com
-language: 
+language: zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -36,6 +36,7 @@ post_asset_folder: false
 relative_link: false
 highlight:
   enable: true
+  ##auto_detect: true
   line_number: true
   tab_replace:
 
@@ -79,7 +80,7 @@ disqus_shortname:
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: yilia
+theme: maupassant
 exclude_generator:
 
 # Deployment
@@ -95,6 +96,6 @@ deploy:
 #backup
 backup:
     type: git
-    theme: yilia
+    theme: maupassant
     repository:
        github: git@github.com:jiwenxing/blogbackup.git,master
