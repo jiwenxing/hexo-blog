@@ -18,8 +18,8 @@ var Instagram = (function(){
 			for(var i=0,len=data[em].srclist.length;i<len;i++){
 				liTmpl += '<li>\
 								<div class="img-box">\
-									<a class="img-bg" rel="example_group" href="'+data[em].bigSrclist[i]+'" title="'+data[em].text[i]+'"></a>\
-									<img lazy-src="'+data[em].srclist[i]+'" alt="">\
+									<a class="img-bg" rel="example_group" href="'+data[em].bigSrclist[i]+'" title="'+data[em].text[i]+'">\
+									<img lazy-src="'+data[em].srclist[i]+'" alt=""></a>\
 								</div>\
 							</li>';		
 			}
@@ -61,8 +61,14 @@ var Instagram = (function(){
 			var y = d.getFullYear();
 			var m = d.getMonth()+1;
 			var da = d.getDate();
-			var src = replacer(data[i].images.low_resolution.url);
-			var bigSrc = replacer(data[i].images.standard_resolution.url); 
+			// console.log("tags:"+data[i].tags);
+			// console.log("likes:"+data[i].likes.count);
+			// console.log("low:"+data[i].images.low_resolution.url);
+			// var src = replacer(data[i].images.low_resolution.url);
+			var src = data[i].images.low_resolution.url;
+			// console.log("stanrdard:"+data[i].images.standard_resolution.url);
+			// var bigSrc = replacer(data[i].images.standard_resolution.url); 
+			var bigSrc = data[i].images.standard_resolution.url; 
 			//var text = data[i].caption.text;
 			if(data[i].caption.text==null){
 				var text = "no description by Totoro";
@@ -95,7 +101,7 @@ var Instagram = (function(){
 			url: url,
 			type: "GET",
 			dataType: "jsonp",
-			timeout: 3000,
+			timeout: 5000,
 			success:function(re){
 				if(re.meta.code == 200){
 					_collection = _collection.concat(re.data);
@@ -108,14 +114,6 @@ var Instagram = (function(){
 					}
 				}else{
 					 alert("hello success!");
-/*					$('<div class="warncontainer">
-				      <h1>Bad Request!</h1>
-				      <p><strong>Dear friend, I am so sorry that your request has been blocked by the evil Great Fire Wall.</strong></p>
-				      <p>
-				        If you are still trying to visit this page,
-				        <a href="http://www.zhiyanblog.com/goagent-chrome-switchyomega-proxy-2015-latest.html">click here</a> to learn how to surf the Internet over the <strong>Great Fire Wall</strong>
-				        or <a href="http://xskywalker.software.informer.com/">click here</a> to download <strong>xskywalker</strong> to visit.
-				      </p>').appendTo($(".instagram"));*/
 				}
 			},
 			error:function(){  
@@ -164,13 +162,13 @@ var Instagram = (function(){
 	return {
 		init:function(){
 			//getList("https://api.instagram.com/v1/users/2059681846/media/recent/?access_token=2059681846.4f38fd6.b4d5736e2ec1402190815007124c66b8&count=100");
-			var insid = $(".instagram").attr("data-client-id");
-			if(!insid){
-				alert("Didn't set your instagram client_id.\nPlease see the info on the console of your brower.");
-				console.log("Please open 'https://instagram.com/developer/clients/manage/' to get your client-id.");
-				return;
-			}
-			getList("https://api.instagram.com/v1/users/2059681846/media/recent/?client_id="+insid+"&count=100");
+			// var insid = $(".instagram").attr("data-client-id");
+			// if(!insid){
+			// 	alert("Didn't set your instagram client_id.\nPlease see the info on the console of your brower.");
+			// 	console.log("Please open 'https://instagram.com/developer/clients/manage/' to get your client-id.");
+			// 	return;
+			// }
+			getList("https://api.instagram.com/v1/users/self/media/recent/?access_token=2059681846.4f38fd6.d309de8a11a94a2ba0a4f2b84910cace");
 			bind();
 		}
 	}

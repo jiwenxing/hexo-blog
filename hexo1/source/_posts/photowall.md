@@ -1,7 +1,0 @@
-title: THAT WINTER
-date: 2014-12-28 21:38:23
-categories: Thinking
-tags: [memory]
----
-
-IT WAS A SPECIAL WINTER. SOMEONE SPECIAL WITH THE COMING OF ONCE-IN-HALF-CENTURY BIGGEST SNOW IN PEKING.<!-- more --> 
