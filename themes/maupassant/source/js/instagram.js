@@ -118,7 +118,7 @@ var Instagram = (function(){
 			},
 			error:function(){  
     			//alert("hello error");
-    			$('<section><h1 class="warncontainer">BAD REQUEST</h1><p class="warncontainer1"><strong>Dear friend, I am so sorry that your request has been blocked by the damned Great Fire Wall. Fxxk the GFW</strong></p><p id="suggestions">If you are still trying to visit this page,<a href="http://pan.baidu.com/s/1pKrBFwZ">click here</a> to download <strong>Lantern</strong> to visit over the <strong>Great Fire Wall</strong>.<p></section>').appendTo($(".instagram")); 
+    			$('<section><h1 class="warncontainer">BAD REQUEST</h1><p class="warncontainer1"><strong>Dear friend, I am so sorry that your request has been blocked by the damned Great Fire Wall. Fxxk the GFW</strong></p><p id="suggestions">If you are still trying to visit this page,<a href="https://getlantern.org/">click here</a> to download <strong>Lantern</strong> to visit over the <strong>Great Fire Wall</strong>.<p></section>').appendTo($(".instagram")); 
 			},
 /*			error:function(XMLHttpRequest, textStatus, errorThrown){
 		        alert(XMLHttpRequest.status);
