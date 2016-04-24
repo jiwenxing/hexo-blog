@@ -25,7 +25,7 @@ var Instagram = (function(){
 			}
 
 			
-			$('<section class="archives album"><h1 class="year">'+data[em].year+'<em>'+data[em].month+'月</em></h1>\
+			$('<section class="archives album"><span class="date-icon"></span><h1 class="year">'+data[em].year+'<em>'+data[em].month+'月</em></h1>\
 			<ul class="img-box-ul">'+liTmpl+'</ul>\
 			</section>').appendTo($(".instagram"));
 			
@@ -174,5 +174,6 @@ var Instagram = (function(){
 	}
 })();
 $(function(){
+	$('<a href="https://instagram.com/jverson1053" target="_blank" class="open-ins" style="float:right;font-size:15px;color:#6E7173;margin-top:10px">图片来自我的Instagram，点此访问</a>').appendTo($(".post-title"));
 	Instagram.init();
 })
