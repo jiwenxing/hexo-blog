@@ -59,7 +59,7 @@
                 var t = target.offset().top;
                 var l = target.offset().left;
                 var tempDom = target.clone().addClass("lazy-loding").insertBefore(target);
-                tempDom[0].src = "/img/img-loading.png";
+                tempDom[0].src = "/img/img-loading.gif";
                 target.hide();
             }
             /**
