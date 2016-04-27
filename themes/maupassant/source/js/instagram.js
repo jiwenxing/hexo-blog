@@ -155,6 +155,7 @@ var Instagram = (function(){
 			var width = $(".img-box-ul").width();
 			var size = Math.max(width*0.26, 157);
 			$(".img-box").width(size).height(size);
+			$(".open-ins").css({"font-size":"15px"}); 
 		}
 	}
 
