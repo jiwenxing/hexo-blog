@@ -101,7 +101,7 @@ var Instagram = (function(){
 			url: url,
 			type: "GET",
 			dataType: "jsonp",
-			timeout: 5000,
+			timeout: 8000,
 			success:function(re){
 				if(re.meta.code == 200){
 					_collection = _collection.concat(re.data);
@@ -145,7 +145,12 @@ var Instagram = (function(){
 
 	var changeSize = function(){	
 		if($(document).width() <= 600){
-			$(".img-box").css({"width":"auto", "height":"auto"});
+			var width = $(".img-box-ul").width();
+			var size = Math.max(width*0.35, 137);
+			$(".img-box").width(size).height(size);
+			$(".img-box").css({"margin-bottom":"10px"});
+			$(".open-ins").css({"font-size":"10px"}); //缩小字体避免换行
+			//$(".img-box").css({"width":"auto", "height":"auto"});
 		}else{
 			var width = $(".img-box-ul").width();
 			var size = Math.max(width*0.26, 157);
@@ -162,7 +167,7 @@ var Instagram = (function(){
 	return {
 		init:function(){
 			//getList("https://api.instagram.com/v1/users/2059681846/media/recent/?access_token=2059681846.4f38fd6.b4d5736e2ec1402190815007124c66b8&count=100");
-			// var insid = $(".instagram").attr("data-client-id");
+			// var insid = $(".instagram").attr("data-client-id");  $(".img-box").css({"margin-bottom":"10px","margin-bottom":"10px"});
 			// if(!insid){
 			// 	alert("Didn't set your instagram client_id.\nPlease see the info on the console of your brower.");
 			// 	console.log("Please open 'https://instagram.com/developer/clients/manage/' to get your client-id.");
