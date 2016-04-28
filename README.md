@@ -16,5 +16,6 @@ sources backup for my github blog
 
 5. backup after edition everytime ensure you can blog anywhere and any computer    
 > hexo backup
+git push origin master
 
 Reference: https://github.com/coneycode/hexo-git-backup
