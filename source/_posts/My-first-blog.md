@@ -2,6 +2,7 @@ title: 建立你的个人独立博客
 date: 2014-03-04 10:49:16
 categories: Thinking
 tags: [GitHub]
+toc: true
 ---
 我希望用我在Github上的第一篇博客来记录我三天以来搭建博客的过程及一些感受，一方面记录遇到的些问题和解决方法，另一方面谈谈自己的认识。注意这不是一篇建站指南，如果您需要比较详尽的建站教程请移步《[如何搭建一个独立博客——简明Github Pages与Hexo教程](http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/)》。
 <!-- more -->

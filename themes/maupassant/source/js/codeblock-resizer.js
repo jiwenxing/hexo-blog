@@ -7,6 +7,17 @@
         this.$codeBlocks = $(elem);
     };
 
+    var changeTitleSize = function(){    
+        if($(document).width() <= 600){
+            $(".description").css({"font-size":"12px"}); //副标题
+            $("#logo").css({"font-size":"35px"}); //标题
+            //$(".img-box").css({"width":"auto", "height":"auto"});
+        }else{
+            $(".description").css({"font-size":"18px"}); //副标题
+            $("#logo").css({"font-size":"55px"}); //标题
+        }
+    }
+
     CodeBlockResizer.prototype = {
         /**
          * Run main feature
@@ -37,6 +48,7 @@
                 $code.css('width', width);
                 $code.children('pre').css('width', width);
             });
+            changeTitleSize();
         }
     };
 

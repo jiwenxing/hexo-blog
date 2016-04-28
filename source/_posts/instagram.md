@@ -2,6 +2,7 @@ title: Maupassant主题添加Instagram相册
 date: 2015-12-29 19:09:42
 categories: Coding
 tags: [JavaScript]
+toc: true
 ---
 
 之前一直使用一个叫[**yilia**](https://github.com/litten/hexo-theme-yilia)的主题，很喜欢它相册的功能，可以直接将Instagram的照片拉取过来展示到博客。直到我遇见了[**Maupassant**](https://github.com/pagecho/maupassant)，一眼就喜欢上了，非常简洁耐看，而且相比较之前的yilia多了一分朴素和稳重。<!-- more -->
@@ -26,7 +27,14 @@ noDate: "true"
 <script src="/js/jquery.lazyload.js"></script>
 <script src="/js/instagram.js"></script>
 ```
-这里主要设置一下相册的标题以及引用加载照片需要的js资源，后面请求到的照片便会填充到class="instagram"的div中。这时候再deploy一下就会发现相册页签已经出现了，当然还没有照片。这是你需要将页面引用的“jquery.lazyload.js”及“instagram.js”文件添加到**主题根目录**下source文件夹下的js文件夹中，[下载链接](https://github.com/litten/hexo-theme-yilia/tree/master/source/js)。
+这里主要设置一下相册的标题以及引用加载照片需要的js资源，后面请求到的照片便会填充到class="instagram"的div中。然后进入到主题的根目录下打开_config.yml文件，在menu的配置中添加相册menu的名称、路径及图标信息如下：
+
+> \- page: album   
+     directory: instagram/  
+     icon: fa-picture-o 
+
+
+这时候再deploy一下就会发现相册页签已经出现了，当然还没有照片。这是你需要将页面引用的“jquery.lazyload.js”及“instagram.js”文件添加到**主题根目录**下source文件夹下的js文件夹中，[下载链接](https://github.com/litten/hexo-theme-yilia/tree/master/source/js)。
 
 ## Instagram接口
 

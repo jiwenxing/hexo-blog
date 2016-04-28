@@ -2,6 +2,7 @@ title: 深入理解Java序列化
 date: 2016-02-03 16:09:42
 categories: Coding
 tags: [Java]
+toc: true
 ---
 
 

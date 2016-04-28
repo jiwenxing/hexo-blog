@@ -52,6 +52,7 @@ tag_map:
 archive: 2
 category: 1
 tag: 2
+## Archives
 archive_generator:
   per_page: 20
   yearly: true

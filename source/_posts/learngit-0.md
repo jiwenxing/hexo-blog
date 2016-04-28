@@ -2,6 +2,7 @@ title: Git学习笔记
 date: 2015-07-15 23:21:42
 categories: Coding
 tags: [GitHub,Git]
+toc: true
 ---
 
 虽然很早就接触github，但对git的版本控制并不了解，最近开始学习使用git，对其使用简单做一些整理。<!-- more -->

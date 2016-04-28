@@ -16,9 +16,10 @@ rss: 订阅
 guestbook: 留言
 home: 首页
 recent_comments: 最近评论
-# Readmore: 阅读更多
+#Readmore: 阅读更多
 Readmore: Readmore
 belongsto: 分类于
 contents: 文章目录
 shareto: 分享到
 album: 相册
+visitors: 访客统计

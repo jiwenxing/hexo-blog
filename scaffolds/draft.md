@@ -1,3 +1,6 @@
 title: {{ title }}
-tags:
+date: {{ date }}
+categories: Coding Thinking
+tags: []
+toc: true
 ---
