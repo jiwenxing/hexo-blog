@@ -184,7 +184,7 @@ a:focus {
         text-indent: .15em;
         &:before {
               font-family: "FontAwesome";
-              content: "\f073";
+              content: "\f274";
               padding-right: 0.3em;
         }
         .category {
@@ -197,7 +197,7 @@ a:focus {
         #busuanzi_value_page_pv {
             &:before {
               font-family: "FontAwesome";
-              content: "\f024";
+              content: "\f234";
               padding-right: 0.3em;
             }
         }
@@ -388,6 +388,11 @@ a:focus {
 }
 
 /* for archive page starts*/
+
+  .listing {
+    font-family: "Microsoft JhengHei";
+    }
+
 .post-archive {
     font-size: 15px;
     line-height: 2;

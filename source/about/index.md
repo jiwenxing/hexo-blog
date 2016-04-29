@@ -17,11 +17,11 @@ date: 2014-06-04 23:48:28
 ### 关于我
 
  我的名字叫Totoro，但其实我只是他的邻居。<br />
- <i class="fa fa-github"></i>  Github: [jiwenxing](https://github.com/jiwenxing)
- <i class="fa fa-instagram"></i>  Instagram: [jverson1053](https://www.instagram.com/jverson1053/)
- <i class="fa fa-facebook-official"></i>  Facebook: [wenxing.ji.9](https://www.facebook.com/wenxing.ji.9)
- <i class="fa fa fa-envelope"></i>  Email: [jverson@126.com]()
- <i class="fa fa-wechat"></i>  Wechat：
+ <i class="fa fa-github fa-fw"></i>  Github: [jiwenxing](https://github.com/jiwenxing)
+ <i class="fa fa-instagram fa-fw"></i>  Instagram: [jverson1053](https://www.instagram.com/jverson1053/)
+ <i class="fa fa-facebook-official fa-fw"></i>  Facebook: [wenxing.ji.9](https://www.facebook.com/wenxing.ji.9)
+ <i class="fa fa fa-envelope fa-fw"></i>  Email: [jverson@126.com]()
+ <i class="fa fa-wechat fa-fw"></i>  Wechat：
  ![](http://7u2eve.com1.z0.glb.clouddn.com/442110507659429382.jpg)
 <br />
 

@@ -7,14 +7,17 @@
         this.$codeBlocks = $(elem);
     };
 
+    // Resize some elements according to personal preferences by jverson
     var changeTitleSize = function(){    
         if($(document).width() <= 600){
-            $(".description").css({"font-size":"12px"}); //副标题
-            $("#logo").css({"font-size":"35px"}); //标题
+            $(".description").css({"font-size":"12px"}); //subtitle
+            $("#logo").css({"font-size":"35px"}); //title
+            $(".disqus-comment-count").hide(); //小屏时 文章标题下方的评论数会换行展示，因此隐藏掉
             //$(".img-box").css({"width":"auto", "height":"auto"});
         }else{
-            $(".description").css({"font-size":"18px"}); //副标题
-            $("#logo").css({"font-size":"55px"}); //标题
+            $(".description").css({"font-size":"18px"}); //subtitle
+            $("#logo").css({"font-size":"55px"}); //title
+            $(".disqus-comment-count").show();
         }
     }
 
