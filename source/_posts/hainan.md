@@ -1,6 +1,6 @@
 title: 北纬18度的热情
 date: 2015-03-15 22:47:04
-categories: Thinking
+categories: Travelling
 tags: [Travelling]
 ---
 

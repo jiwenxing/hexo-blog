@@ -1,6 +1,6 @@
 title: A wonderful trip to Québec, Canada
 date: 2014-07-30 23:24:06
-categories: Thinking 
+categories: Travelling 
 tags: [Travelling]
 ---
 
