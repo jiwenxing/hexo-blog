@@ -149,7 +149,7 @@ var Instagram = (function(){
 			var size = Math.max(width*0.35, 137);
 			$(".img-box").width(size).height(size);
 			$(".img-box").css({"margin-bottom":"10px"});
-			$(".open-ins").css({"font-size":"10px"}); //缩小字体避免换行
+			$(".open-ins").css({"font-size":"10px"}); //缩小字体避免换行			
 			// $(".description").css({"font-size":"12px"}); //副标题
 			// $("#logo").css({"font-size":"35px"}); //标题
 			//$(".img-box").css({"width":"auto", "height":"auto"});

@@ -13,11 +13,13 @@
             $(".description").css({"font-size":"12px"}); //subtitle
             $("#logo").css({"font-size":"35px"}); //title
             $(".disqus-comment-count").hide(); //小屏时 文章标题下方的评论数会换行展示，因此隐藏掉
+            $("#header").hide(); //mobile时隐藏header便于移动端分享
             //$(".img-box").css({"width":"auto", "height":"auto"});
         }else{
             $(".description").css({"font-size":"18px"}); //subtitle
             $("#logo").css({"font-size":"55px"}); //title
             $(".disqus-comment-count").show();
+            $("#header").show(); 
         }
     }
 
@@ -39,6 +41,7 @@
          * Resize codeblocks
          */
         resize: function() {
+            changeTitleSize();
             var self = this;
             self.$codeBlocks.each(function() {
                 var $gutter = $(this).find('.gutter');
@@ -51,7 +54,6 @@
                 $code.css('width', width);
                 $code.children('pre').css('width', width);
             });
-            changeTitleSize();
         }
     };
 
