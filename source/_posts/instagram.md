@@ -75,6 +75,12 @@ noDate: "true"
 ![](http://7u2eve.com1.z0.glb.clouddn.com/TimLine%E5%9B%BE%E7%89%8720160426213510.jpg)
 
 
+## 注意（2016/06/06）
+
+最近几天访问自己的相册发现只能拉取到最近的20张照片，查了一下发现是Instagram的api做了调整，所有的api调用都会被一道沙箱环境，只有app通过审核才可以继续正常使用这些api，这也是Instagram最近规范第三方应用的一系列措施之一，不过没关系，想看更多照片点击右上方的链接进入Instagram的官网查看即可。
+
+![](http://7u2eve.com1.z0.glb.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20160608102706.png)
+
 ## References
 
 - [Instagram Developer](https://www.instagram.com/developer/endpoints/users/)

@@ -6,7 +6,7 @@ date: 2014-06-04 23:48:28
 
  > 在我们乡下，有一种神奇的小精灵，他们就像我们的邻居一样，居住在我们身边嬉戏、玩耍。但是普通人是看不到他们的，据说只有小孩子纯真无邪的心灵才可以捕捉他们的形迹，如果静下心来倾听，风声里可以隐约听到他们奔跑的声音。”
 
-![](http://7u2eve.com1.z0.glb.clouddn.com/blogElement/1212121.jpeg)
+![](http://7u2eve.com1.z0.glb.clouddn.com/710_300_20140516012053_ckRdt.jpg)
 
 
 <br /><br /><br />
@@ -16,13 +16,15 @@ date: 2014-06-04 23:48:28
 
 ### 关于我
 
- 我的名字叫Totoro，但其实我只是他的邻居。<br />
- <i class="fa fa-github fa-fw"></i>  Github: [jiwenxing](https://github.com/jiwenxing)
- <i class="fa fa-instagram fa-fw"></i>  Instagram: [jverson1053](https://www.instagram.com/jverson1053/)
- <i class="fa fa-facebook-official fa-fw"></i>  Facebook: [wenxing.ji.9](https://www.facebook.com/wenxing.ji.9)
- <i class="fa fa fa-envelope fa-fw"></i>  Email: [i@jverson.com]()
- <i class="fa fa-wechat fa-fw"></i>  Wechat：
- ![](http://7u2eve.com1.z0.glb.clouddn.com/442110507659429382.jpg)
+ 我的名字叫Totoro，但其实我只是他的邻居。
+ <ul style="display:flex; list-style:none;padding-left: 5px;">
+	 <li><a href="https://github.com/jiwenxing" target="_blank" class="fa fa-github-square fa-3x fa-fw"></a></li> 
+	 <li><a href="https://www.instagram.com/jverson1053/" target="_blank" class="fa fa-instagram fa-3x fa-fw"></a></li>
+	 <li><a href="https://www.facebook.com/wenxing.ji.9" target="_blank" class="fa fa-facebook-official fa-3x fa-fw"></a></li>
+	 <li><a href="mailto:i@jverson.com" class="fa fa fa-envelope fa-3x fa-fw"></a></li> 
+ </ul>
+<!--  <i class="fa fa-wechat fa-fw"></i>  Wechat：
+ ![](http://7u2eve.com1.z0.glb.clouddn.com/442110507659429382.jpg) -->
 <br />
 
 ### 关于本站

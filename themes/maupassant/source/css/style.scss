@@ -56,7 +56,7 @@ a:focus {
             overflow: hidden;
         }
         #logo {
-            font: bold 58px/1.12 "STXingkai", Georgia, Times, sans-serif;
+            font: bold 58px/1.12 "YouYuan", Georgia, Times, sans-serif;
             color: #555;
             span, &:hover {
                 color: #777;
@@ -404,6 +404,9 @@ a:focus {
     }
     .date {
         padding-right: .7em;
+    }
+    a {
+        color: #14927B;
     }
 }
 /* for archive page ends*/
