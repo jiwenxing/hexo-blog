@@ -6,7 +6,7 @@ sources backup for my github blog
 > mkdir blog
    
 2. check in the directory and clone the repository    
-> hexo clone https://github.com/jiwenxing/blogbackup.git    
+> git clone https://github.com/jiwenxing/blogbackup.git    
 
 3. install the modules including hexo, jade and sass    
 > npm install
