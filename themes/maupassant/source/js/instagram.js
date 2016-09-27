@@ -16,21 +16,35 @@ var Instagram = (function(){
 		for(var em in data){
 			var liTmpl = "";
 			for(var i=0,len=data[em].srclist.length;i<len;i++){
-				liTmpl += '<li>\
+				// images
+				if (data[em].type[i] == "image") {
+					liTmpl += '<li>\
 								<div class="img-box">\
 									<a class="img-bg" rel="example_group" href="'+data[em].bigSrclist[i]+'" title="'+data[em].text[i]+'">\
 									<img lazy-src="'+data[em].srclist[i]+'" alt=""></a>\
 								</div>\
-							</li>';		
+							</li>';	
+				}else{ // videos
+					liTmpl += '<li>\
+								<div class="img-box">\
+									<a class="img-bg" rel="example_group" href="'+data[em].bigSrclist[i]+'" title="'+data[em].text[i]+'">\
+									<video src="'+data[em].srclist[i]+'" autoplay="autoplay" loop="loop" poster="'+data[em].videoImg[i]+'" style="width: 100%;height: 100%;">your browser does not support the video</video></a>\
+								</div>\
+							</li>';
+				}
+					
 			}
 
 			
 			$('<section class="archives album"><span class="date-icon"></span><h1 class="year">'+data[em].year+'<em>'+data[em].month+'月</em></h1>\
 			<ul class="img-box-ul">'+liTmpl+'</ul>\
 			</section>').appendTo($(".instagram"));
+				
 			
 
 		}
+
+		$('<section style="text-align: center;background-color: #ccc;line-height: 30px;width: 65%;font-weight: bold;margin-left: 17%;margin-top: 6%;border-radius: 57%;"><a href="https://www.instagram.com/jverson1053/" target="_black" style="color: white;">Click Here to See More</a></section>').appendTo($(".instagram"));
 
 		$(".instagram").lazyload();
 		changeSize();
@@ -65,10 +79,22 @@ var Instagram = (function(){
 			// console.log("likes:"+data[i].likes.count);
 			// console.log("low:"+data[i].images.low_resolution.url);
 			// var src = replacer(data[i].images.low_resolution.url);
-			var src = data[i].images.low_resolution.url;
+			var type = data[i].type;
+			var videoImg = "";
+			// console.log(type);
+			if (type=="image") {
+				var src = data[i].images.low_resolution.url;
+				var bigSrc = data[i].images.standard_resolution.url;
+				videoImg = ""; 
+			}else{
+				var src = data[i].videos.low_resolution.url;
+				var bigSrc = data[i].videos.standard_resolution.url; 
+				videoImg = data[i].images.low_resolution.url;
+			}
+			
 			// console.log("stanrdard:"+data[i].images.standard_resolution.url);
 			// var bigSrc = replacer(data[i].images.standard_resolution.url); 
-			var bigSrc = data[i].images.standard_resolution.url; 
+			
 			//var text = data[i].caption.text;
 			if(data[i].caption.text==null){
 				var text = "no description by Totoro";
@@ -80,6 +106,8 @@ var Instagram = (function(){
 				imgObj[key].srclist.push(src);
 				imgObj[key].bigSrclist.push(bigSrc);
 				imgObj[key].text.push(text);
+				imgObj[key].type.push(type);
+				imgObj[key].videoImg.push(videoImg);
 			}else{
 				imgObj[key] = {
 					year:y,
@@ -87,7 +115,9 @@ var Instagram = (function(){
 					date:da,
 					srclist:[bigSrc],
 					bigSrclist:[bigSrc],
-					text:[text]
+					text:[text],
+					type:[type],
+					videoImg:[videoImg]
 				}
 			}
 		}
@@ -113,7 +143,7 @@ var Instagram = (function(){
 						ctrler(_collection);
 					}
 				}else{
-					 alert("hello success!");
+					 alert("error_type:"+re.meta.error_type+"\nerrorMsg:"+re.meta.error_message);
 				}
 			},
 			error:function(){  
@@ -178,7 +208,7 @@ var Instagram = (function(){
 			// 	console.log("Please open 'https://instagram.com/developer/clients/manage/' to get your client-id.");
 			// 	return;
 			// }
-			getList("https://api.instagram.com/v1/users/self/media/recent/?access_token=2059681846.4f38fd6.d309de8a11a94a2ba0a4f2b84910cace");
+			getList("https://api.instagram.com/v1/users/self/media/recent/?access_token=2059681846.4f38fd6.65fd54f42e1449fda45d8e059ea5e4b0");
 			bind();
 		}
 	}
