@@ -28,7 +28,7 @@ var Instagram = (function(){
 					liTmpl += '<li>\
 								<div class="img-box">\
 									<a class="img-bg" rel="example_group" href="'+data[em].bigSrclist[i]+'" title="'+data[em].text[i]+'">\
-									<video src="'+data[em].srclist[i]+'" autoplay="autoplay" loop="loop" poster="'+data[em].videoImg[i]+'" style="width: 100%;height: 100%;">your browser does not support the video</video></a>\
+									<video src="'+data[em].srclist[i]+'" autoplay="autoplay" loop="loop" style="width: 100%;height: 100%;">your browser does not support the video</video></a>\
 								</div>\
 							</li>';
 				}
@@ -57,15 +57,21 @@ var Instagram = (function(){
 	}
 
 	var replacer = function(str){
-		if(str.indexOf("outbound-distilleryimage") >= 0 ){
-			var cdnNum = str.match(/outbound-distilleryimage([\s\S]*?)\//)[1];
-			var arr = str.split("/");
-			return "https://distilleryimage"+cdnNum+".ak.instagram.com/"+arr[arr.length-1];
-		}else{
-			var url = "http://photos-g.ak.instagram.com/hphotos-ak-xpf1/";
-			var arr = str.split("/");
-			return url+arr[arr.length-1];
-		}
+
+        // 将ins的图片资源替换为七牛的缓存链接
+		var insUrlSplit = str.split('?')[0].split('/');
+		var imgName = insUrlSplit[insUrlSplit.length-1];
+		var qiniuPrefix = "http://oe5sk3upn.bkt.clouddn.com/";
+		return qiniuPrefix+imgName;
+		// if(str.indexOf("outbound-distilleryimage") >= 0 ){
+		// 	var cdnNum = str.match(/outbound-distilleryimage([\s\S]*?)\//)[1];
+		// 	var arr = str.split("/");
+		// 	return "https://distilleryimage"+cdnNum+".ak.instagram.com/"+arr[arr.length-1];
+		// }else{
+		// 	var url = "http://photos-g.ak.instagram.com/hphotos-ak-xpf1/";
+		// 	var arr = str.split("/");
+		// 	return url+arr[arr.length-1];
+		// }
 	}
 
 	var ctrler = function(data){
@@ -87,9 +93,9 @@ var Instagram = (function(){
 				var bigSrc = data[i].images.standard_resolution.url;
 				videoImg = ""; 
 			}else{
-				var src = data[i].videos.low_resolution.url;
+				var src = data[i].videos.standard_resolution.url;
 				var bigSrc = data[i].videos.standard_resolution.url; 
-				videoImg = data[i].images.low_resolution.url;
+				// videoImg = data[i].images.low_resolution.url;
 			}
 			
 			// console.log("stanrdard:"+data[i].images.standard_resolution.url);
@@ -107,7 +113,7 @@ var Instagram = (function(){
 				imgObj[key].bigSrclist.push(bigSrc);
 				imgObj[key].text.push(text);
 				imgObj[key].type.push(type);
-				imgObj[key].videoImg.push(videoImg);
+				// imgObj[key].videoImg.push(videoImg);
 			}else{
 				imgObj[key] = {
 					year:y,
@@ -116,8 +122,8 @@ var Instagram = (function(){
 					srclist:[bigSrc],
 					bigSrclist:[bigSrc],
 					text:[text],
-					type:[type],
-					videoImg:[videoImg]
+					type:[type]
+					// videoImg:[videoImg]
 				}
 			}
 		}
@@ -131,7 +137,7 @@ var Instagram = (function(){
 			url: url,
 			type: "GET",
 			dataType: "jsonp",
-			timeout: 8000,
+			timeout: 5000,
 			success:function(re){
 				if(re.meta.code == 200){
 					_collection = _collection.concat(re.data);
@@ -147,8 +153,29 @@ var Instagram = (function(){
 				}
 			},
 			error:function(){  
-    			//alert("hello error");
-    			$('<section><h1 class="warncontainer">BAD REQUEST</h1><p class="warncontainer1"><strong>Dear friend, I am so sorry that your request has been blocked by the damned Great Fire Wall. Fxxk the GFW</strong></p><p id="suggestions">If you are still trying to visit this page,<a href="https://getlantern.org/">click here</a> to download <strong>Lantern</strong> to visit over the <strong>Great Fire Wall</strong>.<p></section>').appendTo($(".instagram")); 
+				// if instagram api timeout,then fetch the qiniu cache
+				$.ajax({
+					url: "/data/instagram.json",
+					type: "GET",
+					dataType: "json",
+					success:function(re){
+						// console.log(re.data);
+						var data = re.data;
+						for(var i=0,len=data.length;i<len;i++){
+							if (data[i].type=="image") {
+								data[i].images.low_resolution.url = replacer(data[i].images.low_resolution.url);
+								data[i].images.standard_resolution.url = replacer(data[i].images.standard_resolution.url); 
+							}else{
+								// data[i].videos.low_resolution.url = replacer(data[i].videos.low_resolution.url);
+								data[i].videos.standard_resolution.url = replacer(data[i].videos.standard_resolution.url); 
+								// data[i].images.low_resolution.url = replacer(data[i].images.low_resolution.url);
+							}
+						}
+						$(".open-ins").html("Instagram图片来自缓存，实时数据需要翻墙");
+						ctrler(data);
+					}
+				});
+    			// $('<section><h1 class="warncontainer">BAD REQUEST</h1><p class="warncontainer1"><strong>Dear friend, I am so sorry that your request has been blocked by the damned Great Fire Wall. Fxxk the GFW</strong></p><p id="suggestions">If you are still trying to visit this page,<a href="https://getlantern.org/">click here</a> to download <strong>Lantern</strong> to visit over the <strong>Great Fire Wall</strong>.<p></section>').appendTo($(".instagram")); 
 			},
 /*			error:function(XMLHttpRequest, textStatus, errorThrown){
 		        alert(XMLHttpRequest.status);
