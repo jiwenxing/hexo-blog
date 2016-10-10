@@ -7,8 +7,8 @@ tags: [Java]
 
 ## PROBLEM
 先看看这段代码，刚开始不管怎么搞都无法进入到`error`回调函数中。
-
-	$.ajax({
+```JavaScript
+$.ajax({
 	url: "https://www.google.com.hk/?gws_rd=cr",
 	type: "GET",
 	dataType: "jsonp",
@@ -21,7 +21,8 @@ tags: [Java]
 	complete:function() {           
 	    alert("hello complete!");
 	}
-	});
+});
+```
 
 注意这里的`url`是需要翻墙才能访问的，我在打开`VPN`的情况下访问可以进入`success`回调，当关闭`VPN`时报以下错误信息
 > Failed to load resource: net::ERR_CONNECTION_TIMED_OUT
@@ -51,12 +52,12 @@ object, but jsonp doesn't use XHR.
 
 
 即将之前的代码改成如下即可：
-
-	$.ajax({
+```JavaScript
+$.ajax({
 	url: "https://www.google.com.hk/?gws_rd=cr",
 	type: "GET",
 	dataType: "jsonp",
-    timeout: 3000    //添加此行
+	timeout: 3000    //添加此行
 	success:function(re){
 	    alert("hello success!");
 	},
@@ -66,8 +67,8 @@ object, but jsonp doesn't use XHR.
 	complete:function() {           
 	    alert("hello complete!");
 	}
-	});
-
+});
+```
 
 - 添加一个`jquery-jsonp`的插件
 
