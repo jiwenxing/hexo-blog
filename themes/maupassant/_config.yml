@@ -29,10 +29,11 @@ menu:
   #   icon: fa-rss
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
+  - avatar
   - search
   - category
   - tag
-  - recent_posts
+##  - recent_posts
   - recent_comments
   - statistic
 ##- links
