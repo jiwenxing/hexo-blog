@@ -28,7 +28,7 @@ var Instagram = (function(){
 					liTmpl += '<li>\
 								<div class="img-box">\
 									<a class="img-bg" rel="example_group" href="'+data[em].bigSrclist[i]+'" title="'+data[em].text[i]+'">\
-									<video src="'+data[em].srclist[i]+'" autoplay="autoplay" loop="loop" muted style="width: 100%;height: 100%;z-index:-1;">your browser does not support the video</video></a>\
+									<video src="'+data[em].srclist[i]+'" onmouseover="this.play()" onmouseout="this.pause()" loop="loop" muted style="width: 100%;height: 100%;z-index:-1;">your browser does not support the video</video></a>\
 								</div>\
 							</li>';
 				}
