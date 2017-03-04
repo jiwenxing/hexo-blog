@@ -14,6 +14,15 @@
             $("#logo").css({"font-size":"35px"}); //title
             $(".disqus-comment-count").hide(); //小屏时 文章标题下方的评论数会换行展示，因此隐藏掉
             $("#header").hide(); //mobile时隐藏header便于移动端分享
+            $('.category a').attr('href', '#');//使目录标签不能点击
+            $('#toc').hide(); //自动隐藏toc导航
+            $('.ds-thread-count').hide(); //隐藏顶部评论数，因为会换行
+            $('#ds-thread').hide(); //隐藏评论框
+            $('.post-nav').hide(); //上一篇下一篇隐藏
+            $('.tags').hide(); //
+            $('#ds-share').hide(); //
+            $('#footer a').attr('href', '#'); //
+            $('.article-share-link').hide(); //
             //$(".img-box").css({"width":"auto", "height":"auto"});
         }else{
             $(".description").css({"font-size":"18px"}); //subtitle
