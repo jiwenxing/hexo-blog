@@ -1,11 +1,11 @@
 title: 使用alfred在markdown中愉快的贴图
 categories: Coding
 tags: [Alfred Markdown]
-toc: true
+toc: false
 date: 2017-04-28 10:59:26
 ---
 
-**[qiniu-image-tool](https://github.com/jiwenxing/qiniu-image-tool)**是一个提升markdown贴图体验的实用小工具，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
+**[qiniu-image-tool](https://github.com/jiwenxing/qiniu-image-tool)**是一个mac上提升markdown贴图体验的实用小工具，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
 
 
 ## Introduction
@@ -21,7 +21,7 @@ date: 2017-04-28 10:59:26
 怎么样，是不是想试一把，下面就跟着我来一步一步安装使用这个小工具吧。
 
 ### Pre-Work
-开始之前需要做一些准备工作，注册账号、安装必要的工具软件和插件。   
+开始之前需要做一些准备工作，注册七牛账号、安装必要的软件。   
 
 1. 安装 Alfred with Powerpack   
 如果你的mac上还没有安装`Alfred`(a productivity application for Mac OS X)，请先至[官网](https://www.alfredapp.com/)下载安装。另外由于该工具是基于Alfred的workflow功能实现，因此还需要购买Powerpack（£19），也不算很贵，如果充分利用的话还是很超值的，尽管网上也有破解版的。
@@ -54,7 +54,7 @@ date: 2017-04-28 10:59:26
 ![](http://ochyazsr6.bkt.clouddn.com/ab6d5581255f00511fa56a08aed3a4b1.jpg)
 
 4. 开始使用   
-这时候如果一切顺利的话，便可以使用了。如果使用过程有什么问题，如下图在设置环境变量的右侧有个debug图标，点击打开debug窗口，重新操作一次查看错误日志定位问题，如果依然不能解决问题欢迎留言或在github中提交issue。
+这时候如果一切顺利的话，便可以使用了。如果使用过程有什么问题，如下图在设置环境变量的右侧有个debug图标，点击打开debug窗口，重新操作一次查看错误日志定位问题，如果依然不能解决问题欢迎留言或在github中提交 [issues](https://github.com/jiwenxing/qiniu-image-tool/issues)。
 ![](http://ochyazsr6.bkt.clouddn.com/d98503cde4aa2712d8fab3b0c644fa60.jpg)
 
 ## References
@@ -64,4 +64,4 @@ date: 2017-04-28 10:59:26
 4. [How to split a string](http://erikslab.com/2007/08/31/applescript-how-to-split-a-string/)
  
 
-
+<a href="https://github.com/jiwenxing" target="_blank" rel="external"><a href="https://github.com/jiwenxing/qiniu-image-tool" title="Fork me on GitHub" class="fancybox" rel="article"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/121cd7cbdc3e4855075ea8b558508b91ac463ac2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png"></a><span class="caption">Fork me on GitHub</span></a>
