@@ -5,12 +5,14 @@ toc: false
 date: 2016-08-30 11:41:56
 ---
 
-**[qiniu-image-tool-win](https://github.com/jiwenxing/qiniu-image-tool-win)**是一个windows上提升markdown贴图体验的实用小工具，基于`AutoHotkey`和`qshell`实现，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
+`qiniu-image-tool`是一个提升markdown贴图体验的实用小工具，支持windows及mac。其中**[qiniu-image-tool-win](https://github.com/jiwenxing/qiniu-image-tool-win)**为windows版本，基于`AutoHotkey`和`qshell`实现，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
+
+注：2017.05.06更新，[github](https://github.com/jiwenxing/qiniu-image-tool-win/releases)发布了最新1.0版本，欢迎使用。
 
 ## 简介
 因为平时使用七牛作为图床，在markdown中使用图片时需要先将图片或者截图上传至七牛然后复制外链使用，总觉得这个过程很繁琐，直接影响了我在博客中使用图片的积极性，坚持了一段时间以后实在忍无可忍，于是便有了`qiniu-image-tool`这个小工具，其中`qiniu-image-tool-win`为windows版本，其借助于`qshell`和`AutoHotkey`实现了图片或截图一键上传和引用，从此markdown中贴图成了一件非常愉悦的事情。
 
-另外如果您使用mac，请参考[使用alfred在markdown中愉快的贴图](http://jverson.com/2017/04/28/alfred-qiniu-upload/)
+如果您使用mac，请参考[使用alfred在markdown中愉快的贴图](http://jverson.com/2017/04/28/alfred-qiniu-upload/)
 
 ## 用法
 使用方法很简单，只需两步即可完成图片的上传和使用，[github](https://github.com/jiwenxing/qiniu-image-tool-win)有预览动图：
