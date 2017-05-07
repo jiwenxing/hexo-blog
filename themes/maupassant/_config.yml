@@ -1,5 +1,5 @@
 fancybox: true ## If you want to use fancybox please set the value to true.
-duoshuo: jiwenxing
+duoshuo: 
 #disqus: jverson
 google_search: true ## Use Google search, true/false.
 baidu_search: ## Use Baidu search, true/false.
