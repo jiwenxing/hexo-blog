@@ -68,7 +68,7 @@ WORKING_DIR = E:\TOOLS\qiniu-image-tool-win\  ;directory that you put the qshell
 
 如果您在使用过程中有任何问题，也欢迎留言或在github中提交[issues](https://github.com/jiwenxing/qiniu-image-tool-win/issues)。
 
-### 常见问题1: 七牛uphost有误
+### 常见问题一: 七牛uphost有误
 具体的错误信息如下所示：
 > Uploading G:\Users\Cooper\Desktop\9999.png => markdown : 201705082057_244.png ...
 Progress: 100%
