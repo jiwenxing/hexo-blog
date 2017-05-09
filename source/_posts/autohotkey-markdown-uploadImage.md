@@ -64,7 +64,7 @@ WORKING_DIR = E:\TOOLS\qiniu-image-tool-win\  ;directory that you put the qshell
 至此所有的安装和配置过程都结束了，右键点击`qiniu-image-upload.ahk`文件选择运行脚本（Run Script），这时便可以在任务栏看到一个H字母的绿色图标在运行。这时便可以使用`ctrl+alt+v`尝试上传图片了。
 
 ## 调试脚本
-如果以上操作完成后没有按照预期达到图片上传的效果，感兴趣的筒子可以先自己调试找一下原因，一般报错信息会打印在cmd命令行中，但是cmd窗口一闪而过可能看不清楚，这时候在`qiniu-image-upload.ahk`脚本文件中找到以`RunWait, %comspec% /c`开始的代码，并将其中的`/c`改为`/k`保存，然后在右下角任务栏找到运行着的H绿色小图标右键选择`Reload This Script`，再次尝试，这时候cmd窗口不会自动关闭，便可以看到具体的报错信息从而对症下药解决问题。
+如果以上操作完成后没有按照预期达到图片上传的效果，感兴趣的筒子可以先自己调试找一下原因，一般报错信息会打印在cmd命令行中，但是cmd窗口一闪而过可能看不清楚，这时候将可选参数`DEBUG_MODE := false`改为`DEBUG_MODE := true`打开调试模式，保存后在右下角任务栏找到运行着的H绿色小图标右键选择`Reload This Script`，再次尝试，这时候cmd窗口不会自动关闭，便可以看到具体的报错信息从而对症下药解决问题。
 
 如果您在使用过程中有任何问题，也欢迎留言或在github中提交[issues](https://github.com/jiwenxing/qiniu-image-tool-win/issues)。
 
@@ -75,7 +75,7 @@ Progress: 100%
 Put file error, 400 incorrect region, please use up-z2.qiniu.com, Reqid: 0wUAAGp6j6faorwU
 Last time: 0.43 s, Average Speed: 415.6 KB/s
 
-由于在七牛的[官方文档](https://github.com/qiniu/qshell/wiki/fput)中uphost为非必填项，脚本中使用的是默认值`http://up.qiniu.com`，不知是何原因有时是不行的，会报以上的错误信息，不过错误信息中已经给出了建议的uphost，例如上面的错误信息就给出明确的提示 “请使用up-z2.qiniu.com”，这时将可选配置项`UP_HOST = http://up.qiniu.com`修改为`UP_HOST = http://up-z2.qiniu.com`，保存并reload脚本即可。
+由于在七牛的[官方文档](https://github.com/qiniu/qshell/wiki/fput)中uphost为非必填项，脚本中使用的是默认值`http://up.qiniu.com`，有时当与你空间所在机房不匹配时便会报以上的错误信息，不过错误信息中已经给出了建议的uphost，例如上面的错误信息就给出明确的提示 “请使用up-z2.qiniu.com”，这时将可选配置项`UP_HOST = http://up.qiniu.com`修改为`UP_HOST = http://up-z2.qiniu.com`，保存并reload脚本即可。
 
 
 ## 修改默认项

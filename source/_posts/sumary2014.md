@@ -3,7 +3,7 @@ date: 2015-01-30 22:40:51
 categories: Thinking
 tags: [Summary, Memory]
 ---
-![](https://github.com/jiwenxing/learngit/blob/master/jajdha.jpg?raw=true)
+![](http://7xry05.com1.z0.glb.clouddn.com/201705091556_231.png)
 <!-- more -->
 ## PREFACE 
 After everything gets done and suddenly, I just realize that time has come to 2015. Look back to the passed year at this moment, I can't help sighing with emotions. It is really a wonderful and significant year for me although with much pressure and not a few tough days. Finally and fortunately, I have come through all of these, happiness, struggles as well as hardships. Thanks for everything and everyone that I met, precious memory and of course some remarkable lessons.
