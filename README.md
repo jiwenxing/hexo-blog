@@ -1,7 +1,7 @@
 # Introduction
 该仓库是对自己博客源码的备份，主题为[maupassant](https://github.com/tufu9441/maupassant-hexo)，但做了一些个性化的改动，比如添加了头像以及相册等功能。如果你也喜欢可以按照以下步骤使用。
 
-## Instructions
+# Instructions
 1. fork该仓库 
 将该仓库fork至你的github，便可用该仓库作为自己博客的备份，以后再任何地方使用任何电脑只需将该仓库clone至本地便可以写文章发文章了
    
