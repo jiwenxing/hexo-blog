@@ -6,7 +6,7 @@ var Comments = (function(){
 		  // res instanceof Response == true.
 		  if (res.ok) {
 		    res.json().then(function(data) {
-		      console.log(data.content);
+		      // console.log(data.content);
 		      $(".ds-recent-comments").html(data.content);
 		    });
 		  } else {
