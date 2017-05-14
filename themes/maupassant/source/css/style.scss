@@ -119,6 +119,12 @@ a:focus {
             display: block;
             font-weight: normal;
         }
+        .ds-recent-comments {
+            margin-top: 10px;
+            li {
+                list-style-type: none;
+            }
+        }
         .tagcloud {
             margin-top: 10px;
             a {
