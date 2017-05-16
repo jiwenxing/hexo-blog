@@ -13,7 +13,7 @@
             $(".description").css({"font-size":"12px"}); //subtitle
             $("#logo").css({"font-size":"35px"}); //title
             $(".disqus-comment-count").hide(); //小屏时 文章标题下方的评论数会换行展示，因此隐藏掉
-            $("#header").hide(); //mobile时隐藏header便于移动端分享
+            // $("#header").hide(); //mobile时隐藏header便于移动端分享
             $('.category a').attr('href', '#');//使目录标签不能点击
             $('#toc').hide(); //自动隐藏toc导航
             $('.ds-thread-count').hide(); //隐藏顶部评论数，因为会换行
@@ -25,8 +25,8 @@
             $('.article-share-link').hide(); //
             //$(".img-box").css({"width":"auto", "height":"auto"});
         }else{
-            $(".description").css({"font-size":"18px"}); //subtitle
-            $("#logo").css({"font-size":"55px"}); //title
+            $(".description").css({"font-size":"20px"}); //subtitle
+            $("#logo").css({"font-size":"62px"}); //title
             $(".disqus-comment-count").show();
             $("#header").show(); 
         }
