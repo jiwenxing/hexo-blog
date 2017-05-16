@@ -60,6 +60,8 @@ git push origin master
 #### 相册信息配置
 主题里集成了instagram相册，更改相册相册配置信息请参考[Maupassant主题添加Instagram相册](http://jverson.com/2015/12/29/instagram/)
 
+#### 使用网易云跟帖
+由于多说即将停止服务，主题里集成了网易云跟帖，并实现了最新跟帖的widget，具体实现最近会更新
 
 # Reference 
 1. https://github.com/coneycode/hexo-git-backup

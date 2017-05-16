@@ -5,24 +5,22 @@ toc: false
 date: 2016-08-30 11:41:56
 ---
 
-`qiniu-image-tool`是一个提升markdown贴图体验的实用小工具，支持windows及mac。其中**[qiniu-image-tool-win](https://github.com/jiwenxing/qiniu-image-tool-win)**为windows版本，基于`AutoHotkey`和`qshell`实现，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
+**qiniu-image-tool** 是一个提升 markdown 贴图体验的实用小工具，支持 windows 及 mac。其中 **[qiniu-image-tool-win](https://github.com/jiwenxing/qiniu-image-tool-win)** 为windows版本，基于`AutoHotkey`和`qshell`实现，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
 
-注：2017.05.06更新，[github](https://github.com/jiwenxing/qiniu-image-tool-win/releases)发布了最新1.0版本，欢迎使用。
+> 2017.05.06更新，[github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 发布了最新1.x版本，配置更简单，功能更强大，使用更方便。
 
-## 简介
-因为平时使用七牛作为图床，在markdown中使用图片时需要先将图片或者截图上传至七牛然后复制外链使用，总觉得这个过程很繁琐，直接影响了我在博客中使用图片的积极性，坚持了一段时间以后实在忍无可忍，于是便有了`qiniu-image-tool`这个小工具，其中`qiniu-image-tool-win`为windows版本，其借助于`qshell`和`AutoHotkey`实现了图片或截图一键上传和引用，从此markdown中贴图成了一件非常愉悦的事情。
-
-如果您使用mac，请参考[使用alfred在markdown中愉快的贴图](http://jverson.com/2017/04/28/alfred-qiniu-upload/)
 
 ## 用法
-使用方法很简单，只需两步即可完成图片的上传和使用，[github](https://github.com/jiwenxing/qiniu-image-tool-win)有预览动图：
+使用方法很简单，只需两步即可完成图片的上传和使用，[github](https://github.com/jiwenxing/qiniu-image-tool-win) 有预览动图：
 
 1. 复制本地图片、视频或js等其它类型文件至剪贴板（ctrl+c）or 使用喜欢的截图工具截图 or 直接复制网络图片
 2. 切换到编辑器，`ctrl+alt+v`便可以看到图片链接自动粘贴到当前编辑器的光标处
 
+如果您使用mac，请参考[使用alfred在markdown中愉快的贴图](http://jverson.com/2017/04/28/alfred-qiniu-upload/)
+
 ## 安装
 ### 下载源码
-相对于mac版本，windows版安装更加简单。首先从[github](https://github.com/jiwenxing/qiniu-image-tool-win/releases)上下载最新的release版本并解压到任意目录，在`qiniu-image-tool-win`文件夹中看到的目录结构应该是如下这样：
+相对于 mac 版本，windows 版安装更加简单。首先从 [github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 下载最新的release版本并解压到任意目录，在`qiniu-image-tool-win`文件夹中看到的目录结构应该是如下这样：
 ![](http://ochyazsr6.bkt.clouddn.com/afa184acc926d86a6ea786d7634500e7.jpg)
 其中`dump-clipboard-png.ps1`是保存截图的`powershell`脚本，`qiniu-image-upload.ahk`即完成文件上传的`AutoHotkey`脚本。
 
@@ -48,16 +46,16 @@ WORKING_DIR = E:\TOOLS\qiniu-image-tool-win\  ;directory that you put the qshell
 
 修改这里的五个配置项的值，其中前四个配置项都与七牛账号相关：  
 
-**`ACCESS_KEY` & `SECRET_KEY`**  
+#### ACCESS_KEY & SECRET_KEY
 这是qshell操作个人账号的账号凭证，登陆七牛账号后在`个人面板->密钥管理`中查看，或者直接访问`https://portal.qiniu.com/user/key`查看。   
 
-**`BUCKET_NAME` & `BUCKET_DOMAIN`**     
+#### BUCKET_NAME & BUCKET_DOMAIN    
 在`对象存储->存储空间列表`中选择或新建一个存储空间即bucket，点击该bucket在右边看到一个测试域名，该域名即bucketDomain是图片上传后的访问域名。这里要特别注意域名不要少了前面的http头和最后的那个斜杠。
 
 查看以上四个参数的操作如下图所示：
 ![](http://ochyazsr6.bkt.clouddn.com/883c2cf5633cac4fba7b3719284ab678.gif)
 
-**`WORKING_DIR`**。  
+#### WORKING_DIR  
 这是设置您的工作目录，即这些脚本所在的目录，比如我将从github上下载的release压缩包解压到了`E:\TOOLS`目录下，那我的`WORKING_DIR`就是`E:\TOOLS\qiniu-image-tool-win\`。注意不要少了最后那个反斜杠。*另外需要特别注意的是路径中不能包含中文，而且不能有类似Program Files这类包含空格的路径。*
 
 ## 运行脚本

@@ -1,12 +1,12 @@
 var Comments = (function(){
 
 	var getComments = function(url){
-		console.log("hello begin!");
+		console.log("hello friend!");
 		fetch(url).then(function(res) {
 		  // res instanceof Response == true.
 		  if (res.ok) {
 		    res.json().then(function(data) {
-		      console.log(data.content);
+		      // console.log(data.content);
 		      $(".ds-recent-comments").html(data.content);
 		    });
 		  } else {
