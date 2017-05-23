@@ -20,7 +20,8 @@ menu:
     directory: archives/
     icon: fa-archive 
   - page: album
-    directory: instagram/
+    directory: http://album.jverson.com/
+    # directory: instagram/
     icon: fa-picture-o     
   - page: about
     directory: about/
