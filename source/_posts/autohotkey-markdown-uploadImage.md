@@ -1,4 +1,4 @@
-title: AutoHotkey&qshell实现图片一键上传七牛并返回markdown引用
+title: AutoHotkey&qshell实现图片一键上传七牛并返回markdown引用（适用1.x版本）
 categories: Coding
 tags: [AutoHotkey]
 toc: false
@@ -7,7 +7,7 @@ date: 2016-08-30 11:41:56
 
 **qiniu-image-tool** 是一个提升 markdown 贴图体验的实用小工具，支持 windows 及 mac。其中 **[qiniu-image-tool-win](https://github.com/jiwenxing/qiniu-image-tool-win)** 为windows版本，基于`AutoHotkey`和`qshell`实现，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
 
-> 2017.05.06更新，[github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 发布了最新1.x版本，配置更简单，功能更强大，使用更方便。
+> 注意此文档只适用于1.x版本，2.x及以上版本请参考[windows版本markdown一键贴图工具](http://jverson.com/2017/05/28/qiniu-image-v2/)。
 
 
 ## 用法
