@@ -75,6 +75,15 @@ Last time: 0.43 s, Average Speed: 415.6 KB/s
 
 由于在七牛的[官方文档](https://github.com/qiniu/qshell/wiki/fput)中uphost为非必填项，脚本中使用的是默认值`http://up.qiniu.com`，有时当与你空间所在机房不匹配时便会报以上的错误信息，不过错误信息中已经给出了建议的uphost，例如上面的错误信息就给出明确的提示 “请使用up-z2.qiniu.com”，这时将可选配置项`UP_HOST = http://up.qiniu.com`修改为`UP_HOST = http://up-z2.qiniu.com`，保存并reload脚本即可。
 
+### 常见问题二: powershell执行权限问题
+具体的错误信息如下所示：
+> set-executionpolicy : 对注册表项“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Micro
+soft.PowerShell”的访问被拒绝。 要更改默认(LocalMachine)作用域的执行策略，请使用“以管理员身份运行
+”选项启动 Windows PowerShell。要更改当前用户的执行策略，请运行 "Set-ExecutionPolicy -Scope Current
+User"。
+
+这是powershell执行权限问题，解决方法请参考[issue#3](https://github.com/jiwenxing/qiniu-image-tool-win/issues/3)，在此感谢Daniels5
+
 
 ## 修改默认项
 以下操作非必需，是对一些默认设置的修改，请根据喜好自行选择。
@@ -83,8 +92,6 @@ Last time: 0.43 s, Average Speed: 415.6 KB/s
 脚本中默认的快捷键是`^!V`，即`ctrl+alt+v`(^代表ctrl，!为alt)，如果您希望修改为其它自己习惯的快捷键，直接修改并reload脚本即可生效。    
 关于hotkey的符号与按键对应关系请参考 [You can use the following modifier symbols to define hotkeys](https://autohotkey.com/docs/Hotkeys.htm)
 
-### 升级最新版 **qshell** 
-qshell是基于七牛 API 参考手册实现的一个方便开发者测试和使用七牛 API 服务的命令行工具。源码文件夹中已自带1.8.0版本的`qshell.exe`，因此无需单独安装，如果您想使用最新版，可以去[qshell官网](http://developer.qiniu.com/code/v6/tool/qshell.html) 自行下载。
 
 ## 参考
 - [qshell fput 文件上传指令](https://github.com/qiniu/qshell/wiki/fput)

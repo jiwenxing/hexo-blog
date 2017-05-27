@@ -75,7 +75,14 @@ Last time: 0.43 s, Average Speed: 415.6 KB/s
 
 由于在七牛的[官方文档](https://github.com/qiniu/qshell/wiki/fput)中uphost为非必填项，脚本中使用的是默认值`http://up.qiniu.com`，有时当与你空间所在机房不匹配时便会报以上的错误信息，不过错误信息中已经给出了建议的uphost，例如上面的错误信息就给出明确的提示 “请使用up-z2.qiniu.com”，这时将可选配置项`UP_HOST = http://up.qiniu.com`修改为`UP_HOST = http://up-z2.qiniu.com`，保存并reload脚本即可。
 
+### 常见问题二: powershell执行权限问题
+具体的错误信息如下所示：
+> set-executionpolicy : 对注册表项“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Micro
+soft.PowerShell”的访问被拒绝。 要更改默认(LocalMachine)作用域的执行策略，请使用“以管理员身份运行
+”选项启动 Windows PowerShell。要更改当前用户的执行策略，请运行 "Set-ExecutionPolicy -Scope Current
+User"。
 
+这是powershell执行权限问题，重新以管理员权限运行`qImage.exe`即可。
 
 ## 参考
 - [qshell fput 文件上传指令](https://github.com/qiniu/qshell/wiki/fput)
