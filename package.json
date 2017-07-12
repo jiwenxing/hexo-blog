@@ -18,6 +18,7 @@
     "hexo-renderer-marked": "^0.2.4",
     "hexo-renderer-sass": "^0.2.0",
     "hexo-renderer-stylus": "^0.2.0",
-    "hexo-server": "^0.1.2"
+    "hexo-server": "^0.1.2",
+    "node-sass": "^4.5.3"
   }
 }
