@@ -1,11 +1,11 @@
 title: windows版本markdown一键贴图工具（适用2.x及以上版本）
-categories: Coding
+categories: Tools
 tags: [AutoHotkey]
 toc: false
 date: 2017-05-28 11:41:56
 ---
 
-**qiniu-image-tool** 是一个提升 markdown 贴图体验的实用小工具，支持 windows 及 mac。其中 **[qiniu-image-tool-win](https://github.com/jiwenxing/qiniu-image-tool-win)** 为windows版本，基于`AutoHotkey`和`qshell`实现，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
+**qiniu-image-tool** 是一个提升 markdown 贴图体验的实用小工具，支持 windows 及 mac。其中 **[qimage-win](https://github.com/jiwenxing/qiniu-image-tool-win)** 为windows版本，基于`AutoHotkey`和`qshell`实现，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
 
 > 2017.05.27更新，[github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 发布了最新2.x版本，直接提供exe可行文件，只需简单配置参数即可使用。
 

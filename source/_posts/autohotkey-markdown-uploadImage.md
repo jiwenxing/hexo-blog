@@ -1,11 +1,11 @@
 title: AutoHotkey&qshell实现图片一键上传七牛并返回markdown引用（适用1.x版本）
-categories: Coding
+categories: Tools
 tags: [AutoHotkey]
 toc: false
 date: 2016-08-30 11:41:56
 ---
 
-**qiniu-image-tool** 是一个提升 markdown 贴图体验的实用小工具，支持 windows 及 mac。其中 **[qiniu-image-tool-win](https://github.com/jiwenxing/qiniu-image-tool-win)** 为windows版本，基于`AutoHotkey`和`qshell`实现，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
+**qimage** 是一个提升 markdown 贴图体验的实用小工具，支持 windows 及 mac。其中 **[qiniu-image-tool-win](https://github.com/jiwenxing/qiniu-image-tool-win)** 为windows版本，基于`AutoHotkey`和`qshell`实现，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
 
 > 注意此文档只适用于1.x版本，2.x及以上版本请参考[windows版本markdown一键贴图工具](http://jverson.com/2017/05/28/qiniu-image-v2/)。
 
@@ -20,9 +20,9 @@ date: 2016-08-30 11:41:56
 
 ## 安装
 ### 下载源码
-相对于 mac 版本，windows 版安装更加简单。首先从 [github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 下载最新的release版本并解压到任意目录，在`qiniu-image-tool-win`文件夹中看到的目录结构应该是如下这样：
+相对于 mac 版本，windows 版安装更加简单。首先从 [github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 下载最新的release版本并解压到任意目录，在`qimage-win`文件夹中看到的目录结构应该是如下这样：
 ![](http://ochyazsr6.bkt.clouddn.com/afa184acc926d86a6ea786d7634500e7.jpg)
-其中`dump-clipboard-png.ps1`是保存截图的`powershell`脚本，`qiniu-image-upload.ahk`即完成文件上传的`AutoHotkey`脚本。
+其中`dump-clipboard-png.ps1`是保存截图的`powershell`脚本，`qimage-win.ahk`即完成文件上传的`AutoHotkey`脚本。
 
 ### 安装 **AutoHotkey**    
 文件夹中`AutoHotkey_1.1.25.01_setup.exe`是1.1.25版本的`AutoHotkey`安装包，您可以直接双击安装，也可以去[AutoHotkey官网](https://autohotkey.com/)下载安装最新版本，这是一款免费的、Windows平台下开放源代码的热键脚本语言，利用其通过自定义热键触发一系列系统调用从而完成自动化操作。
@@ -32,7 +32,7 @@ date: 2016-08-30 11:41:56
 
 
 ### 配置脚本
-文件夹中选中`qiniu-image-upload.ahk`文件，右键选择编辑脚本使脚本在编辑器中打开，找到下面这段代码:
+文件夹中选中`qimage-win.ahk`文件，右键选择编辑脚本使脚本在编辑器中打开，找到下面这段代码:
          
 ```autohotkey
 ;;;; config start, you need to replace them by yours
