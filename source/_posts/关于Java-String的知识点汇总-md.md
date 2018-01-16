@@ -5,7 +5,7 @@ toc: true
 date: 2015-12-13 16:43:03
 ---
 
-![](http://ochyazsr6.bkt.clouddn.com/ccecc20dfe653fa0af5fd9260b4e3032.jpg)
+Java 的 String 类几乎是 Java 中最常使用到的对象类型，关于 String 的一些基础知识对开发者来说显得尤为重要。下面就对 String 相关的一些知识点进行列举和归纳，希望能够加深对 String 对象的认识。
 
 <!--more-->
 
@@ -137,9 +137,7 @@ JDK中实现的方法是：当集合要添加新的对象时，先调用这个�
 然后创建一个 HashMap，执行 map.put(a,c); map 中插入了一条数据，键是 a 值是 c，调用 map.get(a) 可以返回对象 c，但是调用 map.get(b) 却不能返回对象 c， 但是 a 和 b 两个对象是相等的，相等的对象却得不到相同的结果，就不符合逻辑了。因为 HashMap 是根据键对象的 HashCode 来进行快速查找的，所以你必须保证 a 和 b 这两个相同对象的 HashCode 也相同，因此你需要重写 hashCode() 方法。另外，如果你要用到 HashSet，在这个例子中 a 和 b 可以同时插入到 HashSet 中，然而这两个对象在逻辑上有时相等的，这不符合 HashSet 的定义。
 
 另外这也是hashcode方法的要求，在Object的hashcode方法注释中明确做了如下说明：
-> If two objects are equal according to the {@code equals(Object)}
-     *     method, then calling the {@code hashCode} method on each of
-     *     the two objects must produce the same integer result.
+> If two objects are equal according to the equals(Object) method, then calling the hashCode() method on each of the two objects must produce the same integer result.
 
 
 ## hashcode 是对象的内存地址吗
@@ -150,12 +148,79 @@ JDK中实现的方法是：当集合要添加新的对象时，先调用这个�
 
 ## String, StringBuffer，StringBuilder的区别？
 
+- String 是字符串常量，是不可变的，而 StringBuffer 及 StringBuilder 可变
+- 在做字符串拼接时，直接操作 String 比较耗资源，因为它的不可变性，会导致创建多个中间对象
+- String、StringBuffer 是线程安全的，StringBuilder 线程不安全
+
+三者之间的关系看这张图：
+
+![](http://ochyazsr6.bkt.clouddn.com/1294873a37967d1f431ce3a5db02fe75.jpg)
+
+看源码会发现 StringBuffer 和 StringBuilder 继承了同样的接口和抽象类，其中的方法和实现也几乎都一样，唯一的区别就是在 StringBuffer 中很多方法都加了 `synchronized` 修饰符
+从而达到线程安全的目的。
+
+## String是不可变的有什么好处？
+       
+1. 由于String是不可变类，所以在多线程中使用是安全的，我们不需要做任何其他同步操作。
+2. 不同的字符串变量可以引用池中的相同的字符串，节省大量内存空间。
 
 
-## String是不可变的有什么好处？String是线程安全的吗？
+## Java 能不能自己创建一个 `java.lang.String` 的对象
+
+先说结论，下面会详细解释。可以创建，但是不能正常的加载。首先 JVM 类加载的`双亲委托机制`使得所有的类都优先从父类或者启动类加载，导致同名自定义的类没有机会加载；其次即使定义了一个父类找不到的类名从而轮到自定义的类加载器加载，也会因为 JVM 限制包名以 `java.*` 开头的类加载，会抛出一个安全异常。
+
+其实这个问题和 String 没什么关系，所有 rt.jar 包下的类都同理。这里主要涉及到 Java 的类加载机制，以及类加载的一些特殊限制（处于安全考虑）。下面对类加载相关的知识进行简单总结。
+
+Java 类加载有一个称为双亲委托的机制：**某个特定的类加载器在接到加载类的请求时，首先将加载任务委托给父类加载器，依次递归，如果父类加载器可以完成类加载任务，就成功返回；只有父类加载器无法完成此加载任务时，才自己去加载。**
+
+使用双亲委派模型的好处在于 Java 类随着它的类加载器一起具备了一种带有优先级的层次关系。例如类java.lang.Object，它存在在 rt.jar 中，无论哪一个类加载器要加载这个类，最终都是委派给处于模型最顶端的 Bootstrap ClassLoader 进行加载，因此 Object 类在程序的各种类加载器环境中都是同一个类。
+
+jdk 自带了3种类加载器，分别是启动类加载器（Bootstrap ClassLoader），扩展类加载器（Extension ClassLoader），应用程序类加载器（Application ClassLoader）。启动类加载器由native实现（HotSpot虚拟机中由c++实现），后两种加载器是继承自抽象类 java.lang.ClassLoader。
 
 
+在 rt.jar 包中的 java.lang.ClassLoader 类中，我们可以查看类加载实现过程的代码如下：
 
+```java
+protected Class<?> loadClass(String name, boolean resolve)
+        throws ClassNotFoundException
+{
+    synchronized (getClassLoadingLock(name)) {
+        // First, check if the class has already been loaded
+        Class<?> c = findLoadedClass(name); //首先检查该类是否已经加载过
+        if (c == null) { //没加载过的话按照以下步骤加载
+            long t0 = System.nanoTime();
+            try {
+                if (parent != null) { //1. 有父加载器时递归调用父加载器加载
+                    c = parent.loadClass(name, false);
+                } else { //2. 没有父加载器时调用启动加载器加载
+                    c = findBootstrapClassOrNull(name);
+                }
+            } catch (ClassNotFoundException e) {
+                // ClassNotFoundException thrown if class not found
+                // from the non-null parent class loader
+            }
+            //3. 前面几步都没有加载的情况下调用加载器实现类自定义的findClass方法自定义加载
+            if (c == null) {
+                // If still not found, then invoke findClass in order
+                // to find the class.
+                long t1 = System.nanoTime();
+                c = findClass(name);
+
+                // this is the defining class loader; record the stats
+                sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
+                sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
+                sun.misc.PerfCounter.getFindClasses().increment();
+            }
+        }
+        if (resolve) {
+            resolveClass(c);
+        }
+        return c;
+    }
+}
+```
+
+如果需要自定义类加载器，方法注释中可以看到 *Subclasses of ClassLoader are encouraged to override findClass(String) rather than this method.* 也就是说一般子类只需要重写这个方法即可，而不是重写整个 loadClass() 方法。
 
 
 
