@@ -107,4 +107,4 @@ backup:
     type: git
     theme: maupassant
     repository:
-       github: git@github.com:jiwenxing/blogbackup.git,master
+       github: https://github.com/jiwenxing/hexo-blog.git,master
