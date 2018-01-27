@@ -1,4 +1,4 @@
-title: Spring Conditional
+title: Spring @Conditional Annotation
 categories: Coding
 tags: []
 toc: true
@@ -6,13 +6,13 @@ date: 2017-11-25 21:40:10
 ---
 
 
-`@Conditional` 注解是 Spring 4 提供的基于条件的Bean的创建方式，Spring Boot 大量利用了这个特定来实现自动配置。比如，当某一个 jar 包在一个类路径下时，自动配置一个或者多个Bean；或者只有一个Bean创建时，才会创建另一个Bean。总的来说，就是根据特定条件来控制Bean的创建行为，这样就可以利用这个特性进行一些自动配置。
+`@Conditional` 注解是 Spring 4 提供的基于条件的 Bean 的创建方式，Spring Boot 大量利用了这个特定来实现自动配置。比如，当某一个 jar 包在一个类路径下时，自动配置一个或者多个 Bean；或者只有一个 Bean 创建时，才会创建另一个 Bean。总的来说，就是根据特定条件来控制 Bean 的创建行为，这样就可以利用这个特性进行一些自动配置。
 
 <!-- more -->
 
 ## 自定义 Condition 实例
 
-下面的示例将以不同的操作系统作为条件，通过实现Condition接口，并重写其matches方法来构造判断条件，获取在不同操作系统下的操作命令。如在Windows系统下运行程序调用获取文件列表命名的方法则输出 `dir`，如果在Linux下则输出 `ls`。
+下面的示例将以不同的操作系统作为条件，通过实现 Condition 接口，并重写其 matches 方法来构造判断条件，获取在不同操作系统下的操作命令。如在 Windows 系统下运行程序调用获取文件列表命名的方法则输出 `dir`，如果在 Linux 下则输出 `ls`。
 
 ### 通过实现 Spring 提供的 `Condition` 接口创建两个 Condition 类
 
@@ -108,12 +108,12 @@ public class SpringConditionalDemoTest {
 
 除了类似上例的自定义 Condition 之外，Spring 还内置了一些 Condition 给我们使用：
 
-- `@ConditionalOnBean` 仅仅在当前上下文中存在某个对象时，才会实例化一个Bean
-- `@ConditionalOnClass` 某个class位于类路径上，才会实例化一个Bean
-- `@ConditionalOnExpression` 当表达式为true的时候，才会实例化一个Bean
-- `@ConditionalOnMissingBean` 仅仅在当前上下文中不存在某个对象时，才会实例化一个Bean
-- `@ConditionalOnMissingClass` 某个class类路径上不存在的时候，才会实例化一个Bean
-- `@ConditionalOnNotWebApplication` 不是web应用时才会实例化一个Bean
+- `@ConditionalOnBean` 仅仅在当前上下文中存在某个对象时，才会实例化一个 Bean
+- `@ConditionalOnClass` 某个 class 位于类路径上，才会实例化一个 Bean
+- `@ConditionalOnExpression` 当表达式为 true 的时候，才会实例化一个 Bean
+- `@ConditionalOnMissingBean` 仅仅在当前上下文中不存在某个对象时，才会实例化一个 Bean
+- `@ConditionalOnMissingClass` 某个 class 类路径上不存在的时候，才会实例化一个 Bean
+- `@ConditionalOnNotWebApplication` 不是 web 应用时才会实例化一个 Bean
 
 ## `@Conditional` 与 `@Profile ` 区别
 
@@ -153,9 +153,9 @@ public class ProductionDatabaseConfig implements DatabaseConfig {
 }
 ```
 
-以上两个配置类都实现了 DatabaseConfig 接口，特殊的地方在于它们都用 @Profile 标注，被 @Profile 标注的组件只有当指定profile值匹配时才生效。可以通过以下方式设置profile值：
+以上两个配置类都实现了 DatabaseConfig 接口，特殊的地方在于它们都用 @Profile 标注，被 @Profile 标注的组件只有当指定 profile 值匹配时才生效。可以通过以下方式设置 profile 值：
 
-1. 设置spring.profiles.active属性（通过JVM参数、环境变量或者web.xml中的Servlet context参数）
+1. 设置 spring.profiles.active 属性（通过 JVM 参数、环境变量或者 web.xml 中的 Servlet context 参数）
 2. ApplicationContext.getEnvironment().setActiveProfiles(“ProfileName”)
 
 在 Spring 3.x 里 @Profiles 注解只能用在类级别，但是在 Spring 4.0 以后则既可以用在类级别也可以用在方法级别，主要是因为在 4.0 中 Spring 使用 @Conditional 对其做了重构：
