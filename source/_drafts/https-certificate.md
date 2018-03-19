@@ -1,7 +1,7 @@
 title: 记录一次 https 握手故障的排查
 categories: Coding
 tags: [Https]
-toc: false
+toc: true
 date: 2018-03-08 17:58:36
 ---
 
@@ -59,17 +59,91 @@ TLS 的身份认证是通过证书信任链完成的，浏览器从站点证书�
 
 
 
-通过对一次 Https 请求的抓包可以清晰的看到这个过程
+通过对一次 Https 请求的抓包可以清晰的看到这个过程中涉及到多次通信过程如截图所示，下面就每次通信内容逐一进行解释。
 
 ![](http://7xry05.com1.z0.glb.clouddn.com/201803132018_274.png)
 
 
 
+#### 一、ClientHello
+
+首先，客户端先向服务器发出加密通信的请求，在这一步，客户端主要向服务器提供（不限于）以下信息。
+
+1. 支持的协议版本，比如TLS 1.0版。
+2. 一个客户端生成的随机数，稍后用于生成"对话密钥"。
+3. 支持的加密方法，比如RSA公钥加密。
+4. 支持的压缩方法。
+
+![](http://7xry05.com1.z0.glb.clouddn.com/201803191728_75.png)
+
+
+#### 二、SeverHello
+
+服务器收到客户端请求后的回应包含以下内容
+
+1. 确认使用的加密通信协议版本，如图可以看到是 **TLS1.2**
+2. 一个服务器生成的随机数，稍后用于生成"对话密钥"
+3. 确认使用的加密方法，从截图可以看到使用的是 **椭圆曲线（ECDHE）算法** 作为密钥交换算法
+
+![](http://7xry05.com1.z0.glb.clouddn.com/201803191732_34.png)
+
+#### 三、Certificate &  Server Key Exchange （椭圆曲线（ECDHE）算法有这一步，如果使用RSA算法则没有这一步）
+
+Certificate 即服务器在响应 ServerHello 的同时会向 Client 端发送证书信息，上文讨论的握手失败就发生在这一步，抓包如下
+
+![](http://7xry05.com1.z0.glb.clouddn.com/201803191740_558.png)
+
+
+
+**Server Key Exchange** 这一步包括下面的 **Client Key Exchange** 都是为了得到生成会话秘钥的第三个随机参数，由于这个随机数需要加密传输避免被第三方截取，因此采用了下图所示的 [**迪菲-赫尔曼密钥交换**（英语：Diffie–Hellman key exchange，缩写为D-H）](https://zh.wikipedia.org/wiki/%E8%BF%AA%E8%8F%B2-%E8%B5%AB%E7%88%BE%E6%9B%BC%E5%AF%86%E9%91%B0%E4%BA%A4%E6%8F%9B)。 采用DH算法后，Premaster secret不需要传递，双方只要交换各自的参数，就可以算出这个随机数。详细的过程可以参考阮一峰的 [图解SSL/TLS协议](http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html) 。
+
+![](http://7xry05.com1.z0.glb.clouddn.com/201803191807_10.png)
+
+
+
+#### 四、Client Key Exchange & Change Cipher Spec & Encrypted Handshake Message
+
+客户端收到服务器回应以后，首先验证服务器证书。如果证书由可信机构颁布，客户端就会从证书中取出服务器的公钥。然后，向服务器发送下面三项信息。
+
+1. 一个随机数。该随机数用服务器公钥加密，防止被窃听。
+2. 编码改变通知，表示随后的信息都将用双方商定的加密方法和密钥发送。
+3. 客户端握手结束通知，表示客户端的握手阶段已经结束。这一项同时也是前面发送的所有内容的hash值，用来供服务器校验。
+
+![](http://7xry05.com1.z0.glb.clouddn.com/201803191828_455.png)
+
+
+
+#### 五、Server 端 Change Cipher Spec & Encrypted Handshake Message
+
+服务器收到客户端的第三个随机数之后，计算生成本次会话所用的"会话密钥"（利用之前的三个随机数共同生成）。然后向客户端最后发送下面信息。
+
+1. 编码改变通知，表示随后的信息都将用双方商定的加密方法和密钥发送。
+2. 服务器握手结束通知，表示服务器的握手阶段已经结束。这一项同时也是前面发送的所有内容的hash值，用来供客户端校验。
+
+![](http://7xry05.com1.z0.glb.clouddn.com/201803191833_879.png)
+
+#### 六、传送应用数据
+
+至此，整个握手阶段全部结束。接下来，客户端与服务器进入加密通信，就完全是使用普通的HTTP协议，只不过用"会话密钥"加密内容。
+
+![](http://7xry05.com1.z0.glb.clouddn.com/201803191904_387.png)
+
+
+
+### 后续
+
+这里由一个问题排查引出了很多的知识点，该篇只是顺便梳理一下 Https 的握手过程，但是发现随着深入，有更多的知识点需要深入挖掘，由于篇幅限制，以下的内容后续将不断追加：
+
+1. 对话密钥的生成，这里涉及到对话秘钥的生成过程及 [Diffie-Hellman算法](http://zh.wikipedia.org/wiki/%E8%BF%AA%E8%8F%B2%EF%BC%8D%E8%B5%AB%E5%B0%94%E6%9B%BC%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2) 的使用
+2. session 的复用，这里涉及到 TLS 的性能优化
 
 
 
 
-### 参考
+
+
+### *参考
 
 - [SSL/TLS协议运行机制的概述](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html)
 - [SSL/TLS 握手优化详解](http://blog.jobbole.com/94332/) 
+- [图解SSL/TLS协议](http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html)
