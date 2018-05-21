@@ -7,9 +7,11 @@ date: 2017-08-23 10:07:36
 
 Spring 事件体系是观察者模式的典型应用，观察者模式中有主题(Subject)和观察者(Observer)，它定义了对象之间的一对多的依赖关系，当主题状态发生变化时，所有观察者都会收到通知并且自动更新，它的主要目标就是松散耦合对象间的一对多的依赖关系。
 
-![](http://7xry05.com1.z0.glb.clouddn.com/201801241600_183.png?imageView2/2/w/2231/h/300)
+
 
 <!-- more -->
+
+![](http://7xry05.com1.z0.glb.clouddn.com/201801241600_183.png?imageView2/2/w/2231/h/300)
 
 ## Overview
 

@@ -25,5 +25,5 @@ var Comments = (function(){
 	}
 })();
 $(function(){
-	Comments.init();
+	// Comments.init();
 })
