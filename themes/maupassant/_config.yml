@@ -33,12 +33,19 @@ menu:
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
   - avatar
   - search
+  - books
   - category
   - tag
 ##  - recent_posts
   # - recent_comments
   - statistic
 ##- links
+
+books:
+  - title: Thinking in Java
+    url: thinking-in-java/
+  - title: Spring Boot
+    url: spring-boot-demo/
 
 # links:
 #   - title: site-name1

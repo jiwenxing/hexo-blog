@@ -1,0 +1,6 @@
+.widget
+  .widget-title
+    i(class='fa fa-book')= ' ' + __('notes')
+  - for (var i in theme.books)
+    ul
+    a(href='#{theme.books[i].url}' title='#{theme.books[i].title}' target='_blank') #{theme.books[i].title}
