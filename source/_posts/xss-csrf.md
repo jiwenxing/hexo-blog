@@ -1,4 +1,4 @@
-title: Http的Cookie&Session机制
+title: Http 的 Cookie&Session 机制
 categories: Coding
 tags: [Cookie,Session,Http]
 toc: true
@@ -7,17 +7,17 @@ date: 2016-09-26 20:31:30
 
 为什么京东的网站没登录也可以加入购物车？为什么刚打开淘宝页面左上角就显示出了我的用户名？为什么我在这个商品页登陆了，其它的页面刷新后也显示已登录？今天就来仔细的探讨一下Http的Cookie和Session机制。<!-- more -->
 
-“Cookie是一个神奇的机制，同域内浏览器中发出的任何一个请求都会带上Cookie，无论请求什么资源，请求时，Cookie出现在请求头的Cookie字段中。服务端响应头的Set-Cookie字段可以添加、修改和删除Cookie，大多数情况下，客户端通过JavaScript也可以添加、修改和删除Cookie。”
+“Cookie 是一个神奇的机制，同域内浏览器中发出的任何一个请求都会带上 Cookie，无论请求什么资源，请求时，Cookie 出现在请求头的 Cookie 字段中。服务端响应头的 Set-Cookie 字段可以添加、修改和删除 Cookie，大多数情况下，客户端通过 JavaScript 也可以添加、修改和删除 Cookie。”
 
-Cookie的重要字段如下：
-`[name][value][domain][path][expires][httponly][secure]`其含义依次是：名称、值、所属域名、所属相对根路径、过期时间、是否有HttpOnly标志、是否有Secure标志。
+Cookie 的重要字段如下：
+`[name][value][domain][path][expires][httponly][secure]`其含义依次是：名称、值、所属域名、所属相对根路径、过期时间、是否有 HttpOnly 标志、是否有 Secure 标志。
 其中：
-- 设置Domain的值可以进行共享cookie(不填为默认本域，可设为根域名进行使其它二级域名共享)。
-- `HttpOnly`是指仅在HTTP层面上传输的Cookie，当设置了HttpOnly标志后，客户端脚本就无法读写该Cookie，这样能有效地防御XSS攻击获取Cookie。
-- 设置了Secure标志的Cookie仅在HTTPS层面上安全传输，如果请求是HTTP的，就不会带上这个Cookie，这样能降低重要的Cookie被中间人截获的风险。
+- 设置 Domain 的值可以进行共享 cookie(不填为默认本域，可设为根域名进行使其它二级域名共享)。
+- `HttpOnly` 是指仅在 HTTP 层面上传输的 Cookie，当设置了 HttpOnly 标志后，客户端脚本就无法读写该 Cookie，这样能有效地防御 XSS 攻击获取 Cookie。
+- 设置了 Secure 标志的 Cookie 仅在 HTTPS 层面上安全传输，如果请求是 HTTP 的，就不会带上这个 Cookie，这样能降低重要的 Cookie 被中间人截获的风险。
 
 
-## 添加cookie属性及session
+## 添加 cookie 属性及 session
 客户端浏览器访问服务时，可以向其添加cookie属性或在服务端保存一些用户相关的session属性，如下所示。注意添加到根域名下的cookie可以在不同的二级域名下共享，这也是多数网站共享登录态实现单点登录的常用手段。创建的session是保存在服务端servlet容器的内存中，如果用户量大或session数据大这样会影响性能甚至造成内存溢出，因此常用的手段是将session存于redis或memcache。
 ```java
 @RequestMapping("/")

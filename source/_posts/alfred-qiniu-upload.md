@@ -1,4 +1,4 @@
-title: 使用alfred在markdown中愉快的贴图
+title: 使用 Alfred 在 markdown 中愉快的贴图
 categories: Tools
 tags: [Alfred Markdown]
 toc: false
