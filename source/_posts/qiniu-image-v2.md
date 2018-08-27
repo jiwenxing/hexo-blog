@@ -1,4 +1,4 @@
-title: windows 版本 markdown 一键贴图工具
+title: Windows 版本 markdown 一键贴图工具
 categories: Tools
 tags: [AutoHotkey]
 toc: false
