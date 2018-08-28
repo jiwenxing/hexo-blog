@@ -11,7 +11,7 @@ date: 2018-06-28 16:40:17
 
 ## Minimum Edit Distance
 
-Minimum Edit Distance （最小编辑距离），是用來计算两个字符串的相似程度。被广泛用於拼字校正、或是计算两个 DNA 序列的相似程度。它的定时如下，
+Minimum Edit Distance （最小编辑距离），是用來计算两个字符串的相似程度，被广泛用於拼字校正、或是计算两个 DNA 序列的相似程度。它的定义如下，
 
 给定 2 个字符串 a, b。 编辑距离是将 a 转换为 b 的最少操作次数，操作只允许如下 3 种：
 
@@ -43,7 +43,7 @@ Minimum Edit Distance （最小编辑距离），是用來计算两个字符串�
 
 使用公式表示如下：
 
-![](http://7xry05.com1.z0.glb.clouddn.com/201808281756_878.png)
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/1deeeaebff36dc4bdc79778bcafe0ec17ce63f83)
 
 
 ## Common Algorithm Implementation
@@ -132,7 +132,7 @@ public static int editDistance2(String str1, String str2) {
 
 明显时间复杂度已经降下来了，因为从前往后算的时候初始值可以直接得到，因此计算下一个元素的时候就不必在像之前一样递归去求，直接使用初始值进行计算，而从后往前算则只能通过递归实现。
 
-## Application
+## Usage
 
 中文转化为拼音后计算编辑距离能够有效解决同音词、相似发音词、发音不标准等特殊情况下的语音识别。但是注意编辑距离明显对长句和短句之间的相似度计算偏差很大，因此该方法主要针对长度相近，从一组候选项中进行最佳匹配的场景。
 
