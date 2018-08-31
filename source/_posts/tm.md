@@ -10,7 +10,6 @@ date: 2016-10-09 23:21:03
 
 
 <div style="text-align: center; color: grey; ">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="http://music.163.com/outchain/player?type=2&id=175206&auto=1&height=32"></iframe>
 
 连着下了两天的雨
 伴着瑟瑟的秋风

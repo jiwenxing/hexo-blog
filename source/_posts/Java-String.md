@@ -1,4 +1,4 @@
-title: About Java String.md
+title: About Java String
 categories: Coding
 tags: [Basic]
 toc: true
