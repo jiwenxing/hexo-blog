@@ -45,7 +45,7 @@ books:
   - title: Thinking in Java
     url: thinking-in-java/
   - title: Spring Boot
-    url: spring-boot-demo/
+    url: https://jverson.com/spring-boot-demo/
 
 # links:
 #   - title: site-name1
