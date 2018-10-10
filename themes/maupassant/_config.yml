@@ -42,10 +42,13 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
 ##- links
 
 books:
+  - title: AI
+    url: https://jverson.com/ai/
   - title: Thinking in Java
-    url: thinking-in-java/
+    url: https://jverson.com/thinking-in-java/
   - title: Spring Boot
     url: https://jverson.com/spring-boot-demo/
+
 
 # links:
 #   - title: site-name1
