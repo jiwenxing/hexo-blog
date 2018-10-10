@@ -55,7 +55,8 @@ DEBUG_MODE = false
 在`对象存储->存储空间列表`中选择或新建一个存储空间即bucket，点击该bucket在右边看到一个测试域名，该域名即bucketDomain是图片上传后的访问域名。
 
 查看以上四个参数的操作如下图所示：
-![](http://ochyazsr6.bkt.clouddn.com/883c2cf5633cac4fba7b3719284ab678.gif)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/883c2cf5633cac4fba7b3719284ab678.gif)
 
 
 ## 运行

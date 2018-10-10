@@ -154,7 +154,8 @@ JDK中实现的方法是：当集合要添加新的对象时，先调用这个�
 
 三者之间的关系看这张图：
 
-![](http://ochyazsr6.bkt.clouddn.com/1294873a37967d1f431ce3a5db02fe75.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/1294873a37967d1f431ce3a5db02fe75.jpg)
 
 看源码会发现 StringBuffer 和 StringBuilder 继承了同样的接口和抽象类，其中的方法和实现也几乎都一样，唯一的区别就是在 StringBuffer 中很多方法都加了 `synchronized` 修饰符
 从而达到线程安全的目的。

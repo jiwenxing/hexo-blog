@@ -38,7 +38,8 @@ module.exports = [
 
 5. 验证匹配结果
 刷新页面，当资源链接匹配rule中配置的pattern时请求便会被转发到相应的responder，并会有如下匹配成功的提示
-![](http://ochyazsr6.bkt.clouddn.com/201610211157_36.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/201610211157_36.jpg)
 <br>
 
 

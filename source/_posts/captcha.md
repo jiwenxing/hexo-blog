@@ -5,7 +5,8 @@ toc: false
 date: 2016-05-04 15:12:39
 ---
 
-![](http://7u2eve.com1.z0.glb.clouddn.com/24fde0b64eeee64015e4f9c5c3319da.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/24fde0b64eeee64015e4f9c5c3319da.jpg)
 <!-- more -->
 
 是不是看到题目一脸懵逼^_^，换句人话其实就是验证码，验证码是网站做人机区分的一种常用手段。想必大家对12306的BT验证码还历历在目吧，尽管遭到无数的吐槽和调侃，但是不可否认验证码作为一种辅助安全手段在Web安全中起着重要的作用，可以一定程度上防止恶意破解密码、刷票、论坛灌水等非法操作。这里我们就来探究一下目前的一些验证码解决方案及其安全性。
@@ -115,14 +116,16 @@ Kaptcha提供比较丰富的配置参数，可以在Producer的实现类DefaultK
 
 最后在你需要展示验证码的html中加上```<img class="captcha" src="/captcha/uuid" alt="验证码">```便可以看到如下所示的预览效果。
 
-![](http://7u2eve.com1.z0.glb.clouddn.com/TimLine%E5%9B%BE%E7%89%8720160505155349.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/TimLine%E5%9B%BE%E7%89%8720160505155349.jpg)
 
 captcha就是一款典型的传统验证码解决方案，目前此类验证码的安全性已经很低甚至于形同虚设，可以轻松的被光学字符识别（OCR, Optical Character Recognition）之类的电脑程序自动辨识，因此并不适合应用于安全性要求较高的场合。
 
 ## Google reCAPTCHA
 reCAPTCHA是Google推出的一种“简化”的图灵测试，可以通过一种更简单的方法来判断机器人：点击一个复选框。也就是说你只需要像下图一样勾选“我不是机器人（I'm not a robt）”，谷歌便能够识别出是人或者机器的一次操作。这是因为reCaptcha功能会在“不经意间”收集大量信息，包括IP地址和cookies，然后通过收集这些数据看对方是否和过去在互联网上的行为一致，来判定这个用户究竟是不是机器人。尽管reCAPTCHA相对于传统手动输入的验证码相比对用户更加友好，但还是有人担心谷歌过度收集用户信息，并且网上也出现了一些破解算法。
 
-![](http://7u2eve.com1.z0.glb.clouddn.com/547fbadc3fff5.gif)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/547fbadc3fff5.gif)
 
 ## geetest
 

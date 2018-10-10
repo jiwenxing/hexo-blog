@@ -17,7 +17,8 @@ toc: true
 
 ## 签约
 对于之前用过微信其它支付接口的同学来说，可能就只有签约接口是陌生的。微信的委托代扣签约流程其实类似于我们平常的微信支付。用户在商户的app进入到委托代扣签约页面以后，后台会生成一个用于签约的链接，点击签约便会唤醒微信app并打开微信的webview进入到签约页面，后续的签约便都是在微信上完成了。下图便是一个不是很规范的签约流程图，另外还会讲到签约需要注意的一些地方。<br>
-![](http://7u2eve.com1.z0.glb.clouddn.com/wechatsign.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/wechatsign.jpg)
 #### 签约参数request_serial 
 签约参数里有一个request_serial（商户请求签约时的序列号，商户侧须唯一），大家在开发文档里应该都能看到，类型是String，刚开始用的是uuid一直没问题，后来突然有一天所有的签约连接打开都提示“参数构造错误”，后来与微信方沟通才知道他们将request_serial参数由String改为uint64了，也没有通知我们，还好我们业务没有上线。另外由于该参数需要保证商户端唯一，再考虑到并发，可建议大家使用ip转long加时间戳的方法。
 
@@ -33,11 +34,13 @@ toc: true
 #### 查询签约结果
 用户每次进入App的支付方式页面，都需要调用微信的签约查询接口确定用户是否已开通微信免密支付，从而向用户展示相应页面或状态。另外查询签约服务还可以负责维护本地签约数据与微信侧数据的一致性。具体流程如下所示：
 <br>
-![](http://7u2eve.com1.z0.glb.clouddn.com/wechatcheck.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/wechatcheck.jpg)
 
 #### 解除签约
 解约同签约，但需要注意的是用户既可以在商户App解约也可以直接在微信客户端解约。区别是如果在商户App调用解约接口解约则会同步返回解约结果，如果是在微信客户端解约，则解约结果会通过商户后台设置的notify_url异步通知商户。附解约时序图和实测解约通知数据格式：<br>
-![](http://7u2eve.com1.z0.glb.clouddn.com/wechat%E8%A7%A3%E7%BA%A6.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/wechat%E8%A7%A3%E7%BA%A6.jpg)
 
 ```xml
 <xml>
@@ -59,7 +62,8 @@ toc: true
 
 ## 支付&退款
 对于财务系统很简单或者根本就没有财务系统的小商户来说，支付这部分开发会比较容易，只需要按照微信的接口文档调通接口，用户支付钱打到商户号绑定的银行卡即可。但是对于比较大型的商户，一般支付会涉及到订单系统、交易系统、台账系统、财务系统、仓储系统等，中间的逻辑就需要厘清。以下是支付流程图（业务不同会有所区别）及几点支付需要注意的问题。<br>
-![](http://7u2eve.com1.z0.glb.clouddn.com/wechatpay.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/wechatpay.jpg)
 
 #### 支付结果异步通知
 调用支付接口支付完成后会返回一个实时结果，如果支付成功也会返回<result_code><![CDATA[SUCCESS]]></result_code>，但是不能根据此信息确认支付成功，这只说明支付请求没有出现异常，最终的支付业务成功还是需要收到异步通知结果才能确定。但是如果返回“SYSTEMERROR”及“BANKERROR”异常时，则需要调用查询接口确认支付结果。
@@ -146,7 +150,8 @@ toc: true
 
 #### 退款
 退款接口与其它接口唯一的不同是多了一个证书，官方有demo（[demo链接](https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=4_3)），调试过程基本没有什么问题，附流程图：
-<br>![](http://7u2eve.com1.z0.glb.clouddn.com/wechatrefund.jpg)
+<br>![](http://
+pgdgu8c3d.bkt.clouddn.com/wechatrefund.jpg)
 
 退款请求返回值:
 ```xml  

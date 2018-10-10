@@ -219,5 +219,6 @@ public class Test1 {
 ## 总结
 很庆幸每次只做出了其中一道也被算作通过了，但是还是暴露了很多问题，实现必须对一些例如IO、排序之类的基本操作达到非常熟练，这样才能很快的完成以上这样的题目，从而留更多的时间去思考第二道算法题，而算法题则需要灵活的思维和更多的技巧，而这更需要平时的积累和总结来提升，所以，骚年，继续努力，下次你可不一定有这么幸运了！
 
-![](http://7u2eve.com1.z0.glb.clouddn.com/blogElement/totoroAbout.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blogElement/totoroAbout.jpg)
 <br><br>

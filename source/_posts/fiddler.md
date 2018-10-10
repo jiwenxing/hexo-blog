@@ -14,10 +14,12 @@ date: 2017-04-10 14:58:48
 ### 操作步骤
 1. pc上安装fiddler并打开远程机器捕获模式
 如图所示，Tools > Fiddler Options下确保 Allow remote clients to connect 被选中
-![](http://ochyazsr6.bkt.clouddn.com/201704101432_963.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/201704101432_963.jpg)
 
 2. 远程机器（即手机）连接至同一局域网并设置该pc为代理机
-![](http://ochyazsr6.bkt.clouddn.com/201704101327_739.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/201704101327_739.jpg)
 注意：ip为pc在局域网中的ip，fiddler默认监听的端口号为8888，可以在第一步修改
 
 3. pc配上需要的host即可在APP上进行测试

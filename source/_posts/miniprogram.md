@@ -123,7 +123,8 @@ WePY 参考了 Vue 等现有框架的一些语法风格和功能特性，对原�
 
 最后打个广告，可以扫下面二维码来体验一下我们的小程序
 
-![](http://ochyazsr6.bkt.clouddn.com/da354829ab89de3f5324abecffcaa120.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/da354829ab89de3f5324abecffcaa120.jpg)
 
 
 

@@ -21,7 +21,8 @@ date: 2016-08-30 11:41:56
 ## 安装
 ### 下载源码
 相对于 mac 版本，windows 版安装更加简单。首先从 [github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 下载最新的release版本并解压到任意目录，在`qimage-win`文件夹中看到的目录结构应该是如下这样：
-![](http://ochyazsr6.bkt.clouddn.com/afa184acc926d86a6ea786d7634500e7.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/afa184acc926d86a6ea786d7634500e7.jpg)
 其中`dump-clipboard-png.ps1`是保存截图的`powershell`脚本，`qimage-win.ahk`即完成文件上传的`AutoHotkey`脚本。
 
 ### 安装 **AutoHotkey**    
@@ -53,7 +54,8 @@ WORKING_DIR = E:\TOOLS\qiniu-image-tool-win\  ;directory that you put the qshell
 在`对象存储->存储空间列表`中选择或新建一个存储空间即bucket，点击该bucket在右边看到一个测试域名，该域名即bucketDomain是图片上传后的访问域名。这里要特别注意域名不要少了前面的http头和最后的那个斜杠。
 
 查看以上四个参数的操作如下图所示：
-![](http://ochyazsr6.bkt.clouddn.com/883c2cf5633cac4fba7b3719284ab678.gif)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/883c2cf5633cac4fba7b3719284ab678.gif)
 
 #### WORKING_DIR  
 这是设置您的工作目录，即这些脚本所在的目录，比如我将从github上下载的release压缩包解压到了`E:\TOOLS`目录下，那我的`WORKING_DIR`就是`E:\TOOLS\qiniu-image-tool-win\`。注意不要少了最后那个反斜杠。*另外需要特别注意的是路径中不能包含中文，而且不能有类似Program Files这类包含空格的路径。*

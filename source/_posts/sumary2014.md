@@ -27,24 +27,30 @@ and Jenny, Kundi, 江雨, 散人王, Forecho, Spock and ... ...
 <br>
 ### This year I have been to some places...
 - Hangzhou - One of the seven ancient capitals in China
-![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/DSC_0068.JPG)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blog201501/DSC_0068.JPG)
 
 
 - Shaoxin - The hometown of celebrities, Luxun Zhouenlai Wangxizhi...
-![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/DSC_0508.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blog201501/DSC_0508.jpg)
 
 
 - Xitang - A peaceful ancient town
-![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/DSC_0111.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blog201501/DSC_0111.jpg)
 
 - Shanghai - See my best friend there
-![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/DSC_0209.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blog201501/DSC_0209.jpg)
 
 - Yinchuan - so called "small Jiangnan of the northwest"
-![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/DSCF1680.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blog201501/DSCF1680.jpg)
 
 - Quebec, Canada - The European Style north America city
-![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/DSCN0825.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blog201501/DSCN0825.jpg)
 
 <br>
 ### This year I have encountered some setbacks...
@@ -65,12 +71,14 @@ If you get seriously sick, you will feel those common strangers across the stree
 ### This year I have got some achievements...
 
 - Publish a conference paper based on my research
-![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/copy-cropped-cropped2-logo_363.png) 
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blog201501/copy-cropped-cropped2-logo_363.png) 
 
 - Be named as the "Excellent Graduate" and the "Excellent Student Cadre"
 
 - Finish the thesis and get my master degree
-![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/IMG_6712.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blog201501/IMG_6712.jpg)
 
 - Got a satisfied offer
 
@@ -82,7 +90,8 @@ If you get seriously sick, you will feel those common strangers across the stree
 Here and now, I would like to hold a memorial ceremony for my school days, that's 20+ years since I was six years old. That is the whole teenage and youth!
 2015, just be more mature, more confident, more healthy and more brave. Do the job, improve myself, earn money and honor my parents.
 Let's go, 2015!
-![](http://7u2eve.com1.z0.glb.clouddn.com/blog201501/2015.png)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blog201501/2015.png)
 <br>
 ——————
 The end.

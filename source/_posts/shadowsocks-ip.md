@@ -22,22 +22,26 @@ UC 看多了不自觉也学会震惊体了，哈哈。回到主题，事情是�
 
 ### long long ago…
 
-![](http://ochyazsr6.bkt.clouddn.com/6754b95cbb27f92979a4dbf1471d0101.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/6754b95cbb27f92979a4dbf1471d0101.jpg)
 
 
 ### when evil comes(hahahaha...)
 
-![](http://ochyazsr6.bkt.clouddn.com/a250a9851c17e397731ab902e18ee074.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/a250a9851c17e397731ab902e18ee074.jpg)
 
 
 ### ssh tunnel
 
-![](http://ochyazsr6.bkt.clouddn.com/ca96eb0c6f38d7afe6985ad32f415885.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/ca96eb0c6f38d7afe6985ad32f415885.jpg)
 
 
 ### shadowsocks
 
-![](http://ochyazsr6.bkt.clouddn.com/66e428d153c996c29c38aad4aa3f4084.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/66e428d153c996c29c38aad4aa3f4084.jpg)
 
 
 

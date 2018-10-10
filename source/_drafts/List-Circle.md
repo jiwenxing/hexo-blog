@@ -24,7 +24,8 @@ tags: [Java]
 <br>
 ### 问题3：找到环的连接点位置
 这个貌似推导有点复杂，先呈上结论：从链表头、与相遇点P分别设一个指针，每次都各走一步，两个指针必定相遇，且相遇第一点即为环入口点。证明如下：
-![](http://7u2eve.com1.z0.glb.clouddn.com/blogpic/list_circle.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blogpic/list_circle.jpg)
 
 
 设链表总长度为L，头结点到环入口的距离为a，环入口到快慢指针相遇的结点距离为x，环的长度为r，慢指针总共走了s步，则快指针走了2s步。另外，快指针要追上慢指针的话快指针至少要在环里面转了一圈多(假设转了n圈加x的距离)，得到：
@@ -113,4 +114,5 @@ public class Node{
 
 
 ----------
-![](http://7u2eve.com1.z0.glb.clouddn.com/blogpic/E___0109GD00SIGT.gif)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blogpic/E___0109GD00SIGT.gif)

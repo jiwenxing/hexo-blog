@@ -6,7 +6,8 @@ date: 2014-06-04 23:48:28
 
  > 在我们乡下，有一种神奇的小精灵，他们就像我们的邻居一样，居住在我们身边嬉戏、玩耍。但是普通人是看不到他们的，据说只有小孩子纯真无邪的心灵才可以捕捉他们的形迹，如果静下心来倾听，风声里可以隐约听到他们奔跑的声音。”
 
-![](http://7u2eve.com1.z0.glb.clouddn.com/710_300_20140516012053_ckRdt.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/710_300_20140516012053_ckRdt.jpg)
 
 
 <br /><br /><br />
@@ -24,7 +25,8 @@ date: 2014-06-04 23:48:28
 	 <li><a href="mailto:i@jverson.com" class="fa fa fa-envelope fa-3x fa-fw"></a></li> 
  </ul>
 <!--  <i class="fa fa-wechat fa-fw"></i>  Wechat：
- ![](http://7u2eve.com1.z0.glb.clouddn.com/442110507659429382.jpg) -->
+ ![](http://
+pgdgu8c3d.bkt.clouddn.com/442110507659429382.jpg) -->
 <br />
 
 ### 关于本站

@@ -37,25 +37,30 @@ date: 2017-04-28 10:59:26
 
 1. [github](https://github.com/jiwenxing/qiniu-image-tool/releases)下载最新的release版本  
 `qimage-mac`文件夹下双击`Qiniu.alfredworkflow`文件安装该workflow。效果如下图所示，其中`Hotkey`为快捷键配置，`Run Script`为AppleScript脚本，最右边两个分别是粘贴板和系统通知。
-![](http://ochyazsr6.bkt.clouddn.com/2c1f76695ffd16c594e4b222f64b3686.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/2c1f76695ffd16c594e4b222f64b3686.jpg)
 
 2. 配置workflow环境变量   
 点击上图标出的环境变量图标，可以看到下图所示的四个配置项
-![](http://ochyazsr6.bkt.clouddn.com/6ec3283e4782eed9b2995289a028e15e.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/6ec3283e4782eed9b2995289a028e15e.jpg)
 这四个配置项都与七牛账号相关：  
 **AccessKey & SecretKey**  
 这是qshell操作个人账号的账号凭证，登陆七牛账号后在`个人面板->密钥管理`中查看，或者直接访问`https://portal.qiniu.com/user/key`查看。   
 **bucket & bucketDomain**
 在`对象存储->存储空间列表`中选择或新建一个存储空间即bucket，点击该bucket在右边看到一个测试域名，该域名即bucketDomain是图片上传后的访问域名。
-![](http://ochyazsr6.bkt.clouddn.com/883c2cf5633cac4fba7b3719284ab678.gif)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/883c2cf5633cac4fba7b3719284ab678.gif)
 
 3. 设置快捷键及关联应用。  
 双击`Hotkey`模块，设置自己习惯的快捷键用于触发该workflow执行，如图这里设置的就是`cmd+option+v`，另外如果担心和别的热键冲突或者只想在特定的app中激活该热键，在`Related Apps`页签中将该app拖拽进来即可。
-![](http://ochyazsr6.bkt.clouddn.com/ab6d5581255f00511fa56a08aed3a4b1.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/ab6d5581255f00511fa56a08aed3a4b1.jpg)
 
 4. 开始使用   
 这时候如果一切顺利的话，便可以使用了。如果使用过程有什么问题，如下图在设置环境变量的右侧有个debug图标，点击打开debug窗口，重新操作一次查看错误日志定位问题，如果依然不能解决问题欢迎留言或在github中提交 [issues](https://github.com/jiwenxing/qiniu-image-tool/issues)。
-![](http://ochyazsr6.bkt.clouddn.com/d98503cde4aa2712d8fab3b0c644fa60.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/d98503cde4aa2712d8fab3b0c644fa60.jpg)
 
 ## References
 1. [qshell命令行工具](https://developer.qiniu.com/kodo/tools/1302/qshell)

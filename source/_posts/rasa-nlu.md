@@ -26,7 +26,8 @@ Rasa Stack 包括 Rasa NLU 和 Rasa Core，前者负责进行语义理解（意�
 
 下图是一个简单的基于 Rasa 的 workflow 示意：
 
-![](http://ochyazsr6.bkt.clouddn.com/3229ba75c0bfdb8ec3da223a84a64913.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/3229ba75c0bfdb8ec3da223a84a64913.jpg)
 
 
 
@@ -109,7 +110,8 @@ $ python -m rasa_nlu.train -c sample_configs/config_jieba_mitie_sklearn.yml --da
 
 最后一步执行训练会得到一个模型文件如下所示，这个模型文件也是我们应用中进行意图识别和槽值提取直接使用到的模型，这一步可以离线进行训练，也可以在线实时训练。
 
-![](http://ochyazsr6.bkt.clouddn.com/56e255b860872e17c4398a708c061a79.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/56e255b860872e17c4398a708c061a79.jpg)
 
 
 

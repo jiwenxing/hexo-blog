@@ -26,7 +26,8 @@ toc: true
  
  #### 什么是GitHub
 简单的讲，GitHub是一个具有版本管理功能的代码仓库，可以使用[GitHubPages](https://pages.github.com/)为每个项目建立一个主页，也就是用户编写的、托管在github上的静态网页。而我们搭建自己的博客即使用了其GitHub Pages功能。
-![](http://7u2eve.com1.z0.glb.clouddn.com/blogElement/githubpages.PNG) 
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blogElement/githubpages.PNG) 
 
  #### 什么是Hexo
 Hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，[Hexo官网](http://hexo.io/)介绍其是一个快速的、支持Markdown格式、操作简单并且插件丰富的博客发布工具。Hexo可以将markdown格式文本生成的静态网页直接放到GitHub Pages等平台上。
@@ -83,7 +84,8 @@ iption: Description\nread_more: Read More\n\u0000',
   stack: undefined }
   ```
 打开\themes\RagingCat\languages下的yml文件
-![](http://7u2eve.com1.z0.glb.clouddn.com/blogElement/yml.PNG)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blogElement/yml.PNG)
 是不是冒号后面的单词都没有加双引号，问题就在这，加上就没问题了，这里需要感谢一下[Xuanwo](http://xuanwo.org/2014/08/14/hexo-usual-problem/)。
 
  #### 修改配置选项

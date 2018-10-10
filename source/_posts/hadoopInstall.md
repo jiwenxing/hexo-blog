@@ -61,7 +61,8 @@ $ jps
 显示namenode,datanode,secondarynamenode,jobtracker,tasktracker启动成功，win7下cygwin中显示不全，但已启动。
 
 ## 安装配置eclipse
-![](http://7u2eve.com1.z0.glb.clouddn.com/blogpic/20140826144826043.jpg)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blogpic/20140826144826043.jpg)
 
 
 run configuration配置，尤其注意输入输出路径的配置，因为是在集群上运行程序，文件代码都在dfs上，所以这里写的dfs上的路径，如果不确定怎么写，运行指令查看一下:
@@ -195,5 +196,6 @@ world   1
 ok,  done!
 <br>
 
-![](http://7u2eve.com1.z0.glb.clouddn.com/blogpic/E___0109GD00SIGT.gif)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/blogpic/E___0109GD00SIGT.gif)
 <br>

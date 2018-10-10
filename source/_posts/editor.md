@@ -11,7 +11,8 @@ toc: false
 
 wangEditor 是一款开源免费的基于javascript和css开发的html富文本编辑器。从下面的预览图可以看到增加了代码块、地图，插入表格等一些不常用、但正好是我们需要的小功能，而且有Demo和比较完整的[文档](http://www.kancloud.cn/wangfupeng/wangeditor2/113961)，上手很快，但对于我这样的业余前端来说使用中还是有一些需要注意的地方。
 
-![](http://7u2eve.com1.z0.glb.clouddn.com/filehelper_1461659066987_36.png)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/filehelper_1461659066987_36.png)
 
 
 ## 初始化
