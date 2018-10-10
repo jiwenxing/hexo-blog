@@ -40,7 +40,8 @@ pgdgu8c3d.bkt.clouddn.com/afa184acc926d86a6ea786d7634500e7.jpg)
 ACCESS_KEY = G4T2TrlRFLf2-Da-IUrHJKSbYbJTGpcwBVFbz3D
 SECRET_KEY = 0wgbpmquurY_BndFuPvDGqzlfWHCdL8YHjz_fHJ
 BUCKET_NAME = fortest  ;qiniu bucket name
-BUCKET_DOMAIN = http://7xry05.com1.z0.glb.clouddn.com/  ;qiniu domain for the image
+BUCKET_DOMAIN = http://
+pgdgu8c3d.bkt.clouddn.com/  ;qiniu domain for the image
 WORKING_DIR = E:\TOOLS\qiniu-image-tool-win\  ;directory that you put the qshell.exe 
 ;;;; config end
 ```

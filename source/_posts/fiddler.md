@@ -35,11 +35,13 @@ pgdgu8c3d.bkt.clouddn.com/201704101327_739.jpg)
 
 1. fiddler设置
 tools->options->https，选中capture HTTPS connects & decrypt https traffic & ignore server certificate errors，这时会提示安装证书，点击yes安装即可
-![](http://7xry05.com1.z0.glb.clouddn.com/201705081657_866.png)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/201705081657_866.png)
 
 2. 手机安装fiddler证书
 手机连接至pc分享的wifi，fiddler处于打开状态，手机内置浏览器输入：http://192.168.64.107:8888，其中ip为pc分享的wifi的ip，即前面设置的代理的ip，端口号默认就是8888，点击页面中的fiddlerRoot certificate安装即可
-![](http://7xry05.com1.z0.glb.clouddn.com/201705081658_54.png)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/201705081658_54.png)
 
 **注意：** 经过测试安卓安装了证书以后没有问题，但是ios安装了证书https请求还是会被拦截，需要native做特殊的处理忽略证书相关警告。
 

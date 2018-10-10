@@ -23,7 +23,8 @@ date: 2017-05-28 11:41:56
 
 ### 下载源文件
 首先从 [github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 下载最新的release版本（2.x及以上版本）并解压到任意目录，在文件夹中看到的目录结构应该是如下这样：
-![](http://7xry05.com1.z0.glb.clouddn.com/201705271605_343.png)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/201705271605_343.png)
 其中`dump-clipboard-png.ps1`是处理截图的`powershell`脚本，`qImage.exe`即完成文件上传的主程序。
 
 
@@ -39,7 +40,8 @@ date: 2017-05-28 11:41:56
 ACCESS_KEY = G4T2TrlRFLf2-Da-IUrHJKSbVYbJTGpcwBVFbz3Da
 SECRET_KEY = 0wgbpmquurY_BndFuPvDGqzlnfWHCdL8YHjz_fHJf
 BUCKET_NAME = fortest
-BUCKET_DOMAIN = http://7xry05.com1.z0.glb.clouddn.com
+BUCKET_DOMAIN = http://
+pgdgu8c3d.bkt.clouddn.com
 
 ;optional settings
 UP_HOST = http://up.qiniu.com

@@ -11,7 +11,8 @@ Spring 事件体系是观察者模式的典型应用，观察者模式中有主�
 
 <!-- more -->
 
-![](http://7xry05.com1.z0.glb.clouddn.com/201801241600_183.png?imageView2/2/w/2231/h/300)
+![](http://
+pgdgu8c3d.bkt.clouddn.com/201801241600_183.png?imageView2/2/w/2231/h/300)
 
 ## Overview
 
