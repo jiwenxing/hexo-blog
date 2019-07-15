@@ -27,8 +27,8 @@ date: 2017-12-20 20:54:41
 源码：https://github.com/jiwenxing/springboot-quartz
 
 预览：    
-![](http://
-pgdgu8c3d.bkt.clouddn.com/206751c9ac95c7860f087a02e5f2fd9f.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/206751c9ac95c7860f087a02e5f2fd9f.jpg)
 
 
 这里也将常规的 Quartz 与 Spring 的整合过程记录如下。
@@ -159,6 +159,6 @@ public class SchedulerConfig {
 ## REFERENCES
 
 - [https://github.com/davidkiss/spring-boot-quartz-demo](https://github.com/davidkiss/spring-boot-quartz-demo)
-- [quartz与spring实现任务动态管理](http://lixuguang.iteye.com/blog/2256478)
+- [quartz与spring实现任务动态管理](//lixuguang.iteye.com/blog/2256478)
 - [Spring 3整合Quartz 2实现定时任务](https://www.dexcoder.com/selfly/article/308)
 - [Spring 中使用 Quartz 时，Job 无法注入spring bean的问题](https://blog.seveniu.com/post/spring-quartz-autowired/)

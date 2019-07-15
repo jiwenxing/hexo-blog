@@ -5,8 +5,8 @@ toc: false
 date: 2016-04-15 18:03:44
 ---
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/e7d4a6deb317c7014c024652b2e13539.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/e7d4a6deb317c7014c024652b2e13539.jpg)
  
 <!-- more -->
 

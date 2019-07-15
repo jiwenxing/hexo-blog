@@ -7,7 +7,7 @@ date: 2016-08-30 11:41:56
 
 **qimage** 是一个提升 markdown 贴图体验的实用小工具，支持 windows 及 mac。其中 **[qiniu-image-tool-win](https://github.com/jiwenxing/qiniu-image-tool-win)** 为windows版本，基于`AutoHotkey`和`qshell`实现，可以自定义快捷键，一键上传图片或截图至七牛云，获取图片的markdown引用至剪贴板，并自动粘贴到当前编辑器。<!--more-->
 
-> 注意此文档只适用于1.x版本，2.x及以上版本请参考[windows版本markdown一键贴图工具](http://jverson.com/2017/05/28/qiniu-image-v2/)。
+> 注意此文档只适用于1.x版本，2.x及以上版本请参考[windows版本markdown一键贴图工具](//jverson.com/2017/05/28/qiniu-image-v2/)。
 
 
 ## 用法
@@ -16,13 +16,13 @@ date: 2016-08-30 11:41:56
 1. 复制本地图片、视频或js等其它类型文件至剪贴板（ctrl+c）or 使用喜欢的截图工具截图 or 直接复制网络图片
 2. 切换到编辑器，`ctrl+alt+v`便可以看到图片链接自动粘贴到当前编辑器的光标处
 
-如果您使用mac，请参考[使用alfred在markdown中愉快的贴图](http://jverson.com/2017/04/28/alfred-qiniu-upload/)
+如果您使用mac，请参考[使用alfred在markdown中愉快的贴图](//jverson.com/2017/04/28/alfred-qiniu-upload/)
 
 ## 安装
 ### 下载源码
 相对于 mac 版本，windows 版安装更加简单。首先从 [github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 下载最新的release版本并解压到任意目录，在`qimage-win`文件夹中看到的目录结构应该是如下这样：
-![](http://
-pgdgu8c3d.bkt.clouddn.com/afa184acc926d86a6ea786d7634500e7.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/afa184acc926d86a6ea786d7634500e7.jpg)
 其中`dump-clipboard-png.ps1`是保存截图的`powershell`脚本，`qimage-win.ahk`即完成文件上传的`AutoHotkey`脚本。
 
 ### 安装 **AutoHotkey**    
@@ -40,8 +40,8 @@ pgdgu8c3d.bkt.clouddn.com/afa184acc926d86a6ea786d7634500e7.jpg)
 ACCESS_KEY = G4T2TrlRFLf2-Da-IUrHJKSbYbJTGpcwBVFbz3D
 SECRET_KEY = 0wgbpmquurY_BndFuPvDGqzlfWHCdL8YHjz_fHJ
 BUCKET_NAME = fortest  ;qiniu bucket name
-BUCKET_DOMAIN = http://
-pgdgu8c3d.bkt.clouddn.com/  ;qiniu domain for the image
+BUCKET_DOMAIN = //
+jverson.oss-cn-beijing.aliyuncs.com/  ;qiniu domain for the image
 WORKING_DIR = E:\TOOLS\qiniu-image-tool-win\  ;directory that you put the qshell.exe 
 ;;;; config end
 ```
@@ -55,8 +55,8 @@ WORKING_DIR = E:\TOOLS\qiniu-image-tool-win\  ;directory that you put the qshell
 在`对象存储->存储空间列表`中选择或新建一个存储空间即bucket，点击该bucket在右边看到一个测试域名，该域名即bucketDomain是图片上传后的访问域名。这里要特别注意域名不要少了前面的http头和最后的那个斜杠。
 
 查看以上四个参数的操作如下图所示：
-![](http://
-pgdgu8c3d.bkt.clouddn.com/883c2cf5633cac4fba7b3719284ab678.gif)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/883c2cf5633cac4fba7b3719284ab678.gif)
 
 #### WORKING_DIR  
 这是设置您的工作目录，即这些脚本所在的目录，比如我将从github上下载的release压缩包解压到了`E:\TOOLS`目录下，那我的`WORKING_DIR`就是`E:\TOOLS\qiniu-image-tool-win\`。注意不要少了最后那个反斜杠。*另外需要特别注意的是路径中不能包含中文，而且不能有类似Program Files这类包含空格的路径。*
@@ -76,7 +76,7 @@ Progress: 100%
 Put file error, 400 incorrect region, please use up-z2.qiniu.com, Reqid: 0wUAAGp6j6faorwU
 Last time: 0.43 s, Average Speed: 415.6 KB/s
 
-由于在七牛的[官方文档](https://github.com/qiniu/qshell/wiki/fput)中uphost为非必填项，脚本中使用的是默认值`http://up.qiniu.com`，有时当与你空间所在机房不匹配时便会报以上的错误信息，不过错误信息中已经给出了建议的uphost，例如上面的错误信息就给出明确的提示 “请使用up-z2.qiniu.com”，这时将可选配置项`UP_HOST = http://up.qiniu.com`修改为`UP_HOST = http://up-z2.qiniu.com`，保存并reload脚本即可。
+由于在七牛的[官方文档](https://github.com/qiniu/qshell/wiki/fput)中uphost为非必填项，脚本中使用的是默认值`//up.qiniu.com`，有时当与你空间所在机房不匹配时便会报以上的错误信息，不过错误信息中已经给出了建议的uphost，例如上面的错误信息就给出明确的提示 “请使用up-z2.qiniu.com”，这时将可选配置项`UP_HOST = //up.qiniu.com`修改为`UP_HOST = //up-z2.qiniu.com`，保存并reload脚本即可。
 
 ### 常见问题二: powershell执行权限问题
 具体的错误信息如下所示：

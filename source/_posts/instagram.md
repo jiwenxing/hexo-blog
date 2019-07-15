@@ -12,8 +12,8 @@ toc: true
 
 ## 创建相册页签
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/810738144892721482.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/810738144892721482.jpg)
 
 首先需要在Maupassant博客中添加相册的页签如图。在Hexo根目录的source文件夹下创建一个空文件夹，不妨就起名instagram，然后创建一个index.md
 文件，编辑文件内容如下：
@@ -41,29 +41,29 @@ noDate: "true"
 
 完成以上步骤后你会发现还是没有照片或者是别人的照片~囧，取自己的照片当然需要设置一些个人的信息。那么问题来了，Instagram是什么没听过啊？呃(⊙o⊙)…  没有Instagram账号！赶紧申请一个吧。啥Instagram上不去？！@#￥%……&*，经过九九八十一难终于注册了一个IG账号，下面我们看看[Instagram的api](https://www.instagram.com/developer/endpoints/users/)，在Endpoints标签下的Users里第一个接口便就是我们即将要用的接口。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/TimLine%E5%9B%BE%E7%89%8720160426205807.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/TimLine%E5%9B%BE%E7%89%8720160426205807.jpg)
 
 可以看到我们现在缺的就是图中框出来的Access Token，怎么获取这个token呢？
 
 ### Step 1
 
-登陆[Instagram开发者平台](https://www.instagram.com/developer/)，按照下图的步骤注册一个new client。填写相关信息时Valid redirect URIs最好填为本机地址“http://localhost”，如果你将你的账号授权给别人的话，这里便可以填写你授权的应用链接；另外记得去掉"Disable implicit OAuth"前的小对号。
+登陆[Instagram开发者平台](https://www.instagram.com/developer/)，按照下图的步骤注册一个new client。填写相关信息时Valid redirect URIs最好填为本机地址“//localhost”，如果你将你的账号授权给别人的话，这里便可以填写你授权的应用链接；另外记得去掉"Disable implicit OAuth"前的小对号。
 
-![](http://i.imgur.com/utTetpb.gif)
+![](//i.imgur.com/utTetpb.gif)
 
 ### Step 2
 
 完成第一步之后就可以得到如图所示的一个new client的信息：
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/TimLine%E5%9B%BE%E7%89%8720160426211557.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/TimLine%E5%9B%BE%E7%89%8720160426211557.jpg)
 
 看到里面有client_id信息我就放心了，然后将下面的链接复制到浏览器，将其中的CLIENT_ID_HERE替换为自己的client_id，然后，奇迹就出现了，请看下图。
 
-> https://instagram.com/oauth/authorize/?client_id=[CLIENT_ID_HERE]&redirect_uri=http://localhost&response_type=token
+> https://instagram.com/oauth/authorize/?client_id=[CLIENT_ID_HERE]&redirect_uri=//localhost&response_type=token
 
-![](http://i.imgur.com/sSWj1xR.gif)
+![](//i.imgur.com/sSWj1xR.gif)
 
 ### Step 3
 
@@ -73,22 +73,22 @@ pgdgu8c3d.bkt.clouddn.com/TimLine%E5%9B%BE%E7%89%8720160426211557.jpg)
 
 ## 修改instagram.js文件
 
-由于yilia之前的js中调用的接口已经被Instagram废弃，因此需要修改一下js中调用的接口。打开instagram.js文件找到getList方法，将其中的url替换为你刚才测试的链接即可。另外由于Instagram在某地被墙，你可能会经常会遇到请求失败的情况，如果你希望在请求超时给用户一个比较友好的界面，可以在回调中做一下处理。例如在我的博客中如果用户没有代理VPN请求图片失败时会展示如下界面，这个实现可以参考我的另一篇博客[JSONP error handling with jquery.ajax](http://jverson.com/2015/07/27/jsonp/)。
+由于yilia之前的js中调用的接口已经被Instagram废弃，因此需要修改一下js中调用的接口。打开instagram.js文件找到getList方法，将其中的url替换为你刚才测试的链接即可。另外由于Instagram在某地被墙，你可能会经常会遇到请求失败的情况，如果你希望在请求超时给用户一个比较友好的界面，可以在回调中做一下处理。例如在我的博客中如果用户没有代理VPN请求图片失败时会展示如下界面，这个实现可以参考我的另一篇博客[JSONP error handling with jquery.ajax](//jverson.com/2015/07/27/jsonp/)。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/TimLine%E5%9B%BE%E7%89%8720160426213510.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/TimLine%E5%9B%BE%E7%89%8720160426213510.jpg)
 
 
 ## 注意（2016/06/06）
 
 最近几天访问自己的相册发现只能拉取到最近的20张照片，查了一下发现是Instagram的api做了调整，所有的api调用都会被一道沙箱环境，只有app通过审核才可以继续正常使用这些api，这也是Instagram最近规范第三方应用的一系列措施之一，不过没关系，想看更多照片点击右上方的链接进入Instagram的官网查看即可。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20160608102706.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20160608102706.png)
 
 ## References
 
 - [Instagram Developer](https://www.instagram.com/developer/endpoints/users/)
 - [大道至简——Hexo简洁主题推荐](https://www.haomwei.com/technology/maupassant-hexo.html)
-- [How to generate an Instagram Access Token](http://jelled.com/instagram/access-token#)
-- [Hexo主题Yilia](http://litten.github.io/2014/08/31/hexo-theme-yilia/)
+- [How to generate an Instagram Access Token](//jelled.com/instagram/access-token#)
+- [Hexo主题Yilia](//litten.github.io/2014/08/31/hexo-theme-yilia/)

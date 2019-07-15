@@ -12,15 +12,15 @@ tags: [GitHub]
 
 ## 解决方法
 找到..\hexo\themes\RagingCat\source\css目录下的style.styl文件打开
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blogElement/style.PNG)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blogElement/style.PNG)
 
 
-可以看到import了很多http:/fonts.googleapis.com的东西。而网上查了下，360网站卫士推出一项字体加速服务，即360将这些从google国外服务器import的东西下载下来存在了自己的服务器上供大家使用，从这点来看360也算是做了回业界良心。
+可以看到import了很多/fonts.googleapis.com的东西。而网上查了下，360网站卫士推出一项字体加速服务，即360将这些从google国外服务器import的东西下载下来存在了自己的服务器上供大家使用，从这点来看360也算是做了回业界良心。
 具体方法：将其中的fonts.googleapis.com替换为fonts.useso.com即可，如下图所示。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blogElement/style2.PNG)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blogElement/style2.PNG)
 
 保存后再去试试，看看速度是不是杠杠的。。。
 <br/>

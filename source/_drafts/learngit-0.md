@@ -8,7 +8,7 @@ toc: true
 虽然很早就接触github，但对git的版本控制并不了解，最近开始学习使用git，对其使用简单做一些整理。<!-- more -->
 
 ## git 介绍
-`Git`是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。关于她的特点[`Git`官网](http://www.git-scm.com/)是这么介绍的：   
+`Git`是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。关于她的特点[`Git`官网](//www.git-scm.com/)是这么介绍的：   
 
 > Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  
 
@@ -16,7 +16,7 @@ toc: true
 
 总之，对于开源项目来说，使用Git可以极大地提高了开发效率、扩大了开源项目的参与度、 增强了版本控制系统的安全性，选择Git已是大势所趋。
 
-以下为本人学习`git`过程中的一些练习和笔记，相关参考：[廖雪峰的Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+以下为本人学习`git`过程中的一些练习和笔记，相关参考：[廖雪峰的Git教程](//www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 ## git 本地仓库常用操作
 
@@ -192,19 +192,19 @@ toc: true
 
 ### git 分支管理策略
 
-> 注：该部分内容参考自文章[《Git 分支管理详解》](http://www.oschina.net/question/31384_157479)
+> 注：该部分内容参考自文章[《Git 分支管理详解》](//www.oschina.net/question/31384_157479)
 
 团队开发中应该如何充分应用`git`的分支功能呢，通常一个项目较为规范的分支策略如下：
 
 - 主分支`master`：代码库应该有一个、且仅有一个主分支。所有提供给用户使用的正式版本，都在这个主分支上发布。  
-  ![](http://static.oschina.net/uploads/img/201406/05112016_Jfp8.png)
+  ![](//static.oschina.net/uploads/img/201406/05112016_Jfp8.png)
 - 开发分支`dev`：进行日常开发工作，这个分支可以用来生成代码的最新代码版本。如果想正式对外发布，就在`Master`分支上，对`Dev`分支进行"合并"。  
-  ![](http://static.oschina.net/uploads/img/201406/05112016_HYVm.png)  
+  ![](//static.oschina.net/uploads/img/201406/05112016_HYVm.png)  
 - 功能分支`feature`：开发某种特定功能，从`Dev`分支上面分出来的；开发完成后，要再并入`Dev`。
-  ![](http://static.oschina.net/uploads/img/201406/05112016_v2ve.png)
+  ![](//static.oschina.net/uploads/img/201406/05112016_v2ve.png)
 - 预发布分支`release`：预发布分支，它是指发布正式版本之前（即合并到`Master`分支之前），我们可能需要有一个预发布的版本进行测试。预发布分支是从Develop分支上面 分出来的，预发布结束以后，必须合并进`Dev`和`Master`分支。
 - `bug`分支`fixbug`：软件正式发布以后，难免会出现bug。这时就需要创建一个分支，进行`bug`修补。修补`bug`分支是从`Master`分支上面分出来的。修补结束以后，再合并进`Master`和`Dev`分支。
-   ![](http://static.oschina.net/uploads/img/201406/05112016_PIf1.png)
+   ![](//static.oschina.net/uploads/img/201406/05112016_PIf1.png)
   
 ## 使用`github`参与开源项目
 

@@ -189,5 +189,5 @@ public @interface Profile {
 ## 参考
 
 - [Spring @Conditional Annotation](https://javapapers.com/spring/spring-conditional-annotation/)
-- [Spring4.0系列5-@Conditional](http://wiselyman.iteye.com/blog/2002449)
+- [Spring4.0系列5-@Conditional](//wiselyman.iteye.com/blog/2002449)
 

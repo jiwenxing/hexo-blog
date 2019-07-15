@@ -11,8 +11,8 @@ date: 2017-03-02 20:25:43
 
 首先简单了解一下https的工作原理，https即安全版的http，在应用层http和传输层之间添加了一层ssl/tsl层，主要用于web浏览器和服务器之间的身份认证和加密数据传输。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/2012072310244445.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/2012072310244445.png)
 
 1. 客户端发起https请求，值得注意的是https使用443端口，而http使用的则是80端口
 2. 支持https协议的服务器需要配置ssl证书，ssl证书类似于驾驶证、护照之类的证件，由受信任的数字证书颁发机构CA，在验证服务器身份后颁发。当然如果是搭建测试环境，可以自己制作证书，只是访问的时候需要客户端验证。一份ssl证书包含一个私钥和一个公钥。
@@ -75,14 +75,14 @@ server {
 # /export/servers/nginx/sbin/nginx -c /export/servers/nginx/conf/nginx.conf  //重启Nginx
 ```
 
-这个时候你可能会看到如下的报错信息，这是因为nginx缺少http_ssl_module模块，需要在编译安装的时候带上`--with-http_ssl_module`参数，具体的操作方法详见[参考文档三](http://unun.in/linux/173.html).
+这个时候你可能会看到如下的报错信息，这是因为nginx缺少http_ssl_module模块，需要在编译安装的时候带上`--with-http_ssl_module`参数，具体的操作方法详见[参考文档三](//unun.in/linux/173.html).
 >the "ssl" parameter requires ngx_http_ssl_module in ...
 
 ## https访问
 以上配置都完成以后，不出意外已经可以使用https访问资源了，但是第一次访问还是会弹出警告。可以提前将证书（生成的crt文件）导入到浏览器或者系统，这样即使第一次访问也不会警告了，注意chrome（chrome://settings/ ——>高级）、IE和系统（win+r——>certmgr.msc）使用的是同一套证书，Firefox（工具——>选项——>高级——>证书）则是独立的证书管理，另外mac系统直接双击证书文件导入到系统即可。
 
 ## 参考资料
--  [图解HTTPS](http://www.cnblogs.com/zhuqil/archive/2012/07/23/2604572.html) 
--  [给Nginx配置一个自签名的SSL证书](http://www.liaoxuefeng.com/article/0014189023237367e8d42829de24b6eaf893ca47df4fb5e000)
--  [已经编译安装好的nginx，添加未被编译的模块](http://unun.in/linux/173.html)
--  [Nginx的启动、停止与重启](http://www.cnblogs.com/codingcloud/p/5095066.html)
+-  [图解HTTPS](//www.cnblogs.com/zhuqil/archive/2012/07/23/2604572.html) 
+-  [给Nginx配置一个自签名的SSL证书](//www.liaoxuefeng.com/article/0014189023237367e8d42829de24b6eaf893ca47df4fb5e000)
+-  [已经编译安装好的nginx，添加未被编译的模块](//unun.in/linux/173.html)
+-  [Nginx的启动、停止与重启](//www.cnblogs.com/codingcloud/p/5095066.html)

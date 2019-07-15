@@ -16,19 +16,19 @@ s.async=1,s.src=r,n.parentNode.insertBefore(s,n)}(document,"script"
 ,"https://cdn.rawgit.com/jtsternberg/instascript/master/instascript.js");
 ```
 
-这时你会惊讶的发现你的所有Instagram照片及小视屏被下载到了本地，以`E:/instagram`文件夹为例。这是一段网友[dsgnwrks](http://dsgnwrks.pro/plugins-and-scripts/script-to-download-high-resolution-images-from-instagrams-website/)写的Instagram资源下载脚本，没看源码，用起来还算顺手。
+这时你会惊讶的发现你的所有Instagram照片及小视屏被下载到了本地，以`E:/instagram`文件夹为例。这是一段网友[dsgnwrks](//dsgnwrks.pro/plugins-and-scripts/script-to-download-high-resolution-images-from-instagrams-website/)写的Instagram资源下载脚本，没看源码，用起来还算顺手。
 
 再然后就需要将这些资源上传缓存服务器，也就是传到七牛上，这个简单，安装七牛的qrsbox，将刚才的文件目录设为资源同步目录，这些数据便自动上传到七牛的指定bucket里。至此，数据缓存搞定！
 
 ## 加载逻辑
-首先jsonp请求Instagram api，如果成功直接返回数据展示，如果超时失败（没有代理环境），则在超时回调中get请求缓存资源进行展示。这个逻辑看上去很简单，本来希望在请求缓存资源时能够直接调用七牛的api获取到所有数据列表，无奈没有找到好用的api，于是想了一个不是很方便的方法，将Instagram接口请求成功返回的json数据保存为服务器的一个本地json文件例如`http://jverson.com/data/instagram.json`，然后需要缓存数据时对这个文件进行get请求，并将其中资源url替换为缓存url（文件名相同，域和路径不同）返回，url替换规则如下：
+首先jsonp请求Instagram api，如果成功直接返回数据展示，如果超时失败（没有代理环境），则在超时回调中get请求缓存资源进行展示。这个逻辑看上去很简单，本来希望在请求缓存资源时能够直接调用七牛的api获取到所有数据列表，无奈没有找到好用的api，于是想了一个不是很方便的方法，将Instagram接口请求成功返回的json数据保存为服务器的一个本地json文件例如`//jverson.com/data/instagram.json`，然后需要缓存数据时对这个文件进行get请求，并将其中资源url替换为缓存url（文件名相同，域和路径不同）返回，url替换规则如下：
 
 ```JavaScript
 var replacer = function(str){
     // 将ins的图片资源替换为七牛的缓存链接
 	var insUrlSplit = str.split('?')[0].split('/');
 	var imgName = insUrlSplit[insUrlSplit.length-1];
-	var qiniuPrefix = "http://oe5sk3upn.bkt.clouddn.com/";
+	var qiniuPrefix = "//oe5sk3upn.bkt.clouddn.com/";
 	return qiniuPrefix+imgName;
 }
 ```
@@ -88,7 +88,7 @@ $.ajax({
 - 个别缓存图片链接出现错误
 
 ## 参考
-1. [qrsbox 图形界面同步上传工具](http://developer.qiniu.com/code/v6/tool/qrsbox.html)
-2. [Script to Download High-Resolution Images from Instagram’s Website](http://dsgnwrks.pro/plugins-and-scripts/script-to-download-high-resolution-images-from-instagrams-website/)
+1. [qrsbox 图形界面同步上传工具](//developer.qiniu.com/code/v6/tool/qrsbox.html)
+2. [Script to Download High-Resolution Images from Instagram’s Website](//dsgnwrks.pro/plugins-and-scripts/script-to-download-high-resolution-images-from-instagrams-website/)
 
 

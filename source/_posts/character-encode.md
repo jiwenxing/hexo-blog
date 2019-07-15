@@ -172,8 +172,8 @@ web 的场景下如果没有指定编码格式，则一般默认的 charset 都�
 [1] [深入分析 Java 中的中文编码问题](https://www.ibm.com/developerworks/cn/java/j-lo-chinesecoding/index.html)
 
 [2] [理解Java中字符流与字节流的区别
-](http://www.importnew.com/23963.html)
+](//www.importnew.com/23963.html)
 
 [3] [字符集与编码（七）——BOM](https://my.oschina.net/goldenshaw/blog/323248)
 
-[4] [字符编码笔记：ASCII，Unicode 和 UTF-8](http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
+[4] [字符编码笔记：ASCII，Unicode 和 UTF-8](//www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)

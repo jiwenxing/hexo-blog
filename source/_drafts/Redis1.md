@@ -8,9 +8,9 @@ Redis的命令总是很难记，每次用到都去网上查一下，最近得空
 
 *参考：*
 
- 1. [Redis 命令参考-中文版](http://redisdoc.com/)
- 2. [ Redis Command Reference](http://redis.io/commands)
- 3. [Redis Documentation](http://redis.io/documentation)
+ 1. [Redis 命令参考-中文版](//redisdoc.com/)
+ 2. [ Redis Command Reference](//redis.io/commands)
+ 3. [Redis Documentation](//redis.io/documentation)
 
 
 

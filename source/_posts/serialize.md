@@ -170,7 +170,7 @@ for(int i=0; i<MAX_LOOP; i++){
 long end = System.currentTimeMillis();
 System.out.println("Gosn serialization time: "+(end-start));
 ```
-注意Gson使用的是[gson-2.1.jar](http://grepcode.com/snapshot/repo1.maven.org/maven2/com.google.code.gson/gson/2.1)，得到测试结果如下：
+注意Gson使用的是[gson-2.1.jar](//grepcode.com/snapshot/repo1.maven.org/maven2/com.google.code.gson/gson/2.1)，得到测试结果如下：
 >Object serialization time: 20163
 Gosn serialization time: 23354
 
@@ -189,6 +189,6 @@ Gosn serialization time: 40533
 不难发现两者的效率差距进一步扩大，但是不同Json序列化实现方式效率也不同，另外也和对象的结构和复杂程度有关，由于没有进一步测试，因此这里并没有孰优孰劣的定论。在效率要求不是很严格的场景下，我们可以根据需要灵活地使用不同的序列化方式，或者也可以使用本文类似的方法针对具体的场景进行效率测试从而选用更为高效的序列化方式。
 
 ## reference
-- [Java 中的序列化Serialable高级详解](http://blog.csdn.net/jiangwei0910410003/article/details/18989711)
-- [Java 序列化 (Serializable) 的作用](http://www.oschina.net/question/4873_23270)
-- [Java 内置序列化与Gson性能比较](http://www.tuicool.com/articles/2Q3M73)
+- [Java 中的序列化Serialable高级详解](//blog.csdn.net/jiangwei0910410003/article/details/18989711)
+- [Java 序列化 (Serializable) 的作用](//www.oschina.net/question/4873_23270)
+- [Java 内置序列化与Gson性能比较](//www.tuicool.com/articles/2Q3M73)

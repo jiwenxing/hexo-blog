@@ -5,14 +5,14 @@ tags: [JavaScript]
 toc: false
 ---
 
-由于项目需要，在网上找了个富文本编辑框[**wangEditor**](wangEditor.github.io)，抱着试一试的态度用了一下，原以为这款个人开发维护的插件会有不少bug，使用之后经过我们测试人员全方位的测试检验，基本符合需求，并且较之前使用的[**simditor**](http://simditor.tower.im/)包含了更多的小功能。<!-- more -->
+由于项目需要，在网上找了个富文本编辑框[**wangEditor**](wangEditor.github.io)，抱着试一试的态度用了一下，原以为这款个人开发维护的插件会有不少bug，使用之后经过我们测试人员全方位的测试检验，基本符合需求，并且较之前使用的[**simditor**](//simditor.tower.im/)包含了更多的小功能。<!-- more -->
 
 ## wangEditor
 
-wangEditor 是一款开源免费的基于javascript和css开发的html富文本编辑器。从下面的预览图可以看到增加了代码块、地图，插入表格等一些不常用、但正好是我们需要的小功能，而且有Demo和比较完整的[文档](http://www.kancloud.cn/wangfupeng/wangeditor2/113961)，上手很快，但对于我这样的业余前端来说使用中还是有一些需要注意的地方。
+wangEditor 是一款开源免费的基于javascript和css开发的html富文本编辑器。从下面的预览图可以看到增加了代码块、地图，插入表格等一些不常用、但正好是我们需要的小功能，而且有Demo和比较完整的[文档](//www.kancloud.cn/wangfupeng/wangeditor2/113961)，上手很快，但对于我这样的业余前端来说使用中还是有一些需要注意的地方。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/filehelper_1461659066987_36.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/filehelper_1461659066987_36.png)
 
 
 ## 初始化
@@ -59,7 +59,7 @@ pgdgu8c3d.bkt.clouddn.com/filehelper_1461659066987_36.png)
 
 配置完编辑器后，本地图片上传时，编辑器便会向你配置的url发送一个post请求如下，在相应的controller里对文件进行上传处理返回该图片的url即可。
 
-> Request URL:http://jverson.com/jlNav/uploadImg
+> Request URL://jverson.com/jlNav/uploadImg
 Request Method:POST
 ------WebKitFormBoundarybWoD7tBsuqM8uVkn
 Content-Disposition: form-data; 

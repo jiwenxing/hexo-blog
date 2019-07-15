@@ -14,7 +14,7 @@ tags: [App, Html5]
 
 ## SAMPLE SHOW
 
-下面是一款取暖器的产品，可以[点击这里](http://storage.360buyimg.com/devh5/1434352371065_index.html)查看其界面UI和源代码（在浏览器里右键->查看源代码)，注意这只是一个主界面的UI,由于配置与云端交互的逻辑，而这里并没有与云端建立长连接，因此在浏览器看不到页面的交互效果。
+下面是一款取暖器的产品，可以[点击这里](//storage.360buyimg.com/devh5/1434352371065_index.html)查看其界面UI和源代码（在浏览器里右键->查看源代码)，注意这只是一个主界面的UI,由于配置与云端交互的逻辑，而这里并没有与云端建立长连接，因此在浏览器看不到页面的交互效果。
 
 ## SAMPLE CODE
 
@@ -26,10 +26,10 @@ tags: [App, Html5]
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0 , maximum-scale=1.0, user-scalable=0">
 
 	<!-- 修改css链接地址，引入jQuery及jdsmart的js库 -->
-	<link type="text/css" rel="stylesheet" href="http://storage.com/devh5/1434029150523_style.css">
-	<script type="text/javascript" src="http://storage.com/devh5/1431152228724_jquery.js"></script>
-	<script type="text/javascript" src="http://storage.com/devh5/1431576139678_jdsmart-1.0.0.js"></script>
-	<script type="text/javascript" src="http://storage.com/devh5/1433907378835_slider.js"></script>
+	<link type="text/css" rel="stylesheet" href="//storage.com/devh5/1434029150523_style.css">
+	<script type="text/javascript" src="//storage.com/devh5/1431152228724_jquery.js"></script>
+	<script type="text/javascript" src="//storage.com/devh5/1431576139678_jdsmart-1.0.0.js"></script>
+	<script type="text/javascript" src="//storage.com/devh5/1433907378835_slider.js"></script>
 
 	<!-- 终端适配 -->
 	<script>
@@ -48,7 +48,7 @@ tags: [App, Html5]
 	<body>
 	<!--添加headerimage链接-->
 	<header id="head">
-	    <div class="imgbox"><img src="http://storage.com/devh5/1433906210381_figure.jpg"></div> 
+	    <div class="imgbox"><img src="//storage.com/devh5/1433906210381_figure.jpg"></div> 
 	    <h2>智能取暖器</h2>
 	    <div class="online"><i></i>设备在线</div>
 	    <div class="not-online" style="display:none">

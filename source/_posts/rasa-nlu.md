@@ -26,8 +26,8 @@ Rasa Stack 包括 Rasa NLU 和 Rasa Core，前者负责进行语义理解（意�
 
 下图是一个简单的基于 Rasa 的 workflow 示意：
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/3229ba75c0bfdb8ec3da223a84a64913.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/3229ba75c0bfdb8ec3da223a84a64913.jpg)
 
 
 
@@ -110,8 +110,8 @@ $ python -m rasa_nlu.train -c sample_configs/config_jieba_mitie_sklearn.yml --da
 
 最后一步执行训练会得到一个模型文件如下所示，这个模型文件也是我们应用中进行意图识别和槽值提取直接使用到的模型，这一步可以离线进行训练，也可以在线实时训练。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/56e255b860872e17c4398a708c061a79.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/56e255b860872e17c4398a708c061a79.jpg)
 
 
 
@@ -189,6 +189,6 @@ $pip install -U scikit-learn scipy sklearn-crfsuite
 
 ## 参考
 
-- [rasa.com](http://rasa.com/docs/getting-started/overview/)
-- [用 Rasa NLU 构建自己的中文 NLU 系统](http://www.crownpku.com/2017/07/27/%E7%94%A8Rasa_NLU%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AD%E6%96%87NLU%E7%B3%BB%E7%BB%9F.html)
+- [rasa.com](//rasa.com/docs/getting-started/overview/)
+- [用 Rasa NLU 构建自己的中文 NLU 系统](//www.crownpku.com/2017/07/27/%E7%94%A8Rasa_NLU%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AD%E6%96%87NLU%E7%B3%BB%E7%BB%9F.html)
 - [Rasa_NLU_Chi](https://github.com/crownpku/Rasa_NLU_Chi)

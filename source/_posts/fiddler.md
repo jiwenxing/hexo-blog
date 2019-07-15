@@ -14,12 +14,12 @@ date: 2017-04-10 14:58:48
 ### 操作步骤
 1. pc上安装fiddler并打开远程机器捕获模式
 如图所示，Tools > Fiddler Options下确保 Allow remote clients to connect 被选中
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201704101432_963.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201704101432_963.jpg)
 
 2. 远程机器（即手机）连接至同一局域网并设置该pc为代理机
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201704101327_739.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201704101327_739.jpg)
 注意：ip为pc在局域网中的ip，fiddler默认监听的端口号为8888，可以在第一步修改
 
 3. pc配上需要的host即可在APP上进行测试
@@ -35,13 +35,13 @@ pgdgu8c3d.bkt.clouddn.com/201704101327_739.jpg)
 
 1. fiddler设置
 tools->options->https，选中capture HTTPS connects & decrypt https traffic & ignore server certificate errors，这时会提示安装证书，点击yes安装即可
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201705081657_866.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201705081657_866.png)
 
 2. 手机安装fiddler证书
-手机连接至pc分享的wifi，fiddler处于打开状态，手机内置浏览器输入：http://192.168.64.107:8888，其中ip为pc分享的wifi的ip，即前面设置的代理的ip，端口号默认就是8888，点击页面中的fiddlerRoot certificate安装即可
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201705081658_54.png)
+手机连接至pc分享的wifi，fiddler处于打开状态，手机内置浏览器输入：//192.168.64.107:8888，其中ip为pc分享的wifi的ip，即前面设置的代理的ip，端口号默认就是8888，点击页面中的fiddlerRoot certificate安装即可
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201705081658_54.png)
 
 **注意：** 经过测试安卓安装了证书以后没有问题，但是ios安装了证书https请求还是会被拦截，需要native做特殊的处理忽略证书相关警告。
 
@@ -50,5 +50,5 @@ pgdgu8c3d.bkt.clouddn.com/201705081658_54.png)
 Fiddler支持代理的功能，也就是说你所有的http请求都可以通过它来转发，在手机端设置Fiddler所在的pc为代理服务器并使用fiddler监听的端口号，使得手机应用的请求都通过Fiddler来转发，从而实现调试手机端页面的目的。当然也可以使用例如NProxy等其它代理工具达到同样的目的，但是无法像fiddler那样查看请求的详细信息。能够抓取https请求是因为当客户端安装了并信任了fiddler自己的证书以后，客户端和fiddler以及fiddler和服务器之间的通信都是没问题的，只是fiddler每次拿到服务器返回的数据后先使用服务器的证书解密再使用自己的证书加密然后再发送给客户端，这时由于客户端安装并信任了fiddler的证书，并可以正常的解析数据了。
 
 ## 参考资料
-- [Capture traffic from another machine](http://docs.telerik.com/fiddler/configure-fiddler/tasks/MonitorRemoteMachine)
-- [用fiddler做代理服务器转发请求](http://blog.csdn.net/sb___itfk/article/details/45250771)
+- [Capture traffic from another machine](//docs.telerik.com/fiddler/configure-fiddler/tasks/MonitorRemoteMachine)
+- [用fiddler做代理服务器转发请求](//blog.csdn.net/sb___itfk/article/details/45250771)

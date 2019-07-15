@@ -12,21 +12,21 @@ date: 2016-06-02 17:05:50
 Firstly， 你需要拥有一个域名，如果暂时没有想购买域名的话可以去[godaddy](https://sg.godaddy.com/zh?isc=CJC2OFF30&ci=)或者[阿里云](https://wanwang.aliyun.com/domain/?spm=5176.7960203.1907008.1.q8vhml)等网站购买，首次购买挺便宜的，差不多一年五六十块rmb的样子，但是注意godaddy等国外域名服务商购买的域名不需要备案，省事适合个人博客，另外比较好的顶级域名很抢手，赶紧去抢注吧，指不定还能赚一笔呢（据说jd.com是花了三千万买的）！
 
 ## step 2
-Secondly，假设你已经成功的购买到自己心仪的域名并做了dns解析，这时候你需要选择一个免费企业邮箱服务商，貌似网易、腾讯、阿里等都提供这样的服务，这里以[网易免费企业邮](http://ym.163.com/)为例。点击首页的创建，若你的域名是example.com，你就可以创建类似@example.com的域名邮箱。具体的操作步骤请[参考这里](http://app.ym.163.com/ym/help/help-hmail.html#3.6)。
+Secondly，假设你已经成功的购买到自己心仪的域名并做了dns解析，这时候你需要选择一个免费企业邮箱服务商，貌似网易、腾讯、阿里等都提供这样的服务，这里以[网易免费企业邮](//ym.163.com/)为例。点击首页的创建，若你的域名是example.com，你就可以创建类似@example.com的域名邮箱。具体的操作步骤请[参考这里](//app.ym.163.com/ym/help/help-hmail.html#3.6)。
 
 ## step 3
-Thirdly，网易会要求你验证这个域名确实是属于你的，具体的操作步骤[帮助中心](http://app.ym.163.com/ym/help/help-hmail.html#3.6)也有介绍，对于这里的操作可能有人会感到困惑。下面我来具体解释一下。
+Thirdly，网易会要求你验证这个域名确实是属于你的，具体的操作步骤[帮助中心](//app.ym.163.com/ym/help/help-hmail.html#3.6)也有介绍，对于这里的操作可能有人会感到困惑。下面我来具体解释一下。
 当你购买了一个域名后需要对其进行dns解析别人才能通过你的域名访问到你的服务器，一般你购买域名的网站也会提供域名解析服务，也可以通过类似[DNSPod](https://www.dnspod.cn/)这样专门提供dns解析服务的网站进行解析。打开管理页面看到类似于这样（以我的域名在DNSPod的设置为例）：
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20160602195333.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20160602195333.png)
 
 其中MX记录和TXT记录是按照网易企业邮箱的要求刚刚添加上去做域名验证的，下面对这些记录做一些解释。
 - A记录
 A (Address) 记录是用来指定主机名（或域名）对应的IP地址记录。用户可以将该域名下的网站服务器指向到自己的web server上。可以看到这里有两条A记录的记录值分别对应着两个具体的ip，因为我的博客是托管在github上的，因此这两个ip就直接解析到了github pages的服务器。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20160602200229.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20160602200229.png)
 
 - NS记录
 同样可以看到两条NS记录分别指向f1g1ns1.dnspod.net和f1g1ns2.dnspod.net，NS记录是用来指定该域名由哪个DNS服务器来进行解析，而f1g1ns1.dnspod.net和f1g1ns2.dnspod.net便是DNSPod的专用域名解析服务器的域名。

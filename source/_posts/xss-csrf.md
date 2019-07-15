@@ -160,7 +160,7 @@ CSRF(Cross-site request forgery)跨站请求伪造，是一种对网站的恶意
 检测访问来路是否可信的最简单方法是，获得HTTP请求中的来路信息（即名为Referer的HTTP头）并且检查它来自站内还是来自一个远程的恶意页面：这是一个很好的解决方法，但是由于可以对服务器获得的请求来路进行欺骗以使得他们看起来合法（js利用插件可以修改http的所有头部信息），这种方法不能够有效防止攻击。
 
 ## 参考
-1. [Session Management in Java – HttpServlet, Cookies, URL Rewriting](http://www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting)
-2. [Cookie/Session的机制与安全](http://harttle.com/2015/08/10/cookie-session.html)
+1. [Session Management in Java – HttpServlet, Cookies, URL Rewriting](//www.journaldev.com/1907/java-session-management-servlet-httpsession-url-rewriting)
+2. [Cookie/Session的机制与安全](//harttle.com/2015/08/10/cookie-session.html)
 3. [避免XSS攻击](https://github.com/astaxie/build-web-application-with-golang/blob/master/zh/09.3.md)
 4. [总结 XSS 与 CSRF 两种跨站攻击](https://blog.tonyseek.com/post/introduce-to-xss-and-csrf/)

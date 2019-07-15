@@ -290,4 +290,4 @@ public interface Predicate<T> {
 ## 参考
 
 - [深入浅析JDK8新特性之Lambda表达式](https://www.jb51.net/article/95933.htm)
-- [Java8 lambda表达式10个示例](http://www.importnew.com/16436.html)
+- [Java8 lambda表达式10个示例](//www.importnew.com/16436.html)

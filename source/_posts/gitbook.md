@@ -61,13 +61,13 @@ info: found 0 asset files
 info: >> generation finished with success in 0.6s !
 
 Starting server ...
-Serving book on http://localhost:4000
+Serving book on //localhost:4000
 ```
 
-这时会发现 docs 目录下多出了 README.md 和 SUMMARY.md 两个 Gitbook 必须文件，其中 README.md 是对书籍的简单介绍，而 SUMMARY.md 则定义了书籍的目录结构。最后可以启动服务进行本地实时预览。gitbook serve 命令实际上会首先调用 gitbook build 编译书籍，完成以后会打开一个 web 服务器，监听在本地的 4000 端口，在浏览器打开 `http://127.0.0.1:4000` 可以看到
+这时会发现 docs 目录下多出了 README.md 和 SUMMARY.md 两个 Gitbook 必须文件，其中 README.md 是对书籍的简单介绍，而 SUMMARY.md 则定义了书籍的目录结构。最后可以启动服务进行本地实时预览。gitbook serve 命令实际上会首先调用 gitbook build 编译书籍，完成以后会打开一个 web 服务器，监听在本地的 4000 端口，在浏览器打开 `//127.0.0.1:4000` 可以看到
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/d0fb8016c0c9475c9e9d0bb221474863.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/d0fb8016c0c9475c9e9d0bb221474863.jpg)
 
 ## Deploy Gitbook
 
@@ -131,10 +131,10 @@ function main() {
 
 - `npm run favicon` 主要用来替换默认的 favicon，因为试了一些设置 favicon 的插件都用不了，采用这种简单粗暴的方法也很管用，需要提前将 favicon 放在 docs 目录下
 
-以上配置都完成后执行 `npm run publish` 即可生成书籍并推送到远程仓库，这时访问 `https://github.com/user-name/project-name` 既能看到发布的书籍，如果你之前已经在 Github 中绑定过自己的域名，则直接访问 `http://yourDomain/peoject-name` 也可访问。
+以上配置都完成后执行 `npm run publish` 即可生成书籍并推送到远程仓库，这时访问 `https://github.com/user-name/project-name` 既能看到发布的书籍，如果你之前已经在 Github 中绑定过自己的域名，则直接访问 `//yourDomain/peoject-name` 也可访问。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/31d46c934bc9e1c720583d4779645617.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/31d46c934bc9e1c720583d4779645617.jpg)
 
 
 另外记得编辑 `.gitignore` 添加以下内容忽略一些不需要备份的文件
@@ -209,7 +209,7 @@ npm-debug.log
 ## References
 
 1. [Gitbook Documentation](https://docs.gitbook.com/)
-2. [如何使用 Gitbook 来做笔记？](http://haoduoshipin.com/videos/231/)
+2. [如何使用 Gitbook 来做笔记？](//haoduoshipin.com/videos/231/)
 3. [Gitbook 使用笔记](https://gitbook.zhangjikai.com/)
 
 

@@ -16,15 +16,15 @@ date: 2017-05-28 11:41:56
 1. 复制本地图片、视频、js等文件至剪贴板（ctrl+c）or 使用喜欢的截图工具截图 or 直接复制网络图片
 2. 切换到编辑器，`ctrl+alt+v`便可以看到图片链接自动粘贴到当前编辑器的光标处（同时链接也会保存在粘贴板里）
 
-如果您使用mac，请参考[使用alfred在markdown中愉快的贴图](http://jverson.com/2017/04/28/alfred-qiniu-upload/)
+如果您使用mac，请参考[使用alfred在markdown中愉快的贴图](//jverson.com/2017/04/28/alfred-qiniu-upload/)
 
 ## 安装
 相对于 mac 版本，windows 版使用非常简单，配置四个参数即可直接使用。
 
 ### 下载源文件
 首先从 [github](https://github.com/jiwenxing/qiniu-image-tool-win/releases) 下载最新的release版本（2.x及以上版本）并解压到任意目录，在文件夹中看到的目录结构应该是如下这样：
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201705271605_343.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201705271605_343.png)
 其中`dump-clipboard-png.ps1`是处理截图的`powershell`脚本，`qImage.exe`即完成文件上传的主程序。
 
 
@@ -40,11 +40,11 @@ pgdgu8c3d.bkt.clouddn.com/201705271605_343.png)
 ACCESS_KEY = G4T2TrlRFLf2-Da-IUrHJKSbVYbJTGpcwBVFbz3Da
 SECRET_KEY = 0wgbpmquurY_BndFuPvDGqzlnfWHCdL8YHjz_fHJf
 BUCKET_NAME = fortest
-BUCKET_DOMAIN = http://
-pgdgu8c3d.bkt.clouddn.com
+BUCKET_DOMAIN = //
+jverson.oss-cn-beijing.aliyuncs.com
 
 ;optional settings
-UP_HOST = http://up.qiniu.com
+UP_HOST = //up.qiniu.com
 DEBUG_MODE = false
 ```
 
@@ -57,8 +57,8 @@ DEBUG_MODE = false
 在`对象存储->存储空间列表`中选择或新建一个存储空间即bucket，点击该bucket在右边看到一个测试域名，该域名即bucketDomain是图片上传后的访问域名。
 
 查看以上四个参数的操作如下图所示：
-![](http://
-pgdgu8c3d.bkt.clouddn.com/883c2cf5633cac4fba7b3719284ab678.gif)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/883c2cf5633cac4fba7b3719284ab678.gif)
 
 
 ## 运行
@@ -76,7 +76,7 @@ Progress: 100%
 Put file error, 400 incorrect region, please use up-z2.qiniu.com, Reqid: 0wUAAGp6j6faorwU
 Last time: 0.43 s, Average Speed: 415.6 KB/s
 
-由于在七牛的[官方文档](https://github.com/qiniu/qshell/wiki/fput)中uphost为非必填项，脚本中使用的是默认值`http://up.qiniu.com`，有时当与你空间所在机房不匹配时便会报以上的错误信息，不过错误信息中已经给出了建议的uphost，例如上面的错误信息就给出明确的提示 “请使用up-z2.qiniu.com”，这时将可选配置项`UP_HOST = http://up.qiniu.com`修改为`UP_HOST = http://up-z2.qiniu.com`，保存并reload脚本即可。
+由于在七牛的[官方文档](https://github.com/qiniu/qshell/wiki/fput)中uphost为非必填项，脚本中使用的是默认值`//up.qiniu.com`，有时当与你空间所在机房不匹配时便会报以上的错误信息，不过错误信息中已经给出了建议的uphost，例如上面的错误信息就给出明确的提示 “请使用up-z2.qiniu.com”，这时将可选配置项`UP_HOST = //up.qiniu.com`修改为`UP_HOST = //up-z2.qiniu.com`，保存并reload脚本即可。
 
 ### 常见问题二: powershell执行权限问题
 具体的错误信息如下所示：

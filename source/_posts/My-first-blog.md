@@ -4,7 +4,7 @@ categories: Thinking
 tags: [GitHub]
 toc: true
 ---
-我希望用我在Github上的第一篇博客来记录我三天以来搭建博客的过程及一些感受，一方面记录遇到的些问题和解决方法，另一方面谈谈自己的认识。注意这不是一篇建站指南，如果您需要比较详尽的建站教程请移步《[如何搭建一个独立博客——简明Github Pages与Hexo教程](http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/)》。
+我希望用我在Github上的第一篇博客来记录我三天以来搭建博客的过程及一些感受，一方面记录遇到的些问题和解决方法，另一方面谈谈自己的认识。注意这不是一篇建站指南，如果您需要比较详尽的建站教程请移步《[如何搭建一个独立博客——简明Github Pages与Hexo教程](//cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/)》。
 <!-- more -->
 开始之前我们先探讨几个问题：
 
@@ -18,7 +18,7 @@ toc: true
 
    而在写作的时候，你便是在充分的思考。
 
-   当然这只是我个人的感受，推荐您看看[这篇文章](http://zhuanlan.zhihu.com/cnfeat/19743861)
+   当然这只是我个人的感受，推荐您看看[这篇文章](//zhuanlan.zhihu.com/cnfeat/19743861)
 
 ## 建站过程
 
@@ -26,11 +26,11 @@ toc: true
  
  #### 什么是GitHub
 简单的讲，GitHub是一个具有版本管理功能的代码仓库，可以使用[GitHubPages](https://pages.github.com/)为每个项目建立一个主页，也就是用户编写的、托管在github上的静态网页。而我们搭建自己的博客即使用了其GitHub Pages功能。
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blogElement/githubpages.PNG) 
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blogElement/githubpages.PNG) 
 
  #### 什么是Hexo
-Hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，[Hexo官网](http://hexo.io/)介绍其是一个快速的、支持Markdown格式、操作简单并且插件丰富的博客发布工具。Hexo可以将markdown格式文本生成的静态网页直接放到GitHub Pages等平台上。
+Hexo出自台湾大学生tommy351之手，是一个基于Node.js的静态博客程序，[Hexo官网](//hexo.io/)介绍其是一个快速的、支持Markdown格式、操作简单并且插件丰富的博客发布工具。Hexo可以将markdown格式文本生成的静态网页直接放到GitHub Pages等平台上。
     使用Hexo发表文章只需要三步：
  ``` bash
 $ hexo new  "Title" #创建题为title的新博客
@@ -84,9 +84,9 @@ iption: Description\nread_more: Read More\n\u0000',
   stack: undefined }
   ```
 打开\themes\RagingCat\languages下的yml文件
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blogElement/yml.PNG)
-是不是冒号后面的单词都没有加双引号，问题就在这，加上就没问题了，这里需要感谢一下[Xuanwo](http://xuanwo.org/2014/08/14/hexo-usual-problem/)。
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blogElement/yml.PNG)
+是不是冒号后面的单词都没有加双引号，问题就在这，加上就没问题了，这里需要感谢一下[Xuanwo](//xuanwo.org/2014/08/14/hexo-usual-problem/)。
 
  #### 修改配置选项
  既然是建立的自己的博客，当然希望所有的特性都按照自己的喜好来配置，由于本人对CSS、js等技术暂时不太了解，因这里只介绍一些简单的配置。
@@ -103,7 +103,7 @@ pgdgu8c3d.bkt.clouddn.com/blogElement/yml.PNG)
 
 ``` yml
 Hexo Configuration
-/## Docs: http://hexo.io/docs/configuration.html
+/## Docs: //hexo.io/docs/configuration.html
 /## Source: https://github.com/hexojs/hexo/
 /# Site
 title: Totoro's blog
@@ -121,7 +121,7 @@ language:
 ### 辅助工具的选择
 #### 关于图床的选择
 由于github的空间容量有限制，如果你的博客里需要大量的图片，那么你可能就需要选择一个适合你的图床了，对于大多数只用于博客的个人站点来说，我想一个免费的即使有各种限制的图床也完全够用。
-我选择的[七牛云存储](http://www.qiniu.com/)，其实主要原因是论坛上好多人都推荐它，了解了一下，七牛是专门做网站资源托管的，体验用户可以获得1G的免费空间，可以上传证件照升级为标准用户获赠10G免费空间，而且还有专门的客户端用于管理这些资源，我想对于多数个人用户够用了。
+我选择的[七牛云存储](//www.qiniu.com/)，其实主要原因是论坛上好多人都推荐它，了解了一下，七牛是专门做网站资源托管的，体验用户可以获得1G的免费空间，可以上传证件照升级为标准用户获赠10G免费空间，而且还有专门的客户端用于管理这些资源，我想对于多数个人用户够用了。
 另外网上很多人都提到了可以使用百度云盘、新浪微博、腾讯微博等做图床，个人觉得这些网站虽然都是大户人家，不会在意这点流量，但是毕竟不是合理的使用，随时都有可能将外链禁掉，百度空间好像就已经不好使了。
 
 #### 关于Markdown编辑器的选择
@@ -146,7 +146,7 @@ if you don't want display contents in a specified post, you can modify *front-ma
 #### 重装系统或者更换电脑后如何配置
 
 
-1. 首先安装[Node,js](https://nodejs.org/)及[git](http://git-scm.com/)
+1. 首先安装[Node,js](https://nodejs.org/)及[git](//git-scm.com/)
 2. 配置SSH
 3. 安装hexo
 4. 配置_config.yml文件，或者把之前的_config.yml拷贝过来，但记得hexo3.0版本以上的type要改为git而不是以前的github

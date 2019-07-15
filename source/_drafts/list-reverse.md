@@ -71,5 +71,5 @@ class Node{   //结点定义
 4->3->2->1->null
 
 ----------
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blogpic/E___0109GD00SIGT.gif)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blogpic/E___0109GD00SIGT.gif)

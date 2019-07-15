@@ -3,8 +3,8 @@ date: 2015-01-30 22:40:51
 categories: Thinking
 tags: [Summary, Memory]
 ---
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201705091556_231.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201705091556_231.png)
 <!-- more -->
 ## PREFACE 
 After everything gets done and suddenly, I just realize that time has come to 2015. Look back to the passed year at this moment, I can't help sighing with emotions. It is really a wonderful and significant year for me although with much pressure and not a few tough days. Finally and fortunately, I have come through all of these, happiness, struggles as well as hardships. Thanks for everything and everyone that I met, precious memory and of course some remarkable lessons.
@@ -12,7 +12,7 @@ After everything gets done and suddenly, I just realize that time has come to 20
 
 ### Firstly, let this MV create some atmosphere
 
-<iframe src="http://www.tudou.com/programs/view/html5embed.action?type=0&code=uhduWh3WD_Y&lcode=&resourceId=709134954_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:480px;height:400px;"></iframe>
+<iframe src="//www.tudou.com/programs/view/html5embed.action?type=0&code=uhduWh3WD_Y&lcode=&resourceId=709134954_06_05_99" allowtransparency="true" allowfullscreen="true" scrolling="no" border="0" frameborder="0" style="width:480px;height:400px;"></iframe>
 
 ### This year I have known some good friends...
 
@@ -28,30 +28,30 @@ and Jenny, Kundi, 江雨, 散人王, Forecho, Spock and ... ...
 <br>
 ### This year I have been to some places...
 - Hangzhou - One of the seven ancient capitals in China
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blog201501/DSC_0068.JPG)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blog201501/DSC_0068.JPG)
 
 
 - Shaoxin - The hometown of celebrities, Luxun Zhouenlai Wangxizhi...
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blog201501/DSC_0508.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blog201501/DSC_0508.jpg)
 
 
 - Xitang - A peaceful ancient town
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blog201501/DSC_0111.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blog201501/DSC_0111.jpg)
 
 - Shanghai - See my best friend there
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blog201501/DSC_0209.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blog201501/DSC_0209.jpg)
 
 - Yinchuan - so called "small Jiangnan of the northwest"
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blog201501/DSCF1680.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blog201501/DSCF1680.jpg)
 
 - Quebec, Canada - The European Style north America city
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blog201501/DSCN0825.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blog201501/DSCN0825.jpg)
 
 <br>
 ### This year I have encountered some setbacks...
@@ -72,14 +72,14 @@ If you get seriously sick, you will feel those common strangers across the stree
 ### This year I have got some achievements...
 
 - Publish a conference paper based on my research
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blog201501/copy-cropped-cropped2-logo_363.png) 
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blog201501/copy-cropped-cropped2-logo_363.png) 
 
 - Be named as the "Excellent Graduate" and the "Excellent Student Cadre"
 
 - Finish the thesis and get my master degree
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blog201501/IMG_6712.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blog201501/IMG_6712.jpg)
 
 - Got a satisfied offer
 
@@ -91,8 +91,8 @@ pgdgu8c3d.bkt.clouddn.com/blog201501/IMG_6712.jpg)
 Here and now, I would like to hold a memorial ceremony for my school days, that's 20+ years since I was six years old. That is the whole teenage and youth!
 2015, just be more mature, more confident, more healthy and more brave. Do the job, improve myself, earn money and honor my parents.
 Let's go, 2015!
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blog201501/2015.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blog201501/2015.png)
 <br>
 ——————
 The end.

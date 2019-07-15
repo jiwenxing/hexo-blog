@@ -11,8 +11,8 @@ Spring 事件体系是观察者模式的典型应用，观察者模式中有主�
 
 <!-- more -->
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201801241600_183.png?imageView2/2/w/2231/h/300)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201801241600_183.png?imageView2/2/w/2231/h/300)
 
 ## Overview
 
@@ -39,8 +39,8 @@ Spring 的事件机制和事件发布是 `ApplicationContext` 本身提供的功
 - 事件监听器需要实现 `ApplicationListener` 接口
     - 也可以使用注解 `@EventListener` （推荐） 
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/006b5cbc1afb620c1a01c2cb537bb899.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/006b5cbc1afb620c1a01c2cb537bb899.jpg)
 
 
 ### 创建自定义事件
@@ -158,7 +158,7 @@ public class LightEventPublisher {
 
 ### 测试
 
-启动 Spring Boot 应用，访问 `http://127.0.0.1/publish` 可以看到以下结果：
+启动 Spring Boot 应用，访问 `//127.0.0.1/publish` 可以看到以下结果：
 
 > traffic light：wait     
 things after publish  
@@ -231,8 +231,8 @@ public class ContextRefreshedListener
 
 部分 ApplicationEvent 事件实现：
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/040fba4bdfcbe70d2220fac459fb0fc4.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/040fba4bdfcbe70d2220fac459fb0fc4.jpg)
 
 
 ## Spring Events 原理
@@ -241,8 +241,8 @@ Spring Events 从实现原理上讲即所有观察者继承一个包含触发方
 
 先看看事件是怎么发布的，下面是发布事件用到的两个重要的类和接口：
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/0fcaba4602471cb4763d59897b8cc804.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/0fcaba4602471cb4763d59897b8cc804.jpg)
 
 
 ApplicationContext 接口继承了 ApplicationEventPublisher，并在 AbstractApplicationContext 实现了具体代码，而我们常用的 ApplicationContext 都继承自 AbstractApplicationContext，如 ClassPathXmlApplicationContext、XmlWebApplicationContext 等。所以自动拥有这个功能。最终实际执行事件发布是委托给ApplicationEventMulticaster：
@@ -316,8 +316,8 @@ public void multicastEvent(final ApplicationEvent event) {
 
 此时便可以使用观察者模式增加了一个 Listener 来解耦 UserService 和其他服务，即注册成功后，只需要通知相关的监听器，不需要关系它们如何处理，这样增删功能非常容易。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/fd397e908f5bb3aebe50bc8cac6f5440.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/fd397e908f5bb3aebe50bc8cac6f5440.jpg)
 
 
 
@@ -330,10 +330,10 @@ pgdgu8c3d.bkt.clouddn.com/fd397e908f5bb3aebe50bc8cac6f5440.jpg)
 
 ## 参考
 
-- [Spring Events](http://www.baeldung.com/spring-events)
+- [Spring Events](//www.baeldung.com/spring-events)
 - [Spring的事件与异步事件](https://www.limisky.com/125.html)
-- [Application events with Spring](http://zoltanaltfatter.com/2016/05/11/application-events-with-spring/)
+- [Application events with Spring](//zoltanaltfatter.com/2016/05/11/application-events-with-spring/)
 - [Spring5源码解析-Spring框架中的事件和监听器](https://muyinchen.github.io/2017/09/27/Spring5%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90-Spring%E6%A1%86%E6%9E%B6%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%9B%91%E5%90%AC%E5%99%A8/)
-- [spring事件机制](http://xls9577087.iteye.com/blog/2121752)
+- [spring事件机制](//xls9577087.iteye.com/blog/2121752)
 
 

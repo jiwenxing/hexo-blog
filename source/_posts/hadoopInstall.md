@@ -5,7 +5,7 @@ tags: [Hadoop]
 toc: true
 ---
 
-出于兴趣，花了两天时间安装hadoop的调试环境，过程中遇到各种各样的问题，但是很庆幸几乎所有遇到的问题网上都有网友分享的解决方法，因此我觉得学会分享是很重要的一件事~本文的安装过程基本按照[这篇博文](http://pengbin6755198.blog.163.com/blog/static/23254939201421043925839/)进行的，软件版本略有不同，不过影响不大，这里主要讲讲安装过程中出现的一些新状况。
+出于兴趣，花了两天时间安装hadoop的调试环境，过程中遇到各种各样的问题，但是很庆幸几乎所有遇到的问题网上都有网友分享的解决方法，因此我觉得学会分享是很重要的一件事~本文的安装过程基本按照[这篇博文](//pengbin6755198.blog.163.com/blog/static/23254939201421043925839/)进行的，软件版本略有不同，不过影响不大，这里主要讲讲安装过程中出现的一些新状况。
 <!-- more -->
 ## JDK安装
 之前装过jdk，版本为jdk1.7.0_51，且是安装在c盘program files目录下的。原博文所提的由于hadoop不识别目录中空格因此建议不能装在该目录下，经测试其实也没有关系，后面只需建立一个目录映射的软连接即可，指令为：
@@ -14,7 +14,7 @@ $ ln -s "c:/program files/java/jdk1.7.0_21" /usr/local/jdk1.7.0_21。
 ```
 
 ## sygwin安装及ssh无密码登陆配置
-直接下载[sygwin](http://www.cygwin.com/)按照原博文步骤安装即可，一般不会有什么问题。因为楼主是外行（刚开始连sygwin是什么都不知道⊙﹏⊙b汗），按照教程做的时候往往也只是知其然不知其所以然，因此稍微出点状况就不知道该怎么解决了，所以还是建议大家（基础概念不清楚的亲们）知道每一步怎么做的同时也能尽量知道为什么这么做。
+直接下载[sygwin](//www.cygwin.com/)按照原博文步骤安装即可，一般不会有什么问题。因为楼主是外行（刚开始连sygwin是什么都不知道⊙﹏⊙b汗），按照教程做的时候往往也只是知其然不知其所以然，因此稍微出点状况就不知道该怎么解决了，所以还是建议大家（基础概念不清楚的亲们）知道每一步怎么做的同时也能尽量知道为什么这么做。
 >sygwin：Get that Linux feeling - on Windows，a large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
 
 ssh是一种安全协议，这里使用RSA非对称加密算法（基于困难的大素数乘积分解），可以防止远程管理过程中的信息泄露。配置ssh的过程即生成rsa密钥对并向集群各主机分发密钥，从而可以实现无密码登陆。
@@ -61,8 +61,8 @@ $ jps
 显示namenode,datanode,secondarynamenode,jobtracker,tasktracker启动成功，win7下cygwin中显示不全，但已启动。
 
 ## 安装配置eclipse
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blogpic/20140826144826043.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blogpic/20140826144826043.jpg)
 
 
 run configuration配置，尤其注意输入输出路径的配置，因为是在集群上运行程序，文件代码都在dfs上，所以这里写的dfs上的路径，如果不确定怎么写，运行指令查看一下:
@@ -196,6 +196,6 @@ world   1
 ok,  done!
 <br>
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/blogpic/E___0109GD00SIGT.gif)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/blogpic/E___0109GD00SIGT.gif)
 <br>

@@ -4,8 +4,8 @@ categories: Thinking
 tags: [Summary]
 ---
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/summaryu%3D3013140567%2C3976971065%26fm%3D11%26gp%3D0.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/summaryu%3D3013140567%2C3976971065%26fm%3D11%26gp%3D0.jpg)
 <!-- more -->
 年年岁岁花相似，岁岁年年人不同！按照惯例，每年的年初需要也应该对上一年做个总结，正好最近比较浮躁，借此机会踏踏实实的静下来回忆回忆、思考思考，也给2016许个愿定个目标。
 

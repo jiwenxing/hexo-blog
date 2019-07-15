@@ -140,13 +140,13 @@ public static String getMD5String(byte[] bytes) {
 
 类似的问题也会出现在SimpleDateFormat（包括DateFormat）类的format()和parse()上，因为该类中的成员变量calendar会进行`calendar.setTime(date)`及`calendar.clear()`方法改变其状态，这时候多线程下便会出现线程不一致的情况。由于format()方法只用到的setTime方法，因此多线程下会出现时间不一致的情况，但是不会抛异常，这个问题比较隐蔽。而parse方法即用到了setTime也用到了clear方法，多线程时b线程设置了date这时候a线程又调用了clear方法清空了值，这是b线程再继续执行便会抛出异常。
 
-对SimpleDateFormat和DateFormat的使用可以参考这篇文章[深入理解Java：SimpleDateFormat安全的时间格式化](http://www.cnblogs.com/peida/archive/2013/05/31/3070790.html)
+对SimpleDateFormat和DateFormat的使用可以参考这篇文章[深入理解Java：SimpleDateFormat安全的时间格式化](//www.cnblogs.com/peida/archive/2013/05/31/3070790.html)
 
 
 第一次碰到java并发的问题，解决的过程中查询了很多资料发现对java多线程了解的很少，后面找时间系统的研究一下关于java多线程的知识点。
 
 ## References
 [1] [Message Digest](https://recalll.co/app/?q=Message%20Digest) 
-[2] [java模拟并发访问](http://zx-code.iteye.com/blog/2267185)
-[3] [java.util.concurrent介绍](http://www.cnblogs.com/sarafill/archive/2011/05/18/2049461.html)
-[4] [Java Concurrency / Multithreading Tutorial](http://tutorials.jenkov.com/java-concurrency/index.html)
+[2] [java模拟并发访问](//zx-code.iteye.com/blog/2267185)
+[3] [java.util.concurrent介绍](//www.cnblogs.com/sarafill/archive/2011/05/18/2049461.html)
+[4] [Java Concurrency / Multithreading Tutorial](//tutorials.jenkov.com/java-concurrency/index.html)

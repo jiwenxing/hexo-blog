@@ -83,14 +83,14 @@ public static int editDistance(String str1, String str2) {
 以字符串 a = "fxy", b = "fab" 为例
 
 1. 首先建立一个矩阵，用来存放子问题及原问题的编辑距离，并将递归边界在矩阵中填好，如下：   
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201808281955_879.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201808281955_879.png)
 
 2. 然后计算 i = 1, j = 1 所对应的编辑距离    
 比较 a[i] 和 b[j] 是否相等然后根据递归规律算出这个值，比如在这种情况下 a[i] = f 和 b[j] = f, 那么 `d[i][j]` 就等于 `d[i-1][j-1]` 等于 0
 然后计算 i = 1, j = 2 直到算出 i = 3, j = 3, 原问题的编辑距离就等于 `d[3][3]`，最终矩阵如下：   
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201808282003_296.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201808282003_296.png)
 
 代码实现如下：
 
@@ -259,4 +259,4 @@ public class PinYinUtil {
 1. [Wikipedia - Edit distance](https://en.wikipedia.org/wiki/Edit_distance)
 2. [Wikipedia - Wagner–Fischer algorithm](https://en.wikipedia.org/wiki/Wagner%E2%80%93Fischer_algorithm)
 3. [Gitbook - edit-distance](https://www.dreamxu.com/books/dsa/dp/edit-distance.html)
-4. [百度AI开放平台 - 拼音相似度比较](http://ai.baidu.com/docs#/ASR-Tool-diff/top)
+4. [百度AI开放平台 - 拼音相似度比较](//ai.baidu.com/docs#/ASR-Tool-diff/top)

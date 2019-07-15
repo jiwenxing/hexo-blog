@@ -158,4 +158,4 @@ public class MusicNLUServiceImpl extends NLUBaseService {
 
 ## 参考
 
-1. [如何设计一种网关类型的服务端架构](http://www.jianshu.com/p/648c5031bcf1)
+1. [如何设计一种网关类型的服务端架构](//www.jianshu.com/p/648c5031bcf1)

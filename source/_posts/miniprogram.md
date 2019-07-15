@@ -12,10 +12,10 @@ date: 2018-08-10 12:21:36
 
 ## 小程序 & 服务号 & 订阅号
 
-我们在微信公众平台上注册账号的时候会看到有以下四个选项：服务号、订阅号、企业微信以及小程序（统称为公众号），上面简要的对其进行了描述，如果你看完以后还是一头雾水，还是不确定该选择哪一种形式的应用，可以参考[官网的详细说明](http://kf.qq.com/faq/170815aUZjeQ170815mU7bI7.html)。
+我们在微信公众平台上注册账号的时候会看到有以下四个选项：服务号、订阅号、企业微信以及小程序（统称为公众号），上面简要的对其进行了描述，如果你看完以后还是一头雾水，还是不确定该选择哪一种形式的应用，可以参考[官网的详细说明](//kf.qq.com/faq/170815aUZjeQ170815mU7bI7.html)。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201808221632_638.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201808221632_638.png)
 
 总的来说，订阅号注重分享内容（每天可以发一条消息，展示在订阅号文件夹中），适用于个人及自媒体等；服务号注重服务并借助 H5 能够实现简单的交互，功能较订阅号更多，例如可以使用微信支付（每个月能发4条消息，会展示在好友对话列表里），适用于公司或组织；而小程序主要面向产品和服务，可理解为不用安装的 APP，具有接近原生 APP 的体验，适用于有较为复杂的服务和业务的公司或组织。
 
@@ -39,8 +39,8 @@ pgdgu8c3d.bkt.clouddn.com/201808221632_638.png)
 
 首先到[微信公众平台](https://mp.weixin.qq.com)申请一个小程序开发者账号，需要邮箱、手机号、身份证信息等。注册成功后登陆，可以看到
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201808221627_842.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201808221627_842.png)
 
 此时需要先补充小程序信息，指的注意的是小程序信息填写了以后不可更改，如果类目选择了小游戏，想使用该 AppId 再开发普通小程序就不行了，需要重新申请账号。
 补充完小程序信息会发现创建者已经被自动加入到开发者列表中，另外在开发设置中也可以看到 AppID(小程序ID)了，可以使用该 ID 进行开发。
@@ -66,8 +66,8 @@ npm run dev   //开启实时编译，或者直接执行 wepy build --watch
 
 此时打开微信开发者工具，导入项目即可在本地实时预览小程序如下所示。
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/201808221751_748.png)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/201808221751_748.png)
 
 
 ### 原生小程序
@@ -126,8 +126,8 @@ WePY 参考了 Vue 等现有框架的一些语法风格和功能特性，对原�
 
 最后打个广告，可以扫下面二维码来体验一下我们的小程序
 
-![](http://
-pgdgu8c3d.bkt.clouddn.com/da354829ab89de3f5324abecffcaa120.jpg)
+![](//
+jverson.oss-cn-beijing.aliyuncs.com/da354829ab89de3f5324abecffcaa120.jpg)
 
 
 
@@ -137,4 +137,4 @@ pgdgu8c3d.bkt.clouddn.com/da354829ab89de3f5324abecffcaa120.jpg)
 - [微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html)
 - [小程序开发框架](https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html)
 - [微信公众平台](https://mp.weixin.qq.com/?url=%2Fwxopen%2Fcategory%3Faction%3Dget%26token%3D1820933982%26lang%3Dzh_CN)
-- [公众平台服务号、订阅号、企业微信、小程序的相关说明](http://kf.qq.com/faq/170815aUZjeQ170815mU7bI7.html)
+- [公众平台服务号、订阅号、企业微信、小程序的相关说明](//kf.qq.com/faq/170815aUZjeQ170815mU7bI7.html)
